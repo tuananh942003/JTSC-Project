@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOCX Viewer</title>
+<script src="/vendor/docx-preview/docx-preview.min.js"></script>
+<style>
+  /* Isolated: app CSS does NOT reach here */
+  *, *::before, *::after { box-sizing: content-box; margin: 0; padding: 0; }
+  html, body {
+    height: 100%;
+    background: #d8dde3;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    color: #111;
+  }
+  #loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 14px;
+    color: #555;
+    font-family: Arial, sans-serif;
+  }
+  #errbox {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 14px;
+    color: #c0392b;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 32px;
+  }
+  #root {
+    padding: 28px 0 40px;
+  }
+  /* docx-preview page wrapper */
+  .docx-wrapper {
+    background: transparent !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  /* Each A4/Letter page */
+  .docx-wrapper > section.docx {
+    margin: 0 auto 28px !important;
+    background: #fff !important;
+    box-shadow: 0 4px 24px rgba(0,0,0,.18), 0 1px 4px rgba(0,0,0,.12) !important;
+    box-sizing: border-box !important;
+  }
+  /* Tables */
+  .docx-wrapper table { border-collapse: collapse; }
+  /* Images stay within page */
+  .docx-wrapper img { max-width: 100%; height: auto; }
+</style>
+</head>
+<body>
+<div id="loader">Đang tải tài liệu...</div>
+<div id="errbox"></div>
+<div id="root" style="display:none"></div>
+
+<script>
+(async () => {
+  const params  = new URLSearchParams(location.search);
+  const fileUrl = params.get('url');
+  const loader  = document.getElementById('loader');
+  const errbox  = document.getElementById('errbox');
+  const root    = document.getElementById('root');
+
+  function showError(msg) {
+    loader.style.display  = 'none';
+    errbox.style.display  = 'flex';
+    errbox.textContent    = msg;
+  }
+
+  if (!fileUrl) { showError('Không có URL file được cung cấp.'); return; }
+
+  try {
+    const res = await fetch(fileUrl);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const buf = await res.arrayBuffer();
+
+    loader.style.display = 'none';
+    root.style.display   = '';
+
+    await window.docx.renderAsync(buf, root, null, {
+      inWrapper:       true,
+      ignoreWidth:     false,
+      ignoreHeight:    false,
+      breakPages:      true,
+      renderHeaders:   true,
+      renderFooters:   true,
+      renderFootnotes: true,
+      renderEndnotes:  true,
+      useBase64URL:    true,
+    });
+  } catch (err) {
+    showError('Không thể hiển thị file: ' + err.message);
+  }
+})();
+</script>
+</body>
+</html>

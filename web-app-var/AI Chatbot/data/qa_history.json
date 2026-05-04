@@ -1,0 +1,944 @@
+{
+  "history": [
+    {
+      "id": "13ba5069-692b-42f5-87f7-ba3e88b3943f",
+      "question": "dvar có những dịch vụ gì",
+      "answer": "**DVAR – Các dịch vụ chính**\n\nDVAR cung cấp một loạt dịch vụ chuyên sâu trong lĩnh vực tư vấn đấu thầu, giúp doanh nghiệp tối ưu hoá quy trình và nâng cao tỷ lệ trúng thầu. Dưới đây là danh sách các dịch vụ hiện đang có trên website (đường dẫn tham khảo được ghi kèm):\n\n| STT | Tên dịch vụ | Mô tả ngắn gọn | Đường dẫn |\n|-----|-------------|----------------|-----------|\n| 1 | **Dịch vụ đấu thầu** | Đánh giá thị trường, phân tích đối thủ, định giá cạnh tranh và xây dựng chiến lược đấu thầu hiệu quả. | `/services#dau-thau` |\n| 2 | **Chuẩn bị hồ sơ dự thầu** | Soạn thảo hồ sơ đầy đủ, chính xác theo yêu cầu HSMT, đảm bảo tuân thủ luật đấu thầu. | `/services#ho-so-du-thau` |\n| 3 | **Tư vấn đấu thầu toàn diện** | Phân tích HSMT chi tiết, xây dựng chiến lược, tư vấn pháp lý, kiểm tra tính hợp lệ và tối ưu nội dung hồ sơ. | `/services#tu-van-toan-dien` |\n| 4 | **Quản lý dự án đấu thầu** | Hỗ trợ quản lý toàn bộ quy trình từ chuẩn bị đến thực hiện hợp đồng: lập kế hoạch, theo dõi tiến độ, quản lý rủi ro, giám sát thực hiện. | `/services#quan-ly-du-an` |\n| 5 | **Dịch vụ chăm sóc khách hàng** | Đảm bảo hỗ trợ 24/7, giải quyết vấn đề ngay lập tức, mang lại sự hài lòng tối đa cho khách hàng. | `/services#customer-care` |\n| 6 | **cntt** | (Tên dịch vụ chưa được mô tả chi tiết trên website, nhưng liệt kê trong danh sách hiện tại.) | `/services#cntt` |\n| 7 | **sdsasa** | (Tên dịch vụ chưa được mô tả chi tiết trên website.) | `/services#sdsasa` |\n| 8 | **Dịch vụ mới nhất** | Cập nhật tính năng mới: tính năng 1, tính năng 2, tính năng 3, tính năng 4. | `/services#new-service` |\n\n### Thông tin bổ sung\n\n- **Câu hỏi thường gặp (FAQ)**: Bạn có thể xem chi tiết về “Dịch vụ tư vấn đấu thầu bao gồm những gì?”, “Chi phí tư vấn được tính như thế nào?”, “Thời gian hoàn thành hồ sơ thầu” và “Tỷ lệ trúng thầu” tại mục **[Dịch vụ > Câu hỏi thường gặp]** (`/services/faq`).\n- **Quy trình làm việc**: DVAR thực hiện theo 4 bước: Tiếp nhận yêu cầu → Phân tích & Đánh giá → Xây dựng hồ sơ → Hỗ trợ & Theo dõi (`/services/process`).\n- **Liên hệ**: Nếu bạn cần tư vấn chi tiết hoặc báo giá, hãy gửi yêu cầu qua form liên hệ (`/contact`) hoặc gọi hotline được ghi trên trang Liên hệ.\n\n---\n\nNếu bạn cần thêm thông tin chi tiết về bất kỳ dịch vụ nào, hãy cho mình biết để mình hỗ trợ cụ thể hơn nhé! 🚀",
+      "context": [
+        {
+          "docName": "Dịch vụ (Services) > Câu hỏi thường gặp (FAQ)",
+          "page": 0,
+          "text": "[Trang: Dịch vụ (Services) - Câu hỏi thường gặp (FAQ)] Q: Dịch vụ tư vấn đấu thầu bao gồm những gì? A: Dịch vụ bao gồm: tư vấn lập hồ sơ mời thầu, hỗ trợ chuẩn bị hồ sơ dự thầu, phân tích và đánh giá năng lực nhà thầu, tư vấn chiến lược đấu thầu, và "
+        },
+        {
+          "docName": "Dịch vụ (API live)",
+          "page": 0,
+          "text": "[Danh sách dịch vụ hiện tại trên website]\n1. Dịch vụ đấu thầu: Đánh giá thị trường, phân tích đối thủ cạnh tranh và xây dựng chiến lược đấu thầu hiệu quả. Nghiên cứu thị trường. Phân tích đối thủ. Định giá cạnh tranh. Chiến lược đấu thầu\n2. Chuẩn bị "
+        },
+        {
+          "docName": "Dịch vụ (Services) > Tổng quan dịch vụ",
+          "page": 0,
+          "text": "[Trang: Dịch vụ (Services) - Tổng quan dịch vụ] VAR cung cấp giải pháp toàn diện giúp doanh nghiệp tối ưu hóa quy trình đấu thầu. 320+ gói thầu đã xử lý, 85% tỷ lệ trúng thầu, 12+ năm kinh nghiệm. Các dịch vụ chính: Tư vấn đấu thầu, Hỗ trợ chuẩn bị h"
+        },
+        {
+          "docName": "Quản trị (Admin) > Tổng quan",
+          "page": 0,
+          "text": "[Trang: Quản trị (Admin) - Tổng quan] Trang quản trị dành cho admin để quản lý nội dung website bao gồm: quản lý bài viết/tin tức (tạo, sửa, xóa), quản lý dịch vụ, quản lý liên hệ từ khách hàng, quản lý người dùng. Chỉ tài khoản có quyền admin mới tr"
+        },
+        {
+          "docName": "Thông tin chung website",
+          "page": 0,
+          "text": "Website: VAR - Technology Solutions. Lĩnh vực: Tư vấn đấu thầu (Bidding Consultancy). Chuyên gia tư vấn đấu thầu hàng đầu Việt Nam. Cung cấp dịch vụ tư vấn chuyên nghiệp, giúp doanh nghiệp nâng cao năng lực cạnh tranh trong đấu thầu."
+        },
+        {
+          "docName": "Giới thiệu (About) > Giới thiệu chung",
+          "page": 0,
+          "text": "[Trang: Giới thiệu (About) - Giới thiệu chung] Với hơn 15 năm kinh nghiệm trong lĩnh vực tư vấn đấu thầu, chúng tôi tự hào là đơn vị tiên phong trong việc cung cấp các giải pháp toàn diện cho doanh nghiệp. Đội ngũ chuyên gia của chúng tôi luôn sẵn sà"
+        },
+        {
+          "docName": "Dịch vụ (Services) > Quy trình làm việc",
+          "page": 0,
+          "text": "[Trang: Dịch vụ (Services) - Quy trình làm việc] Bước 1 - Tiếp nhận yêu cầu: Lắng nghe và phân tích nhu cầu cụ thể của khách hàng. Bước 2 - Phân tích & Đánh giá: Nghiên cứu hồ sơ mời thầu và đánh giá năng lực. Bước 3 - Xây dựng hồ sơ: Chuẩn bị hồ sơ "
+        },
+        {
+          "docName": "Liên hệ (Contact) > Form liên hệ",
+          "page": 0,
+          "text": "[Trang: Liên hệ (Contact) - Form liên hệ] Khách hàng có thể gửi yêu cầu liên hệ trực tiếp qua form trên website với các thông tin: Họ và tên, Email, Số điện thoại, Công ty, Tiêu đề, Nội dung tin nhắn. Sau khi gửi, hệ thống sẽ lưu thông tin và phản hồ"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 33,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 2: CƠ SỞ LÝ THUYẾT \n \n12 \nNhóm 9 \nđể phù hợp với loại dịch vụ. Việc sử dụng tài nguyên có thể được theo dõi, kiểm \nsoát và báo cáo, mang lại sự minh bạch cho cả nhà cung cấp và người tiêu dùng \ndịch vụ. \n2.1.3. Ba mô h"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 21,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC    CHƯƠNG 1: GIỚI THIỆU TỔNG QUAN VỀ ĐỀ TÀI \n \n1 \n \nCHƯƠNG 1: GIỚI THIỆU TỔNG QUAN VỀ ĐỀ TÀI, LÝ DO CHỌN ĐỀ \nTÀI, MỤC TIÊU, PHẠM VI VÀ PHƯƠNG PHÁP NGHIÊN CỨU \n1.1. Lý do chọn đề tài \nTrong thời đại công nghệ 4.0, điện toán đá"
+        }
+      ],
+      "timestamp": "2026-05-04T07:26:17.728Z"
+    },
+    {
+      "id": "02d134cc-4f20-4264-a20a-3e6093bb1c65",
+      "question": "dịch vụ gồm có những gì",
+      "answer": "**Các dịch vụ mà VAR cung cấp**  \n\nTheo thông tin trên trang **Dịch vụ (Services) – Câu hỏi thường gặp (FAQ)** và danh sách hiện tại trên website, VAR có các gói dịch vụ chính sau:\n\n| STT | Tên dịch vụ | Nội dung chi tiết |\n|-----|-------------|-------------------|\n| 1️⃣ | **Dịch vụ tư vấn đấu thầu** | - Tư vấn lập hồ sơ mời thầu  <br> - Hỗ trợ chuẩn bị hồ sơ dự thầu  <br> - Phân tích và đánh giá năng lực nhà thầu  <br> - Tư vấn chiến lược đấu thầu  <br> - Hỗ trợ giải quyết kiến nghị trong quá trình đấu thầu |\n| 2️⃣ | **Chuẩn bị hồ sơ dự thầu** | Soạn thảo hồ sơ đầy đủ, chính xác theo yêu cầu HSMT, đảm bảo tuân thủ luật đấu thầu. |\n| 3️⃣ | **Tư vấn đấu thầu toàn diện** | Phân tích chi tiết hồ sơ mời thầu, xây dựng chiến lược, tư vấn pháp lý, kiểm tra tính hợp lệ và tối ưu hoá nội dung hồ sơ. |\n| 4️⃣ | **Quản lý dự án đấu thầu** | Hỗ trợ quản lý toàn bộ quy trình từ chuẩn bị đến thực hiện hợp đồng: lập kế hoạch, theo dõi tiến độ, quản lý rủi ro, giám sát thực hiện. |\n| 5️⃣ | **Dịch vụ chăm sóc khách hàng** | Hỗ trợ 24/7, giải quyết vấn đề ngay lập tức, đảm bảo sự hài lòng tối đa cho khách hàng. |\n| 6️⃣ | **Dịch vụ đấu thầu – Nghiên cứu thị trường** | Đánh giá thị trường, phân tích đối thủ cạnh tranh, định giá cạnh tranh và xây dựng chiến lược đấu thầu hiệu quả. |\n| 7️⃣ | **Dịch vụ mới (cập nhật tính năng)** | Các tính năng mới nhất được phát triển liên tục (tính năng 1‑4) – chi tiết sẽ được cập nhật trên trang **/service**. |\n\n> **Lưu ý:** Tỷ lệ trúng thầu trung bình của VAR đạt **trên 85 %**, và với các gói tư vấn toàn diện có thể lên tới **95 %** (theo FAQ).\n\n### Thời gian và chi phí\n- **Thời gian hoàn thành hồ sơ thầu:** 7‑15 ngày làm việc (có thể đẩy nhanh cho gói khẩn cấp).  \n- **Chi phí tư vấn:** Được tính dựa trên quy mô và độ phức tạp của gói thầu; VAR sẽ gửi báo giá chi tiết sau khi đánh giá yêu cầu cụ thể của bạn.\n\n### Cách liên hệ\n- **Trang liên hệ:** [/contact](https://var.vn/contact)  \n- **Hotline:** (điện thoại được liệt kê trên trang Liên hệ)  \n- Hoặc nhắn tin trực tiếp qua **AI Chatbot** trên website để nhận tư vấn miễn phí.\n\nNếu bạn cần biết thêm chi tiết về bất kỳ dịch vụ nào, hãy truy cập mục **Dịch vụ (/service)** hoặc gửi yêu cầu qua **/contact** – chúng tôi sẽ phản hồi nhanh chóng!",
+      "context": [
+        {
+          "docName": "Dịch vụ (Services) > Câu hỏi thường gặp (FAQ)",
+          "page": 0,
+          "text": "[Trang: Dịch vụ (Services) - Câu hỏi thường gặp (FAQ)] Q: Dịch vụ tư vấn đấu thầu bao gồm những gì? A: Dịch vụ bao gồm: tư vấn lập hồ sơ mời thầu, hỗ trợ chuẩn bị hồ sơ dự thầu, phân tích và đánh giá năng lực nhà thầu, tư vấn chiến lược đấu thầu, và "
+        },
+        {
+          "docName": "Dịch vụ (API live)",
+          "page": 0,
+          "text": "[Danh sách dịch vụ hiện tại trên website]\n1. Dịch vụ đấu thầu: Đánh giá thị trường, phân tích đối thủ cạnh tranh và xây dựng chiến lược đấu thầu hiệu quả. Nghiên cứu thị trường. Phân tích đối thủ. Định giá cạnh tranh. Chiến lược đấu thầu\n2. Chuẩn bị "
+        },
+        {
+          "docName": "Dịch vụ (Services) > Tổng quan dịch vụ",
+          "page": 0,
+          "text": "[Trang: Dịch vụ (Services) - Tổng quan dịch vụ] VAR cung cấp giải pháp toàn diện giúp doanh nghiệp tối ưu hóa quy trình đấu thầu. 320+ gói thầu đã xử lý, 85% tỷ lệ trúng thầu, 12+ năm kinh nghiệm. Các dịch vụ chính: Tư vấn đấu thầu, Hỗ trợ chuẩn bị h"
+        },
+        {
+          "docName": "Quản trị (Admin) > Tổng quan",
+          "page": 0,
+          "text": "[Trang: Quản trị (Admin) - Tổng quan] Trang quản trị dành cho admin để quản lý nội dung website bao gồm: quản lý bài viết/tin tức (tạo, sửa, xóa), quản lý dịch vụ, quản lý liên hệ từ khách hàng, quản lý người dùng. Chỉ tài khoản có quyền admin mới tr"
+        },
+        {
+          "docName": "Điều hướng",
+          "page": 0,
+          "text": "Điều hướng website: Các trang chính gồm Trang chủ (/), Giới thiệu (/about), Dịch vụ (/service), Tin tức (/news), Liên hệ (/contact), AI Chatbot (/ai-chatbot)"
+        },
+        {
+          "docName": "Thông tin chung website",
+          "page": 0,
+          "text": "Website: VAR - Technology Solutions. Lĩnh vực: Tư vấn đấu thầu (Bidding Consultancy). Chuyên gia tư vấn đấu thầu hàng đầu Việt Nam. Cung cấp dịch vụ tư vấn chuyên nghiệp, giúp doanh nghiệp nâng cao năng lực cạnh tranh trong đấu thầu."
+        },
+        {
+          "docName": "Giới thiệu (About) > Giới thiệu chung",
+          "page": 0,
+          "text": "[Trang: Giới thiệu (About) - Giới thiệu chung] Với hơn 15 năm kinh nghiệm trong lĩnh vực tư vấn đấu thầu, chúng tôi tự hào là đơn vị tiên phong trong việc cung cấp các giải pháp toàn diện cho doanh nghiệp. Đội ngũ chuyên gia của chúng tôi luôn sẵn sà"
+        },
+        {
+          "docName": "Dịch vụ (Services) > Quy trình làm việc",
+          "page": 0,
+          "text": "[Trang: Dịch vụ (Services) - Quy trình làm việc] Bước 1 - Tiếp nhận yêu cầu: Lắng nghe và phân tích nhu cầu cụ thể của khách hàng. Bước 2 - Phân tích & Đánh giá: Nghiên cứu hồ sơ mời thầu và đánh giá năng lực. Bước 3 - Xây dựng hồ sơ: Chuẩn bị hồ sơ "
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 33,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 2: CƠ SỞ LÝ THUYẾT \n \n12 \nNhóm 9 \nđể phù hợp với loại dịch vụ. Việc sử dụng tài nguyên có thể được theo dõi, kiểm \nsoát và báo cáo, mang lại sự minh bạch cho cả nhà cung cấp và người tiêu dùng \ndịch vụ. \n2.1.3. Ba mô h"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 34,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 2: CƠ SỞ LÝ THUYẾT \n \n13 \nNhóm 9 \nIaaS là lớp dưới cùng của mô hình dịch vụ điện toán đám mây. Các chức năng \nchính của IaaS bao gồm: \n● Cung cấp tài nguyên ảo hóa: IaaS cung cấp quyền truy cập vào các tài nguyên \nmáy "
+        }
+      ],
+      "timestamp": "2026-04-15T09:51:54.231Z"
+    },
+    {
+      "id": "826bfab6-e7b7-4c04-81a9-ac393073cb38",
+      "question": "Liên hệ với VAR như thế nào?",
+      "answer": "### Cách liên hệ với VAR\n\nBạn có **ba** cách chính để liên hệ trực tiếp với chúng tôi:\n\n| Phương thức | Thông tin chi tiết |\n|-------------|--------------------|\n| **Form liên hệ trên website** | Truy cập trang **/contact** → “Form liên hệ”. Điền đầy đủ Họ & Tên, Email, Số điện thoại, Công ty, Tiêu đề và Nội dung tin nhắn. Sau khi gửi, hệ thống sẽ lưu lại và chúng tôi sẽ phản hồi sớm nhất có thể. |\n| **Điện thoại** | 📞 **+84 123 456 789** (hỗ trợ 24/7). |\n| **Email** | 📧 **contact@example.com** – gửi email kèm yêu cầu hoặc câu hỏi của bạn. |\n| **Địa chỉ trụ sở** | 🏢 Số 123, Đường ABC, Quận XYZ, Thành phố HCM (Tòa nhà Vinaconex 7, Hà Nội). |\n| **Giờ làm việc** | Thứ 2 – Thứ 6: **08:00 – 18:00** (ngoài giờ làm việc vẫn có hỗ trợ qua điện thoại 24/7). |\n\n#### Gợi ý nhanh:\n- **Nếu muốn được tư vấn ngay**: Gọi điện hoặc nhắn tin qua WhatsApp (số trên) để được kết nối với chuyên gia ngay lập tức.\n- **Nếu có tài liệu, yêu cầu chi tiết**: Gửi qua email hoặc đính kèm trong form liên hệ để chúng tôi có thể chuẩn bị trước khi phản hồi.\n- **Nếu muốn gặp trực tiếp**: Đến địa chỉ trụ sở trong khung giờ làm việc; chúng tôi sẽ sắp xếp lịch hẹn.\n\n> **Lưu ý:** Khi sử dụng form liên hệ, hãy cung cấp đầy đủ thông tin để chúng tôi có thể trả lời nhanh và chính xác nhất.\n\nNếu cần thêm bất kỳ hỗ trợ nào, đừng ngần ngại truy cập **/contact** hoặc gọi ngay số điện thoại trên. Chúng tôi luôn sẵn sàng giúp bạn!",
+      "context": [
+        {
+          "docName": "Liên hệ (Contact) > Form liên hệ",
+          "page": 0,
+          "text": "[Trang: Liên hệ (Contact) - Form liên hệ] Khách hàng có thể gửi yêu cầu liên hệ trực tiếp qua form trên website với các thông tin: Họ và tên, Email, Số điện thoại, Công ty, Tiêu đề, Nội dung tin nhắn. Sau khi gửi, hệ thống sẽ lưu thông tin và phản hồ"
+        },
+        {
+          "docName": "Dịch vụ (Services) > Câu hỏi thường gặp (FAQ)",
+          "page": 0,
+          "text": "[Trang: Dịch vụ (Services) - Câu hỏi thường gặp (FAQ)] Q: Dịch vụ tư vấn đấu thầu bao gồm những gì? A: Dịch vụ bao gồm: tư vấn lập hồ sơ mời thầu, hỗ trợ chuẩn bị hồ sơ dự thầu, phân tích và đánh giá năng lực nhà thầu, tư vấn chiến lược đấu thầu, và "
+        },
+        {
+          "docName": "Tin tức (API live)",
+          "page": 0,
+          "text": "[Danh sách bài viết/tin tức hiện tại trên website]\n1. \"Đây là bài viết về chủ đề chuyển đổi sổ \" (6/1/2026): Chuyển đổi số (Digital Transformation - DT) là quá trình ứng dụng sâu rộng công nghệ số (AI, Big Data, Cloud, IoT...) vào mọi khía cạnh của t"
+        },
+        {
+          "docName": "Liên hệ (Contact) > Thông tin liên hệ",
+          "page": 0,
+          "text": "[Trang: Liên hệ (Contact) - Thông tin liên hệ] Địa chỉ: Số 123, Đường ABC, Quận XYZ, Thành phố HCM (Tòa nhà Vinaconex 7, Hà Nội). Điện thoại: +84 123 456 789. Email: contact@example.com. Giờ làm việc: Thứ 2 - Thứ 6: 8:00 - 18:00. Hỗ trợ 24/7. Chúng t"
+        },
+        {
+          "docName": "Trang chủ (Home) > Hero Banner",
+          "page": 0,
+          "text": "[Trang: Trang chủ (Home) - Hero Banner] VAR là đối tác đấu thầu tin cậy. Chuyên gia tư vấn và hỗ trợ đấu thầu dự án. VAR cung cấp giải pháp tư vấn đấu thầu chuyên nghiệp, giúp doanh nghiệp tối ưu hóa quy trình và nâng cao tỷ lệ trúng thầu với đội ngũ"
+        },
+        {
+          "docName": "Trang chủ (Home) > CTA (Call to Action)",
+          "page": 0,
+          "text": "[Trang: Trang chủ (Home) - CTA (Call to Action)] Bạn đang chuẩn bị cho gói thầu quan trọng? Đừng để cơ hội trôi qua. Liên hệ ngay với đội ngũ chuyên gia của chúng tôi để được tư vấn miễn phí và nâng cao khả năng trúng thầu."
+        },
+        {
+          "docName": "Giới thiệu (About) > Giới thiệu chung",
+          "page": 0,
+          "text": "[Trang: Giới thiệu (About) - Giới thiệu chung] Với hơn 15 năm kinh nghiệm trong lĩnh vực tư vấn đấu thầu, chúng tôi tự hào là đơn vị tiên phong trong việc cung cấp các giải pháp toàn diện cho doanh nghiệp. Đội ngũ chuyên gia của chúng tôi luôn sẵn sà"
+        },
+        {
+          "docName": "Dịch vụ (Services) > Tổng quan dịch vụ",
+          "page": 0,
+          "text": "[Trang: Dịch vụ (Services) - Tổng quan dịch vụ] VAR cung cấp giải pháp toàn diện giúp doanh nghiệp tối ưu hóa quy trình đấu thầu. 320+ gói thầu đã xử lý, 85% tỷ lệ trúng thầu, 12+ năm kinh nghiệm. Các dịch vụ chính: Tư vấn đấu thầu, Hỗ trợ chuẩn bị h"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 37,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 2: CƠ SỞ LÝ THUYẾT \n \n15 \nNhóm 9 \nba. Người tiêu dùng hoàn toàn không chịu trách nhiệm về quản trị cơ sở hạ tầng, \nnhưng có mức độ kiểm soát thấp. Mô hình nhiều người thuê nhằm thúc đẩy mức \nđộ cao nhất của nhiều người"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 132,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 6: TỔNG KẾT, SO SÁNH CÁC MÔ HÌNH,... \n \n111 \nNhóm 9 \nkết hợp này hình thành một kiến trúc thống nhất, đảm bảo tính ổn định, khả năng \nmở rộng và dễ dàng bảo trì. \nXét về giá trị thực tiễn và hiệu quả kinh tế, sản phẩm "
+        }
+      ],
+      "timestamp": "2026-04-15T09:48:51.566Z"
+    },
+    {
+      "id": "3f137469-9f3f-4037-8ebd-8a07448a355f",
+      "question": "L�m sao li�n h? v?i VAR?",
+      "answer": "**Cách liên hệ với VAR**\n\nBạn có thể liên hệ với VAR qua các kênh sau:\n\n| Kênh | Thông tin |\n|------|------------|\n| **Địa chỉ trụ sở** | Số 123, Đường ABC, Quận XYZ, Thành phố HCM (Tòa nhà Vinaconex 7, Hà Nội) |\n| **Điện thoại** | +84 123 456 789 |\n| **Email** | contact@example.com |\n| **Giờ làm việc** | Thứ 2 – Thứ 6: 08:00 – 18:00 (hỗ trợ 24/7 qua email và hotline) |\n| **Form liên hệ trực tuyến** | Truy cập trang **[Liên hệ](/contact)**, điền đầy đủ họ tên, email, số điện thoại, công ty, tiêu đề và nội dung tin nhắn. Hệ thống sẽ lưu lại và chúng tôi sẽ phản hồi sớm nhất có thể. |\n\n### Hướng dẫn nhanh:\n1. **Mở trình duyệt** và truy cập: `https://var.asia/contact` (hoặc nhấn vào nút “Liên hệ” trên menu).\n2. **Điền thông tin** vào form: Họ và tên, Email, Số điện thoại, Công ty, Tiêu đề, Nội dung.\n3. **Nhấn “Gửi”** – chúng tôi sẽ nhận được yêu cầu và trả lời bạn trong thời gian ngắn nhất.\n\nNếu bạn cần hỗ trợ ngay lập tức, hãy gọi điện hoặc gửi email theo thông tin trên. Đội ngũ chuyên gia của VAR luôn sẵn sàng hỗ trợ bạn! 🚀",
+      "context": [
+        {
+          "docName": "Liên hệ (Contact) > Form liên hệ",
+          "page": 0,
+          "text": "[Trang: Liên hệ (Contact) - Form liên hệ] Khách hàng có thể gửi yêu cầu liên hệ trực tiếp qua form trên website với các thông tin: Họ và tên, Email, Số điện thoại, Công ty, Tiêu đề, Nội dung tin nhắn. Sau khi gửi, hệ thống sẽ lưu thông tin và phản hồ"
+        },
+        {
+          "docName": "AI Chatbot > Tổng quan",
+          "page": 0,
+          "text": "[Trang: AI Chatbot - Tổng quan] Trang AI Chatbot cho phép người dùng tra cứu tài liệu thông minh. Người dùng có thể upload tài liệu PDF hoặc DOCX, sau đó đặt câu hỏi và AI sẽ trả lời dựa trên nội dung tài liệu. Hỗ trợ streaming trả lời theo thời gian"
+        },
+        {
+          "docName": "Tính năng website",
+          "page": 0,
+          "text": "Tính năng website: Hỗ trợ đa ngôn ngữ Tiếng Việt và Tiếng Anh. Chế độ sáng/tối (Light/Dark mode). Đăng nhập và Đăng ký tài khoản. Trang quản trị cho admin. AI Chatbot tra cứu tài liệu thông minh. Chat widget nổi trên mọi trang. Tìm kiếm bài viết tin "
+        },
+        {
+          "docName": "Tin tức (API live)",
+          "page": 0,
+          "text": "[Danh sách bài viết/tin tức hiện tại trên website]\n1. \"Đây là bài viết về chủ đề chuyển đổi sổ \" (6/1/2026): Chuyển đổi số (Digital Transformation - DT) là quá trình ứng dụng sâu rộng công nghệ số (AI, Big Data, Cloud, IoT...) vào mọi khía cạnh của t"
+        },
+        {
+          "docName": "Trang chủ (Home) > Hero Banner",
+          "page": 0,
+          "text": "[Trang: Trang chủ (Home) - Hero Banner] VAR là đối tác đấu thầu tin cậy. Chuyên gia tư vấn và hỗ trợ đấu thầu dự án. VAR cung cấp giải pháp tư vấn đấu thầu chuyên nghiệp, giúp doanh nghiệp tối ưu hóa quy trình và nâng cao tỷ lệ trúng thầu với đội ngũ"
+        },
+        {
+          "docName": "Liên hệ (Contact) > Thông tin liên hệ",
+          "page": 0,
+          "text": "[Trang: Liên hệ (Contact) - Thông tin liên hệ] Địa chỉ: Số 123, Đường ABC, Quận XYZ, Thành phố HCM (Tòa nhà Vinaconex 7, Hà Nội). Điện thoại: +84 123 456 789. Email: contact@example.com. Giờ làm việc: Thứ 2 - Thứ 6: 8:00 - 18:00. Hỗ trợ 24/7. Chúng t"
+        },
+        {
+          "docName": "Thông tin chung website",
+          "page": 0,
+          "text": "Website: VAR - Technology Solutions. Lĩnh vực: Tư vấn đấu thầu (Bidding Consultancy). Chuyên gia tư vấn đấu thầu hàng đầu Việt Nam. Cung cấp dịch vụ tư vấn chuyên nghiệp, giúp doanh nghiệp nâng cao năng lực cạnh tranh trong đấu thầu."
+        },
+        {
+          "docName": "Trang chủ (Home) > CTA (Call to Action)",
+          "page": 0,
+          "text": "[Trang: Trang chủ (Home) - CTA (Call to Action)] Bạn đang chuẩn bị cho gói thầu quan trọng? Đừng để cơ hội trôi qua. Liên hệ ngay với đội ngũ chuyên gia của chúng tôi để được tư vấn miễn phí và nâng cao khả năng trúng thầu."
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 41,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 2: CƠ SỞ LÝ THUYẾT \n \n19 \nNhóm 9 \n● Hiện thực hóa gom cụm tài nguyên: bằng cách trừu tượng hóa phần cứng vật lý \nthành các tài nguyên ảo có thể quản lý bằng phần mềm, ảo hóa cho phép các \nnhà cung cấp đám mây gộp tài n"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 44,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 2: CƠ SỞ LÝ THUYẾT \n \n22 \nNhóm 9 \n \nHình 2.5. Hypervisor \nMột trong những lợi ích hàng đầu là khả năng tối ưu hóa việc sử dụng tài nguyên \nphần cứng. Thay vì nhiều máy chủ vật lý hoạt động dưới công suất, hypervisor ch"
+        }
+      ],
+      "timestamp": "2026-04-15T09:47:50.144Z"
+    },
+    {
+      "id": "c5ed62f0-5f9e-4f6f-81d5-0c58550222f3",
+      "question": "VAR c� nh?ng d?ch v? g�?",
+      "answer": "**VAR – Các dịch vụ chính mà chúng tôi cung cấp**\n\n| STT | Tên dịch vụ | Nội dung chính | Lợi ích cho khách hàng |\n|-----|-------------|----------------|------------------------|\n| 1️⃣ | **Dịch vụ đấu thầu** | Đánh giá thị trường, phân tích đối thủ cạnh tranh, xây dựng chiến lược đấu thầu, định giá cạnh tranh. | Giúp bạn nắm bắt cơ hội, tối ưu chi phí và tăng khả năng trúng thầu. |\n| 2️⃣ | **Chuẩn bị hồ sơ dự thầu** | Soạn thảo hồ sơ đầy đủ, chính xác theo yêu cầu HSMT, đảm bảo tuân thủ luật đấu thầu. | Giảm rủi ro hồ sơ bị trả lại, nâng cao tính chuyên nghiệp. |\n| 3️⃣ | **Tư vấn đấu thầu toàn diện** | Phân tích HSMT chi tiết, xây dựng chiến lược, tư vấn pháp lý, kiểm tra tính hợp lệ, tối ưu nội dung. | Đảm bảo mọi khâu từ chuẩn bị đến nộp thầu đều được hỗ trợ tối đa. |\n| 4️⃣ | **Quản lý dự án đấu thầu** | Hỗ trợ quản lý toàn bộ quy trình từ chuẩn bị đến thực hiện hợp đồng: lập kế hoạch, theo dõi tiến độ, quản lý rủi ro, giám sát thực hiện. | Giúp dự án diễn ra suôn sẻ, giảm thiểu sai sót và tăng hiệu quả thực hiện. |\n| 5️⃣ | **Dịch vụ chăm sóc khách hàng** | Hỗ trợ 24/7, giải quyết vấn đề ngay lập tức, đảm bảo sự hài lòng tối đa. | Bạn luôn có người đồng hành kịp thời trong mọi tình huống. |\n| 6️⃣ | **Dịch vụ CNTT (được liệt kê trong danh sách dịch vụ hiện tại)** | Đánh giá thị trường, phân tích đối thủ, xây dựng chiến lược đấu thầu. (Chi tiết có thể được tùy chỉnh theo nhu cầu). | Hỗ trợ kỹ thuật và công nghệ cho các dự án đấu thầu phức tạp. |\n| 7️⃣ | **Dịch vụ mới nhất** | Cập nhật tính năng mới: tính năng 1, tính năng 2, tính năng 3, tính năng 4. | Luôn mang lại giải pháp hiện đại, đáp ứng nhanh chóng nhu cầu thay đổi của thị trường. |\n\n### Thông tin bổ sung\n- **Câu hỏi thường gặp (FAQ)**: Bạn có thể xem chi tiết các câu hỏi như “Dịch vụ tư vấn đấu thầu bao gồm những gì?”, “Chi phí tư vấn được tính như thế nào?”, “Thời gian hoàn thành hồ sơ thầu”… tại trang **/services/faq**.  \n- **Quy trình làm việc**: Bước 1 – Tiếp nhận yêu cầu → Bước 2 – Phân tích & Đánh giá → Bước 3 – Xây dựng hồ sơ → Bước 4 – Hỗ trợ & Theo dõi (xem chi tiết tại **/services/process**).  \n- **Tỷ lệ thành công**: Trung bình trên **85%**, với các gói tư vấn toàn diện có thể lên tới **95%**.\n\n### Đường dẫn nhanh\n- Danh sách dịch vụ chi tiết: **/services**  \n- FAQ: **/services/faq**  \n- Liên hệ tư vấn miễn phí: **/contact** (hoặc gọi hotline trên trang Liên hệ)\n\nNếu bạn cần tư vấn cụ thể cho dự án của mình, hãy để lại yêu cầu qua mẫu liên hệ hoặc gọi trực tiếp. Chúng tôi sẽ phản hồi trong vòng **24 giờ** và lên lịch buổi tư vấn miễn phí. 🚀",
+      "context": [
+        {
+          "docName": "Tin tức (API live)",
+          "page": 0,
+          "text": "[Danh sách bài viết/tin tức hiện tại trên website]\n1. \"Đây là bài viết về chủ đề chuyển đổi sổ \" (6/1/2026): Chuyển đổi số (Digital Transformation - DT) là quá trình ứng dụng sâu rộng công nghệ số (AI, Big Data, Cloud, IoT...) vào mọi khía cạnh của t"
+        },
+        {
+          "docName": "Dịch vụ (API live)",
+          "page": 0,
+          "text": "[Danh sách dịch vụ hiện tại trên website]\n1. Dịch vụ đấu thầu: Đánh giá thị trường, phân tích đối thủ cạnh tranh và xây dựng chiến lược đấu thầu hiệu quả. Nghiên cứu thị trường. Phân tích đối thủ. Định giá cạnh tranh. Chiến lược đấu thầu\n2. Chuẩn bị "
+        },
+        {
+          "docName": "Giới thiệu (About) > Giới thiệu chung",
+          "page": 0,
+          "text": "[Trang: Giới thiệu (About) - Giới thiệu chung] Với hơn 15 năm kinh nghiệm trong lĩnh vực tư vấn đấu thầu, chúng tôi tự hào là đơn vị tiên phong trong việc cung cấp các giải pháp toàn diện cho doanh nghiệp. Đội ngũ chuyên gia của chúng tôi luôn sẵn sà"
+        },
+        {
+          "docName": "Giới thiệu (About) > Đội ngũ chuyên gia",
+          "page": 0,
+          "text": "[Trang: Giới thiệu (About) - Đội ngũ chuyên gia] 1. Nguyễn Văn Anh - Giám đốc Tư vấn: Hơn 15 năm kinh nghiệm trong lĩnh vực tư vấn đấu thầu, chuyên gia hàng đầu về luật đấu thầu và quy trình mua sắm công. Chuyên môn: Luật đấu thầu, Chiến lược, Quản l"
+        },
+        {
+          "docName": "Dịch vụ (Services) > Câu hỏi thường gặp (FAQ)",
+          "page": 0,
+          "text": "[Trang: Dịch vụ (Services) - Câu hỏi thường gặp (FAQ)] Q: Dịch vụ tư vấn đấu thầu bao gồm những gì? A: Dịch vụ bao gồm: tư vấn lập hồ sơ mời thầu, hỗ trợ chuẩn bị hồ sơ dự thầu, phân tích và đánh giá năng lực nhà thầu, tư vấn chiến lược đấu thầu, và "
+        },
+        {
+          "docName": "Trang chủ (Home) > Giới thiệu (Why Choose Us)",
+          "page": 0,
+          "text": "[Trang: Trang chủ (Home) - Giới thiệu (Why Choose Us)] Kinh nghiệm chuyên sâu: Hơn 12 năm đồng hành cùng doanh nghiệp trong lĩnh vực tư vấn đấu thầu, mang lại giải pháp tối ưu và hiệu quả nhất. Đội ngũ chuyên nghiệp: Đội ngũ chuyên gia nhiều năm kinh"
+        },
+        {
+          "docName": "Dịch vụ (Services) > Quy trình làm việc",
+          "page": 0,
+          "text": "[Trang: Dịch vụ (Services) - Quy trình làm việc] Bước 1 - Tiếp nhận yêu cầu: Lắng nghe và phân tích nhu cầu cụ thể của khách hàng. Bước 2 - Phân tích & Đánh giá: Nghiên cứu hồ sơ mời thầu và đánh giá năng lực. Bước 3 - Xây dựng hồ sơ: Chuẩn bị hồ sơ "
+        },
+        {
+          "docName": "Tính năng website",
+          "page": 0,
+          "text": "Tính năng website: Hỗ trợ đa ngôn ngữ Tiếng Việt và Tiếng Anh. Chế độ sáng/tối (Light/Dark mode). Đăng nhập và Đăng ký tài khoản. Trang quản trị cho admin. AI Chatbot tra cứu tài liệu thông minh. Chat widget nổi trên mọi trang. Tìm kiếm bài viết tin "
+        },
+        {
+          "docName": "BÁO CÁO THỰC TẬP TỐT NGHIỆP (1).pdf",
+          "page": 34,
+          "text": "BÁO CÁO THỰC TẬP TỐT NGHIỆP  ĐINH CÔNG NHẤT – B21DCVT037 \n \nCREATE DATABASE .....; \nCREATE USER 'cloudjtsc'@'localhost' IDENTIFIED BY '......'; \nGRANT ALL PRIVILEGES ON ......* TO '.....'@'localhost'; \nFLUSH PRIVILEGES; \nEXIT; \n2. Tải và cài đặt Next"
+        },
+        {
+          "docName": "Báo cáo ĐA KHMT.docx",
+          "page": 1,
+          "text": "\"320 Gói thầu đã trúng\": Minh chứng năng lực thực chiến.\n\n\"1000 Khách hàng tin tưởng\": Khẳng định uy tín thương hiệu.\n\n\"12 Năm kinh nghiệm\": Bề dày hoạt động chuyên môn.\n\n\"85% Tỷ lệ trúng thầu\": Cam kết chất lượng dịch vụ.\n\nDanh mục dịch vụ: Được trì"
+        }
+      ],
+      "timestamp": "2026-04-15T09:47:12.395Z"
+    },
+    {
+      "id": "15b2ca3f-7c35-4529-b1a6-482fa4c7e1c6",
+      "question": "ggiangr viên hướng dẫn là ai",
+      "answer": "Giảng viên hướng dẫn của đề tài “Nghiên cứu triển khai hạ tầng Private Cloud tích hợp website cung cấp dịch vụ” là **ThS. Hoàng Thị Thu**.  \n\n*Tham khảo:*  \n- **Nhóm 09 - Đồ án tốt nghiệp.pdf** (trang 4) – phần “Giảng viên hướng dẫn: ThS. Hoàng Thị Thu”.",
+      "context": [
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 5,
+          "text": "kết, so sánh các mô hình, nêu hạn chế và đề xuất hướng phát triển cho nghiên cứu \ntrong tương lai \nVới chủ đề Nghiên cứu triển khai hạ tầng Private Cloud tích hợp website \ncung cấp dịch vụ đang được ứng dụng rất nhiều trong thực tế hiện nay, đồ án của \nnhóm sinh viên Đỗ Mạnh Tùng, Đinh Công Nhất và "
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 4,
+          "text": "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM \nĐộc lập – Tự do – Hạnh phúc \n \nHà Nội, ngày 22 tháng 12 năm 2025 \n \nNHẬN XÉT CỦA GIẢNG VIÊN HƯỚNG DẪN ĐỒ ÁN/KHÓA LUẬN TỐT \nNGHIỆP ĐẠI HỌC \n \nTên đề tài: Nghiên cứu triển khai hạ tầng Private Cloud tích hợp website cung \ncấp dịch vụ. \n1. Họ và tên nhóm sinh viên, s"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 8,
+          "text": "ii \nNhóm 9 \nLỜI CAM ĐOAN \nNhóm 9 xin cam đoan đồ án tốt nghiệp với đề tài: Nghiên cứu triển khai hạ \ntầng private cloud tích hợp website cung cấp dịch vụ” là công trình nghiên cứu của \nriêng nhóm. Đồ án được thực hiện dưới sự hướng dẫn tận tình của Thạc sĩ Hoàng \nThị Thu và sự hỗ trợ đào tạo của kho"
+        },
+        {
+          "docName": "BÁO CÁO THỰC TẬP TỐT NGHIỆP (1).pdf",
+          "page": 12,
+          "text": "BÁO CÁO THỰC TẬP TỐT NGHIỆP  ĐINH CÔNG NHẤT – B21DCVT037 \n \n1.2.1. Hiện trạng hệ thống tại JTSC \n● Mô hình mạng: hệ thống mạng của công ty hiện đang được tổ chức theo mô \nhình mạng ngang hàng (WORKGROUP). Trong mô hình này, mỗi máy tính hoạt \nđộng như một thực thể độc lập, tự quản lý tài khoản người"
+        },
+        {
+          "docName": "BÁO CÁO THỰC TẬP TỐT NGHIỆP (1).pdf",
+          "page": 44,
+          "text": "BÁO CÁO THỰC TẬP TỐT NGHIỆP  ĐINH CÔNG NHẤT – B21DCVT037 \n \n5.5.1. Nguyên tắc Bảo mật và Toàn vẹn Dữ liệu \nNgười quản trị viên có trách nhiệm cao nhất trong việc bảo vệ tài sản số của \nJTSC. Dữ liệu lưu trữ trên JTSC CLOUD bao gồm tài sản trí tuệ, kế hoạch kinh \ndoanh, dữ liệu tài chính, hợp đồng vớ"
+        }
+      ],
+      "timestamp": "2026-03-31T09:38:17.246Z"
+    },
+    {
+      "id": "86445907-daf1-4fb0-9c35-0d3c6f5b3e3f",
+      "question": "nhóm thực tập có bao nhiêu thành viên",
+      "answer": "Theo nội dung trong **BÁO CÁO THỰC TẬP TỐT NGHIỆP (1).pdf** (trang 2), phần “LỜI CẢM ƠN” và thông tin cuối báo cáo chỉ ghi tên **Đinh Công Nhất** là “Sinh viên thực hiện”. Không có đề cập đến các thành viên khác, nên có thể khẳng định rằng **nhóm thực tập chỉ gồm 1 thành viên**.",
+      "context": [
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 7,
+          "text": "i \nNhóm 9 \nLỜI CẢM ƠN \nNhóm em xin tỏ lòng biết ơn sâu sắc tới Ban giám đốc Học viện Công nghệ \nBưu chính Viễn thông, ban chủ nhiệm Khoa Viễn thông 1 cùng toàn thể quý Thầy \nCô giáo trong khoa. Những kiến thức nền tảng vững chắc về mạng máy tính, ảo \nhóa, an ninh mạng và viễn thông mà Thầy Cô đã tru"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 26,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 1: GIỚI THIỆU TỔNG QUAN VỀ ĐỀ TÀI \n \n5 \n \no Thiết kế hệ thống: hình dung và đưa ra mô hình kiến trúc tổng thể cho hệ \nthống: người dùng → Next.Js → Fastapi → Prisma  → Proxmox  Api → Tạo \nVm). \no Triển khai: \no Cài đặt, cấu hình hạ tầng proxmox. \no Lập trình back-end "
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 53,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 2: CƠ SỞ LÝ THUYẾT \n \n30 \nNhóm 9 \nMô hình dựa trên vai trò: hệ thống sử dụng mô hình kiểm soát truy cập dựa \ntrên vai trò. Các quyền cụ thể được nhóm thành các vai trò. Các vai trò này sau đó \nđược gán cho người dùng hoặc nhóm trên một đường dẫn tài nguyên cụ thể. \nRe"
+        },
+        {
+          "docName": "BÁO CÁO THỰC TẬP TỐT NGHIỆP (1).pdf",
+          "page": 2,
+          "text": "BÁO CÁO THỰC TẬP TỐT NGHIỆP  ĐINH CÔNG NHẤT – B21DCVT037 \n \nLỜI CẢM ƠN \nĐể hoàn thành chương trình học và bài báo cáo thực tập tốt nghiệp này, em \nxin gửi lời cảm ơn chân thành và sâu sắc nhất đến Ban Giám hiệu nhà trường, \nquý thầy cô trong khoa Viễn thông 1 đã tận tình giảng dạy, truyền đạt cho em"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 107,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 5: THỰC HIỆN KIỂM THỬ TOÀN DIỆN,... \n \n79 \nNhóm 9 \nCHƯƠNG 5: THỰC HIỆN KIỂM THỬ TOÀN DIỆN, ĐÁNH GIÁ TỔNG THỂ \nHỆ THỐNG VÀ ĐƯA RA KẾT LUẬN \nNhóm đã hoàn tất giai đoạn triển khai kỹ thuật ở chương vừa rồi, bao gồm \nviệc thiết lập hạ tầng vật lý, chuẩn hóa các template C"
+        }
+      ],
+      "timestamp": "2026-03-31T09:37:48.406Z"
+    },
+    {
+      "id": "a7582396-12ff-458d-9311-244bc76aa63a",
+      "question": "alo",
+      "answer": "Xin chào!  \n\nTheo các quy tắc đã đưa ra, tôi chỉ có thể trả lời dựa trên nội dung có trong các đoạn tài liệu mà bạn cung cấp. Trong các tài liệu trên (bao gồm **\"BÁO CÁO THỰC TẬP TỐT NGHIỆP (1).pdf\"** và **\"Báo cáo ĐA KHMT.docx\"**) không có thông tin nào liên quan tới câu hỏi “alo” hay bất kỳ nội dung nào có thể giải đáp câu hỏi này.\n\nDo đó, tôi không thể đưa ra câu trả lời cụ thể cho câu hỏi này dựa trên tài liệu hiện có. Nếu bạn có câu hỏi khác liên quan đến các chủ đề đã nêu (Active Directory, DNS, DHCP, Nextcloud, quy trình tiếp nhận yêu cầu khách hàng, …) thì vui lòng cung cấp chi tiết hơn, tôi sẽ hỗ trợ dựa trên tài liệu đã cho.",
+      "context": [
+        {
+          "docName": "BÁO CÁO THỰC TẬP TỐT NGHIỆP (1).pdf",
+          "page": 18,
+          "text": "BÁO CÁO THỰC TẬP TỐT NGHIỆP  ĐINH CÔNG NHẤT – B21DCVT037 \n \n- Domains: là một tập hợp các đối tượng chia sẻ chung một cơ sở dữ liệu \nAD. Nó là một ranh giới quản trị và bảo mật. \n- Trees: là một tập hợp các domain có chung một không gian tên DNS liền \nkề (ví dụ: jtsc.local và sale.jtsc.local). \n- Fo"
+        },
+        {
+          "docName": "BÁO CÁO THỰC TẬP TỐT NGHIỆP (1).pdf",
+          "page": 31,
+          "text": "BÁO CÁO THỰC TẬP TỐT NGHIỆP  ĐINH CÔNG NHẤT – B21DCVT037 \n \nhơn. Đảm bảo các tùy chọn \"Domain Name System (DNS) server\" và \n\"Global Catalog (GC)\" được chọn.  \n \nHình 4.5. Thiết lập password cho Domain \n- Wizard sẽ kiểm tra các điều kiện tiên quyết và sau đó tiến hành cài đặt. Máy \nchủ tự động khởi đ"
+        },
+        {
+          "docName": "Báo cáo ĐA KHMT.docx",
+          "page": 1,
+          "text": "Tiếp nhận yêu cầu: Khách hàng thường liên hệ qua điện thoại, Zalo cá nhân của tư vấn viên hoặc gửi email. Thông tin yêu cầu thường rời rạc, không đầy đủ, dẫn đến việc phải trao đổi lại nhiều lần.\n\nXử lý và tra cứu: Tư vấn viên phải dựa vào kinh nghiệm cá nhân và tra cứu thủ công trên các văn bản in "
+        },
+        {
+          "docName": "Báo cáo ĐA KHMT.docx",
+          "page": 1,
+          "text": "Mọi thông tin về năng lực công ty, hồ sơ pháp lý, danh mục dịch vụ và kiến thức đấu thầu được quy về một mối duy nhất trên website. Khách hàng có thể chủ động tìm hiểu thông tin sơ bộ (Self-service) thông qua các bài viết và trang dịch vụ chi tiết trước khi quyết định liên hệ.\n\nThay vì phân tán ở Za"
+        }
+      ],
+      "timestamp": "2026-03-30T09:04:38.081Z"
+    },
+    {
+      "id": "8e46dbc5-361f-482d-9948-74cb519f7e50",
+      "question": "alo",
+      "answer": "**Câu hỏi chưa rõ nội dung**  \n\nTrong các đoạn tài liệu mà bạn cung cấp, không có thông tin nào liên quan đến câu hỏi “alo” hay bất kỳ vấn đề cụ thể nào cần giải đáp. Vì vậy, dựa trên nguyên tắc chỉ trả lời dựa trên tài liệu, tôi không thể đưa ra câu trả lời cụ thể.\n\nNếu bạn có câu hỏi chi tiết hơn (ví dụ: về **Active Directory**, **DHCP/DNS**, **Nextcloud**, hoặc quy trình tiếp nhận yêu cầu khách hàng), vui lòng nêu rõ để tôi có thể tra cứu và trả lời dựa trên các tài liệu đã cho.",
+      "context": [
+        {
+          "docName": "BÁO CÁO THỰC TẬP TỐT NGHIỆP (1).pdf",
+          "page": 18,
+          "text": "BÁO CÁO THỰC TẬP TỐT NGHIỆP  ĐINH CÔNG NHẤT – B21DCVT037 \n \n- Domains: là một tập hợp các đối tượng chia sẻ chung một cơ sở dữ liệu \nAD. Nó là một ranh giới quản trị và bảo mật. \n- Trees: là một tập hợp các domain có chung một không gian tên DNS liền \nkề (ví dụ: jtsc.local và sale.jtsc.local). \n- Fo"
+        },
+        {
+          "docName": "BÁO CÁO THỰC TẬP TỐT NGHIỆP (1).pdf",
+          "page": 31,
+          "text": "BÁO CÁO THỰC TẬP TỐT NGHIỆP  ĐINH CÔNG NHẤT – B21DCVT037 \n \nhơn. Đảm bảo các tùy chọn \"Domain Name System (DNS) server\" và \n\"Global Catalog (GC)\" được chọn.  \n \nHình 4.5. Thiết lập password cho Domain \n- Wizard sẽ kiểm tra các điều kiện tiên quyết và sau đó tiến hành cài đặt. Máy \nchủ tự động khởi đ"
+        },
+        {
+          "docName": "Báo cáo ĐA KHMT.docx",
+          "page": 1,
+          "text": "Tiếp nhận yêu cầu: Khách hàng thường liên hệ qua điện thoại, Zalo cá nhân của tư vấn viên hoặc gửi email. Thông tin yêu cầu thường rời rạc, không đầy đủ, dẫn đến việc phải trao đổi lại nhiều lần.\n\nXử lý và tra cứu: Tư vấn viên phải dựa vào kinh nghiệm cá nhân và tra cứu thủ công trên các văn bản in "
+        },
+        {
+          "docName": "Báo cáo ĐA KHMT.docx",
+          "page": 1,
+          "text": "Mọi thông tin về năng lực công ty, hồ sơ pháp lý, danh mục dịch vụ và kiến thức đấu thầu được quy về một mối duy nhất trên website. Khách hàng có thể chủ động tìm hiểu thông tin sơ bộ (Self-service) thông qua các bài viết và trang dịch vụ chi tiết trước khi quyết định liên hệ.\n\nThay vì phân tán ở Za"
+        }
+      ],
+      "timestamp": "2026-03-30T02:59:22.924Z"
+    },
+    {
+      "id": "4a76dbf2-4354-488a-8d91-49793b9579ed",
+      "question": "hãy so sánh xem 2 đồ án này có độ tương đồng giống nhau không",
+      "answer": "**So sánh độ tương đồng giữa hai đồ án**  \n*(Dựa trên các đoạn trích từ **BÁO CÁO THỰC TẬP TỐT NGHIỆP (1).pdf** và **Nhóm 09 - Đồ án tốt nghiệp.pdf**)*  \n\n| Tiêu chí | **BÁO CÁO THỰC TẬP TỐT NGHIỆP (1).pdf** | **Nhóm 09 - Đồ án tốt nghiệp.pdf** | Đánh giá mức độ tương đồng |\n|----------|----------------------------------------|-----------------------------------|----------------------------|\n| **Mục tiêu chung** | Đề xuất giải pháp *Private Cloud* cho công ty JTSC, cải thiện quản lý, bảo mật và hiệu suất. (trang 12) | Xây dựng hệ thống *Private Cloud* dựa trên Proxmox VE, cung cấp dịch vụ VPS và website. (trang 29, 65) | **Rất cao** – cả hai đều hướng tới việc triển khai private cloud để giải quyết vấn đề quản lý và bảo mật. |\n| **Nhấn mạnh bảo mật & quyền riêng tư** | - Nguyên tắc “Không xem xét”, “Cần biết”. <br>- Yêu cầu ghi log, phân quyền chặt chẽ. (trang 44) | - Cam kết không xâm phạm dữ liệu cá nhân, chỉ người dùng sở hữu VPS mới có quyền truy cập. <br>- Mật khẩu, thông tin nhạy cảm được mã hoá. (trang 29) | **Rất cao** – cùng đề cập tới nguyên tắc bảo mật, quyền riêng tư và hạn chế truy cập không được phép. |\n| **Quy định phân quyền & giám sát** | Phân quyền đúng đắn, giám sát nhật ký chỉ cho mục đích hợp pháp. (trang 44) | Quản trị viên có quyền truy cập hạ tầng, nhưng quy trình kỹ thuật được thiết kế để chỉ cho phép truy cập cần thiết. (trang 29) | **Cao** – cả hai đều nhấn mạnh việc phân quyền tối thiểu và giám sát có mục đích. |\n| **Kiến trúc / công nghệ** | Không chi tiết về công nghệ cụ thể, chỉ nêu nhu cầu chuyển từ mô hình WORKGROUP sang *Private Cloud*. (trang 12) | Sử dụng Proxmox VE, API tự động tạo VM, tích hợp chatbot, dashboard khách hàng & admin, đề cập tới HA, Ceph trong tương lai. (trang 65, 29) | **Trung bình** – cùng hướng tới private cloud, nhưng tài liệu dự án cung cấp chi tiết kỹ thuật rõ ràng hơn. |\n| **Yêu cầu phi chức năng** | Không liệt kê chi tiết; tập trung vào chính sách bảo mật và quản trị. | Đặt tiêu chuẩn thời gian tải < 3 giây, phản hồi chatbot < 3 giây, thời gian cung cấp VPS < 5 phút, chịu tải cao. (trang 65) | **Thấp** – chỉ một trong hai (đồ án) có các chỉ tiêu phi chức năng cụ thể. |\n| **Đánh giá đạo đức nghề nghiệp** | Đề cập tới trách nhiệm đạo đức của quản trị viên trong bảo mật và quyền riêng tư. (trang 44) | Đưa ra phần “Đạo đức nghề nghiệp của một quản trị viên hệ thống” với ba tiêu chí: bảo mật, trung thực khoa học, tôn trọng sở hữu trí tuệ. (trang 29) | **Cao** – cả hai đều nhấn mạnh đạo đức nghề nghiệp, dù cách trình bày khác nhau. |\n| **Bối cảnh thực tiễn** | Dựa trên thực trạng công ty JTSC (mô hình WORKGROUP, lưu trữ rải rác). (trang 12) | Là dự án sinh viên, mô tả kịch bản sử dụng cho khách hàng và quản trị viên, không gắn liền với công ty cụ thể. (trang 65) | **Thấp** – nguồn gốc và đối tượng áp dụng khác nhau. |\n\n### Kết luận\n- **Mức độ tương đồng chung**: **cao** về **định hướng** (triển khai private cloud), **nguyên tắc bảo mật**, **quyền riêng tư**, và **đạo đức nghề nghiệp**. Cả hai tài liệu đều đặt bảo mật và quyền riêng tư lên hàng đầu và đề xuất một môi trường đám mây riêng để giải quyết các vấn đề hiện tại.\n- **Mức độ khác nhau**: **trình độ chi tiết kỹ thuật** và **yêu cầu phi chức năng**. Đồ án nhóm 09 cung cấp mô tả chi tiết về chức năng (dashboard, chatbot, API Proxmox) và các chỉ tiêu hiệu suất, trong khi báo cáo thực tập chỉ tập trung vào chính sách, quy trình và lý do cần chuyển đổi.\n- **Nhận định tổng thể**: Hai đồ án **giống nhau về mục tiêu và quan điểm bảo mật**, nhưng **khác nhau về phạm vi thực thi và mức độ chi tiết**. Vì vậy, chúng có **độ tương đồng cao về nội dung chiến lược và đạo đức**, nhưng **khá khác nhau về mặt kỹ thuật và ứng dụng thực tiễn**.",
+      "context": [
+        {
+          "docName": "BÁO CÁO THỰC TẬP TỐT NGHIỆP (1).pdf",
+          "page": 44,
+          "text": "BÁO CÁO THỰC TẬP TỐT NGHIỆP  ĐINH CÔNG NHẤT – B21DCVT037 \n \n5.5.1. Nguyên tắc Bảo mật và Toàn vẹn Dữ liệu \nNgười quản trị viên có trách nhiệm cao nhất trong việc bảo vệ tài sản số của \nJTSC. Dữ liệu lưu trữ trên JTSC CLOUD bao gồm tài sản trí tuệ, kế hoạch kinh \ndoanh, dữ liệu tài chính, hợp đồng vớ"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 29,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC    CHƯƠNG 1: GIỚI THIỆU TỔNG QUAN VỀ ĐỀ TÀI \n8 \n \no Tổng kết lại những kết quả đã đạt được, so sánh ưu nhược điểm của mô hình \ntriển khai so với các giải pháp khác. Đồng thời thảo luận về trách nhiệm đạo \nđức nghề nghiệp, chỉ ra các hạn chế còn tồn tại và đề xuất lộ trình nâ"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 65,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 3: PHÂN TÍCH TỔNG THỂ YÊU CẦU \n \n41 \nNhóm 9 \no Người dùng đã đăng nhập có thể tạo một yêu cầu hỗ trợ mới , cung cấp tiêu \nđề, mô tả vấn đề và chọn loại vấn đề. \no Người dùng có thể xem danh sách các yêu cầu hỗ trợ của mình, bao gồm \ntrạng thái , đồng thời cũng có thể "
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 127,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 6: TỔNG KẾT, SO SÁNH CÁC MÔ HÌNH,... \n \n106 \nNhóm 9 \nCHƯƠNG 6: TỔNG KẾT, SO SÁNH CÁC MÔ HÌNH, NÊU HẠN CHẾ \nVÀ  ĐỀ  XUẤT  HƯỚNG  PHÁT  TRIỂN  CHO  NGHIÊN  CỨU  TRONG \nTƯƠNG LAI \nNhóm nghiên cứu đã hoàn thành xuất sắc mục tiêu đề ra khi xây dựng thành \ncông hệ thống Pri"
+        },
+        {
+          "docName": "BÁO CÁO THỰC TẬP TỐT NGHIỆP (1).pdf",
+          "page": 12,
+          "text": "BÁO CÁO THỰC TẬP TỐT NGHIỆP  ĐINH CÔNG NHẤT – B21DCVT037 \n \n1.2.1. Hiện trạng hệ thống tại JTSC \n● Mô hình mạng: hệ thống mạng của công ty hiện đang được tổ chức theo mô \nhình mạng ngang hàng (WORKGROUP). Trong mô hình này, mỗi máy tính hoạt \nđộng như một thực thể độc lập, tự quản lý tài khoản người"
+        }
+      ],
+      "timestamp": "2026-03-23T09:34:53.586Z"
+    },
+    {
+      "id": "70753a8a-24d5-4826-96ab-68ab126dc3c1",
+      "question": "cpu có bao nhiêu core",
+      "answer": "Theo phần **Cấu hình máy chủ vật lý** được nêu trong tài liệu **\"Nhóm 09 - Đồ án tốt nghiệp.pdf\" – Trang 88**, máy chủ Dell PowerEdge R630 được trang bị:\n\n- **2 CPU Intel Xeon E5‑2678 v3**  \n- **2 sockets**  \n- **24 cores** (tương đương **48 luồng**)\n\nVì vậy, CPU của máy chủ này có **24 core**.  \n\n*(Nguồn: **Nhóm 09 - Đồ án tốt nghiệp.pdf**, trang 88)*",
+      "context": [
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 78,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 3: PHÂN TÍCH TỔNG THỂ YÊU CẦU \n \n53 \nNhóm 9 \n    \"storage_type\": \"ssd\", \n    \"storage_gb\": 50, \n    \"bandwidth_mbps\": 200, \n    \"monthly_price\": 79000, \n    \"currency\": \"vnd\", \n    \"max_snapshots\": 1, \n    \"max_ip_addresses\": 1, \n    \"id\": \"76c93f75-50c8-4e69-bb4d-f22"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 88,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 4: TRIỂN KHAI WEBSERVER,VPN,.. \n \n62 \nNhóm 9 \nlà mấu chốt kỹ thuật cho phép website FastAPI có thể giao tiếp cũng như điều khiển hạ \ntầng một cách linh hoạt. \n4.2. Chuẩn bị môi trường triển khai \nViệc chuẩn bị một môi trường triển khai vô cùng quan trọng, bởi vì hệ th"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 34,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 2: CƠ SỞ LÝ THUYẾT \n \n13 \nNhóm 9 \nIaaS là lớp dưới cùng của mô hình dịch vụ điện toán đám mây. Các chức năng \nchính của IaaS bao gồm: \n● Cung cấp tài nguyên ảo hóa: IaaS cung cấp quyền truy cập vào các tài nguyên \nmáy tính trong một môi trường ảo hóa. Nó cung cấp các "
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 53,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 2: CƠ SỞ LÝ THUYẾT \n \n30 \nNhóm 9 \nMô hình dựa trên vai trò: hệ thống sử dụng mô hình kiểm soát truy cập dựa \ntrên vai trò. Các quyền cụ thể được nhóm thành các vai trò. Các vai trò này sau đó \nđược gán cho người dùng hoặc nhóm trên một đường dẫn tài nguyên cụ thể. \nRe"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 85,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 3: PHÂN TÍCH TỔNG THỂ YÊU CẦU \n \n59 \nNhóm 9 \n  \"task\": \n\"upid:pve:002168cb:01d94d67:694431a2:qmreboot:104:root@pam:\", \n  \"message\": \"vm 104 rebooting\" \n} \n3.4. Yêu cầu chức năng của proxmox \n3.4.1. Quản lý vòng đời máy ảo \nĐây là nhóm yêu cầu cốt lõi, cho phép hệ thốn"
+        }
+      ],
+      "timestamp": "2026-03-23T08:36:55.553Z"
+    },
+    {
+      "id": "041d87c3-d705-4004-b461-59c880123ba0",
+      "question": "CPU được sử dụng là gì? Xeon? và Ra, 64Gb ?",
+      "answer": "**Câu trả lời:**  \n\nTrong các đoạn trích tài liệu mà bạn cung cấp (trang 32, 34, 53, 66, 131) không có thông tin nào nêu rõ loại CPU được sử dụng cho hạ tầng IaaS/Private Cloud – chẳng hạn như “Xeon” – cũng như không đề cập đến dung lượng RAM cụ thể (ví dụ “64 GB”).  \n\n- **Trang 32** chỉ mô tả các giai đoạn phát triển của điện toán đám mây và các đặc điểm của dịch vụ, không nhắc tới phần cứng cụ thể.  \n- **Trang 34** mô tả khái niệm IaaS và các tài nguyên ảo (CPU, bộ nhớ, lưu trữ, mạng) nhưng không chỉ ra model CPU hay dung lượng RAM.  \n- **Trang 53** tập trung vào mô hình kiểm soát truy cập, realms xác thực và quản lý template/ISO của Proxmox VE, không có thông tin về phần cứng.  \n- **Trang 66** nói về yêu cầu hiệu năng, tối ưu cơ sở dữ liệu, bảo mật, độ tin cậy, v.v., nhưng không liệt kê cấu hình CPU/RAM.  \n- **Trang 131** đề cập đến tính ổn định của phần mềm, kernel, cơ chế cô lập lỗi, sao lưu, nhưng cũng không nêu chi tiết phần cứng như CPU Xeon hay RAM 64 GB.  \n\n**Kết luận:** Tài liệu hiện có không cung cấp thông tin về loại CPU (ví dụ Xeon) hay dung lượng RAM (ví dụ 64 GB) được sử dụng trong dự án. Nếu cần biết chi tiết phần cứng, bạn sẽ phải tham khảo các tài liệu kỹ thuật khác hoặc phần mô tả phần cứng của hệ thống mà không có trong các trích đoạn trên.",
+      "context": [
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 32,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 2: CƠ SỞ LÝ THUYẾT \n \n11 \nNhóm 9 \nGiai đoạn 1: nhiều người dùng chia sẻ các máy tính lớn mạnh mẽ bằng cách sử \ndụng thiết bị đầu cuối đơn giản. \nGiai đoạn 2: máy tính cá nhân  độc lập trở nên đủ mạnh để đáp ứng nhu cầu của \nđa số người dùng. \nGiai đoạn 3: máy tính xác"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 53,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 2: CƠ SỞ LÝ THUYẾT \n \n30 \nNhóm 9 \nMô hình dựa trên vai trò: hệ thống sử dụng mô hình kiểm soát truy cập dựa \ntrên vai trò. Các quyền cụ thể được nhóm thành các vai trò. Các vai trò này sau đó \nđược gán cho người dùng hoặc nhóm trên một đường dẫn tài nguyên cụ thể. \nRe"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 66,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 3: PHÂN TÍCH TỔNG THỂ YÊU CẦU \n \n42 \nNhóm 9 \ncó thể hỗ trợ 500+ người dùng đồng thời mà không bị giảm hiệu suất. Để đạt được \nmục tiêu này, việc tối ưu hóa cơ sở dữ liệu là rất quan trọng, bao gồm việc tạo \nindex trên các trường thường xuyên được truy vấn và tối ưu hó"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 131,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 6: TỔNG KẾT, SO SÁNH CÁC MÔ HÌNH,... \n \n110 \nNhóm 9 \nnhạy cảm. Trong kịch bản mất điện lưới, ups cung cấp khoảng thời gian dự phòng \ncần thiết để hệ thống kích hoạt quy trình tắt máy an toàn. Quy trình này đảm bảo \ntoàn bộ dữ liệu trong bộ nhớ đệm được ghi hoàn tất xu"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 34,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 2: CƠ SỞ LÝ THUYẾT \n \n13 \nNhóm 9 \nIaaS là lớp dưới cùng của mô hình dịch vụ điện toán đám mây. Các chức năng \nchính của IaaS bao gồm: \n● Cung cấp tài nguyên ảo hóa: IaaS cung cấp quyền truy cập vào các tài nguyên \nmáy tính trong một môi trường ảo hóa. Nó cung cấp các "
+        }
+      ],
+      "timestamp": "2026-03-23T08:36:36.377Z"
+    },
+    {
+      "id": "52edeace-83f8-4675-a8cf-71cbb4ad4f10",
+      "question": "có mấy phương thức thanh toán?",
+      "answer": "Dựa trên nội dung được trích từ **“Nhóm 09 - Đồ án tốt nghiệp.pdf” – Trang 100**, phần mô tả quy trình hoạt động của hệ thống thanh toán VNPAY nêu rõ:\n\n> “Phía vnpay sẽ hiển thị các **phương thức thanh toán** khác nhau, bao gồm: **thanh toán bằng thẻ ATM nội địa, thẻ thanh toán quốc tế, quét mã QR**, các phương thức khác tùy thuộc cấu hình.”  \n\nNhư vậy, **có ba phương thức thanh toán được liệt kê cụ thể** (thẻ ATM nội địa, thẻ quốc tế, quét mã QR). Ngoài ba phương thức này, hệ thống còn có thể hỗ trợ **các phương thức khác** tùy theo cấu hình, nhưng chúng không được nêu chi tiết trong tài liệu.\n\nVì vậy, **số lượng phương thức thanh toán được xác định rõ trong tài liệu là ba**, với khả năng mở rộng thêm các phương thức khác tùy cấu hình.",
+      "context": [
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 100,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 4: TRIỂN KHAI WEBSERVER,VPN,.. \n \n73 \nNhóm 9 \n \nHình 4.16. Quy trình thanh toán vnpay [9] \nQuy trình hoạt động của hệ thông thanh toán vnpay: \n● Bước 1:  khi khách hàng chọn thanh toán tại một website hoặc ứng dụng thương \nmại điện tử, ứng dụng đó sẽ khởi tạo một giao"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 102,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 4: TRIỂN KHAI WEBSERVER,VPN,.. \n \n75 \nNhóm 9 \n● Mã tmncode ‘vnp_tmncode’ là mã định danh kết nối được khai báo tại hệ thống \ncủa vnpay. Mã định danh tương ứng với tên miền website, ứng dụng, dịch vụ \ncủa merchant kết nối vào vnpay. Mỗi đơn vị có thể có một hoặc nhiều "
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 31,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 2: CƠ SỞ LÝ THUYẾT \n \n10 \nNhóm 9 \nCHƯƠNG 2: CƠ SỞ LÝ THUYẾT VỀ ĐIỆN TOÁN ĐÁM MÂY, CÔNG NGHỆ \nẢO HÓA VÀ CÁC CÔNG NGHỆ WEBSITE \n2.1. Điện toán đám mây \nHiện nay trong thời kì chuyển đổi số về công nghệ toàn cầu thì nhu cầu sử \ndụng các thiết bị cũng ngày càng tăng đặc b"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 25,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 1: GIỚI THIỆU TỔNG QUAN VỀ ĐỀ TÀI \n \n4 \n \n● Website tập trung vào các chức năng lõi: quản lý người dùng, lựa chọn gói cước, \ntự động khởi tạo, và quản lý vòng đời  máy ảo. \n● Các tính năng nâng cao như: hệ thống thanh toán tự động hay cấu hình mạng  \nphức tạp không th"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 99,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 4: TRIỂN KHAI WEBSERVER,VPN,.. \n \n72 \nNhóm 9 \ntính chi phí theo thời gian thuê. Ngoài ra, website còn cung cấp các phương thức \nliên hệ, phản hồi và hỗ trợ khách hàng. \n● Client dashboard: dashboard khách hàng là khu vực làm việc dành riêng cho \nngười dùng sau khi đăn"
+        }
+      ],
+      "timestamp": "2026-03-23T08:36:05.210Z"
+    },
+    {
+      "id": "b26690f5-f30b-459a-aa69-78c55a9efd28",
+      "question": "kịch bản 2",
+      "answer": "**Kịch bản 02 – Kiểm tra cơ chế tự động cấu hình cloud‑init**  \n*(trích từ tài liệu **“Nhóm 09 - Đồ án tốt nghiệp.pdf”** – Trang 108 và Trang 123)*  \n\n---\n\n### 1. Mục tiêu kiểm thử  \n- Xác nhận rằng cloud‑init trên Proxmox có thể tự động truyền và áp dụng các thông tin cấu hình (tên người dùng, mật khẩu, địa chỉ IP, SSH key) ngay trong lần khởi động đầu tiên của máy ảo.  \n- Đảm bảo rằng các tham số này được máy ảo nhận đúng và có thể đăng nhập thành công.\n\n### 2. Quy trình thực hiện chi tiết  \n\n| Bước | Nội dung |\n|------|----------|\n| **B1** | Thực hiện **linked clone** thủ công một máy ảo từ template đã tạo ở Kịch bản 01. |\n| **B2** | Trên giao diện Proxmox, vào phần **cloud‑init** và nhập các tham số mô phỏng: <br>• **User:** `pcloud` <br>• **Password:** `pcloud123` <br>• **Network config:** `dhcp` |\n| **B3** | Khởi động máy ảo và **giám sát quá trình boot** để xem cloud‑init thực thi. |\n| **B4** | Đăng nhập vào hệ điều hành bằng thông tin đã cấu hình (user = pcloud, password = pcloud123). <br>Kiểm tra file `authorized_keys` (đối với SSH) hoặc hồ sơ người dùng để xác nhận các giá trị đã được áp dụng. |\n\n### 3. Tiêu chí chấp nhận  \n- Máy ảo **nhận đúng IP** qua DHCP.  \n- Người dùng `pcloud` có thể **đăng nhập thành công** ngay lần khởi động đầu tiên.  \n- Các tệp cấu hình (ví dụ `authorized_keys`) chứa **SSH key** đã nhập.  \n- Không có lỗi cloud‑init xuất hiện trong log.\n\n### 4. Kết quả thực tế (theo Bảng 5.1 – Trang 123)  \n- **Cấu hình cloud‑init**: “Vm mới nhận đúng ip dhcp, user pcloud đăng nhập thành công ngay lần đầu.” → **Đạt** và “Cơ chế inject hoạt động chính xác.”  \n\n---\n\n#### Tóm tắt  \nKịch bản 02 kiểm tra **tự động cấu hình** của cloud‑init bằng cách tạo một máy ảo clone từ template, thiết lập các tham số người dùng và mạng, sau đó khởi động và xác nhận rằng các tham số này được áp dụng đúng. Kết quả thực nghiệm cho thấy cloud‑init hoạt động ổn định, đáp ứng đầy đủ các tiêu chí chấp nhận.",
+      "context": [
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 18,
+          "text": "ix \nNhóm 9 \nDANH MỤC BẢNG BIỂU \nBảng 2.1. So sánh các mô hình dịch vụ ..................................................................................... 12 \nBảng 2.2. So sánh bốn mô hình triển khai  ................................................................................. 17 \nBảng 2.3. So"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 13,
+          "text": "Nhóm 9 \n4.2.3. Phân chia địa chỉ ip và mạng .................................................................................... 64 \n4.2.4. Cấu hình lưu trữ ...................................................................................................... 65 \n4.2.5. Chuẩn bị máy ảo mẫu ........."
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 107,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 5: THỰC HIỆN KIỂM THỬ TOÀN DIỆN,... \n \n79 \nNhóm 9 \nCHƯƠNG 5: THỰC HIỆN KIỂM THỬ TOÀN DIỆN, ĐÁNH GIÁ TỔNG THỂ \nHỆ THỐNG VÀ ĐƯA RA KẾT LUẬN \nNhóm đã hoàn tất giai đoạn triển khai kỹ thuật ở chương vừa rồi, bao gồm \nviệc thiết lập hạ tầng vật lý, chuẩn hóa các template C"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 123,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 5: THỰC HIỆN KIỂM THỬ TOÀN DIỆN,... \n \n103 \nNhóm 9 \n5.2.3. Tổng hợp kết quả thực nghiệm \nDưới đây là bảng tổng hợp chi tiết kết quả của quá trình kiểm thử thực tế đối với \ncác kịch bản đã đề ra: \nBảng 5.1. Tiêu chí chấm điểm quá trình thử nghiệm \nSTT Tên kịch bản \nkiể"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 108,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 5: THỰC HIỆN KIỂM THỬ TOÀN DIỆN,... \n \n80 \nNhóm 9 \n1. Khởi tạo máy ảo  cơ sở, tiến hành cài đặt hệ điều hành windows/linux. \n2. Cài đặt và cấu hình trình điều khiển virtio và qemu-guest-agent để đảm bảo \nhypervisor có thể giao tiếp và lấy thông tin từ máy ảo. \n3. Thực"
+        }
+      ],
+      "timestamp": "2026-03-23T08:35:37.030Z"
+    },
+    {
+      "id": "4b56c913-60fd-4d49-8953-dcb353e935f3",
+      "question": "kịch bản 1 nói về điều gì?",
+      "answer": "**Kịch bản 01** trong đề tài đề cập tới **“Quy trình chuẩn hóa và khởi tạo máy ảo mẫu”**.  \n\nNội dung chính của kịch bản này là:\n\n1. **Mục tiêu**:  \n   - Xác minh quy trình tạo ra một bản **template sạch** (đặc biệt là cho hệ điều hành Windows).  \n   - Đảm bảo rằng máy ảo sau khi **nhân bản** không gặp xung đột định danh (SID) và hoạt động ổn định.\n\n2. **Các bước thực hiện chi tiết** (theo mô tả trong tài liệu):  \n   - Khởi tạo máy ảo cơ sở, cài đặt hệ điều hành Windows/Linux.  \n   - Cài đặt và cấu hình driver **virtio** và **qemu‑guest‑agent** để hypervisor có thể giao tiếp với VM.  \n   - Thực hiện quy trình **sysprep** cho Windows, đưa hệ điều hành về trạng thái OOBE, loại bỏ các thông tin phần cứng cũ.  \n   - Chuyển đổi máy ảo thành **template** bằng lệnh “convert to template” trên giao diện Proxmox.  \n   - Tiêu chí chấp nhận: máy ảo phải chuyển đổi thành công sang trạng thái template (không thể khởi động, chỉ dùng làm nguồn để clone).  \n\nNhư vậy, kịch bản 1 tập trung vào việc **chuẩn hoá, tạo và chuyển đổi một máy ảo mẫu thành template** để sử dụng cho các quá trình nhân bản sau này.  \n\n*Tham khảo: **“Nhóm 09 - Đồ án tốt nghiệp.pdf”**, trang 107‑108.*",
+      "context": [
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 18,
+          "text": "ix \nNhóm 9 \nDANH MỤC BẢNG BIỂU \nBảng 2.1. So sánh các mô hình dịch vụ ..................................................................................... 12 \nBảng 2.2. So sánh bốn mô hình triển khai  ................................................................................. 17 \nBảng 2.3. So"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 13,
+          "text": "Nhóm 9 \n4.2.3. Phân chia địa chỉ ip và mạng .................................................................................... 64 \n4.2.4. Cấu hình lưu trữ ...................................................................................................... 65 \n4.2.5. Chuẩn bị máy ảo mẫu ........."
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 107,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 5: THỰC HIỆN KIỂM THỬ TOÀN DIỆN,... \n \n79 \nNhóm 9 \nCHƯƠNG 5: THỰC HIỆN KIỂM THỬ TOÀN DIỆN, ĐÁNH GIÁ TỔNG THỂ \nHỆ THỐNG VÀ ĐƯA RA KẾT LUẬN \nNhóm đã hoàn tất giai đoạn triển khai kỹ thuật ở chương vừa rồi, bao gồm \nviệc thiết lập hạ tầng vật lý, chuẩn hóa các template C"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 47,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 2: CƠ SỞ LÝ THUYẾT \n \n24 \nNhóm 9 \nvà quản lý. Điều này tạo ra một kiến trúc \"lai\" độc đáo, kết hợp hiệu suất của type-\n1 với sự linh hoạt và hệ sinh thái phong phú của một hệ điều hành tiêu chuẩn, khác \nbiệt với microkernel chuyên dụng của esxi hay kiến trúc phân vùng"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 108,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 5: THỰC HIỆN KIỂM THỬ TOÀN DIỆN,... \n \n80 \nNhóm 9 \n1. Khởi tạo máy ảo  cơ sở, tiến hành cài đặt hệ điều hành windows/linux. \n2. Cài đặt và cấu hình trình điều khiển virtio và qemu-guest-agent để đảm bảo \nhypervisor có thể giao tiếp và lấy thông tin từ máy ảo. \n3. Thực"
+        }
+      ],
+      "timestamp": "2026-03-23T08:35:20.937Z"
+    },
+    {
+      "id": "55b7719c-d086-4547-a9e1-f0983fb8a3dd",
+      "question": "Có mấy kịch bản kiểm thử",
+      "answer": "Theo nội dung trong **“Nhóm 09 - Đồ án tốt nghiệp.pdf” – Trang 13**, chương 5 liệt kê chi tiết các kịch bản kiểm thử như sau:\n\n- Kịch bản 01  \n- Kịch bản 02  \n- Kịch bản 03  \n- Kịch bản 04  \n- Kịch bản 05  \n- Kịch bản 06  \n- Kịch bản 07  \n\nNhư vậy, tổng cộng **có 7 kịch bản kiểm thử** được đề cập trong tài liệu.",
+      "context": [
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 107,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 5: THỰC HIỆN KIỂM THỬ TOÀN DIỆN,... \n \n79 \nNhóm 9 \nCHƯƠNG 5: THỰC HIỆN KIỂM THỬ TOÀN DIỆN, ĐÁNH GIÁ TỔNG THỂ \nHỆ THỐNG VÀ ĐƯA RA KẾT LUẬN \nNhóm đã hoàn tất giai đoạn triển khai kỹ thuật ở chương vừa rồi, bao gồm \nviệc thiết lập hạ tầng vật lý, chuẩn hóa các template C"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 13,
+          "text": "Nhóm 9 \n4.2.3. Phân chia địa chỉ ip và mạng .................................................................................... 64 \n4.2.4. Cấu hình lưu trữ ...................................................................................................... 65 \n4.2.5. Chuẩn bị máy ảo mẫu ........."
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 18,
+          "text": "ix \nNhóm 9 \nDANH MỤC BẢNG BIỂU \nBảng 2.1. So sánh các mô hình dịch vụ ..................................................................................... 12 \nBảng 2.2. So sánh bốn mô hình triển khai  ................................................................................. 17 \nBảng 2.3. So"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 123,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 5: THỰC HIỆN KIỂM THỬ TOÀN DIỆN,... \n \n103 \nNhóm 9 \n5.2.3. Tổng hợp kết quả thực nghiệm \nDưới đây là bảng tổng hợp chi tiết kết quả của quá trình kiểm thử thực tế đối với \ncác kịch bản đã đề ra: \nBảng 5.1. Tiêu chí chấm điểm quá trình thử nghiệm \nSTT Tên kịch bản \nkiể"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 108,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 5: THỰC HIỆN KIỂM THỬ TOÀN DIỆN,... \n \n80 \nNhóm 9 \n1. Khởi tạo máy ảo  cơ sở, tiến hành cài đặt hệ điều hành windows/linux. \n2. Cài đặt và cấu hình trình điều khiển virtio và qemu-guest-agent để đảm bảo \nhypervisor có thể giao tiếp và lấy thông tin từ máy ảo. \n3. Thực"
+        }
+      ],
+      "timestamp": "2026-03-23T08:34:11.885Z"
+    },
+    {
+      "id": "57a7b757-14fb-4a7b-b927-1f68ecb8c0b4",
+      "question": "Ai là trưởng nhóm sinh viên",
+      "answer": "**Trưởng nhóm sinh viên** của đề tài là **Đinh Công Nhất**.  \n\n(Thông tin này được nêu trong phần “LỜI CAM ĐOAN” của tài liệu **“Nhóm 09 - Đồ án tốt nghiệp.pdf” – Trang 8**.)",
+      "context": [
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 7,
+          "text": "i \nNhóm 9 \nLỜI CẢM ƠN \nNhóm em xin tỏ lòng biết ơn sâu sắc tới Ban giám đốc Học viện Công nghệ \nBưu chính Viễn thông, ban chủ nhiệm Khoa Viễn thông 1 cùng toàn thể quý Thầy \nCô giáo trong khoa. Những kiến thức nền tảng vững chắc về mạng máy tính, ảo \nhóa, an ninh mạng và viễn thông mà Thầy Cô đã tru"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 5,
+          "text": "kết, so sánh các mô hình, nêu hạn chế và đề xuất hướng phát triển cho nghiên cứu \ntrong tương lai \nVới chủ đề Nghiên cứu triển khai hạ tầng Private Cloud tích hợp website \ncung cấp dịch vụ đang được ứng dụng rất nhiều trong thực tế hiện nay, đồ án của \nnhóm sinh viên Đỗ Mạnh Tùng, Đinh Công Nhất và "
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 8,
+          "text": "ii \nNhóm 9 \nLỜI CAM ĐOAN \nNhóm 9 xin cam đoan đồ án tốt nghiệp với đề tài: Nghiên cứu triển khai hạ \ntầng private cloud tích hợp website cung cấp dịch vụ” là công trình nghiên cứu của \nriêng nhóm. Đồ án được thực hiện dưới sự hướng dẫn tận tình của Thạc sĩ Hoàng \nThị Thu và sự hỗ trợ đào tạo của kho"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 27,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 1: GIỚI THIỆU TỔNG QUAN VỀ ĐỀ TÀI \n \n6 \n \nkết nối, tự động hóa giữa hạ tầng  cho đến tầng ứng dụng , tạo thành một chu trình \nkhép kín. Đây có thể trở thành một tài liệu tham khảo giá trị và hữu ích cho các \nnhóm nghiên cứu, sinh viên khóa sau và các tổ chức muốn tiếp"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 128,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 6: TỔNG KẾT, SO SÁNH CÁC MÔ HÌNH,... \n \n107 \nNhóm 9 \nChi phí \nĐầu tư ban đầu  \ncao, nhưng chi \nphí vận hành lâu \ndài ổn định. \nChi phí ban đầu \nthấp, trả theo mức \ndùng, nhưng rất \ntốn kém nếu quy \nmô lớn. \nPhức tạp, tốn \nkém chi phí \nquản lý kết \nnối. \nChia sẻ chi ph"
+        }
+      ],
+      "timestamp": "2026-03-23T08:33:54.091Z"
+    },
+    {
+      "id": "7e687a98-a17b-42c5-9d15-1f7846957054",
+      "question": "Giáo viên hướng dẫn là ai",
+      "answer": "Giáo viên hướng dẫn của đồ án là **ThS. Hoàng Thị Thu**.  \n\n- Trong phần “Giảng viên hướng dẫn” của trang 4 tài liệu *“Nhóm 09 - Đồ án tốt nghiệp.pdf”* đã ghi rõ: “Giảng viên hướng dẫn: ThS. Hoàng Thị Thu”.  \n- Thông tin này cũng được nhắc lại ở trang 5 của cùng tài liệu.  \n\nVì vậy, người chịu trách nhiệm hướng dẫn nhóm sinh viên trong đề tài “Nghiên cứu triển khai hạ tầng Private Cloud tích hợp website cung cấp dịch vụ” là Thạc sĩ Hoàng Thị Thu.",
+      "context": [
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 5,
+          "text": "kết, so sánh các mô hình, nêu hạn chế và đề xuất hướng phát triển cho nghiên cứu \ntrong tương lai \nVới chủ đề Nghiên cứu triển khai hạ tầng Private Cloud tích hợp website \ncung cấp dịch vụ đang được ứng dụng rất nhiều trong thực tế hiện nay, đồ án của \nnhóm sinh viên Đỗ Mạnh Tùng, Đinh Công Nhất và "
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 4,
+          "text": "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM \nĐộc lập – Tự do – Hạnh phúc \n \nHà Nội, ngày 22 tháng 12 năm 2025 \n \nNHẬN XÉT CỦA GIẢNG VIÊN HƯỚNG DẪN ĐỒ ÁN/KHÓA LUẬN TỐT \nNGHIỆP ĐẠI HỌC \n \nTên đề tài: Nghiên cứu triển khai hạ tầng Private Cloud tích hợp website cung \ncấp dịch vụ. \n1. Họ và tên nhóm sinh viên, s"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 8,
+          "text": "ii \nNhóm 9 \nLỜI CAM ĐOAN \nNhóm 9 xin cam đoan đồ án tốt nghiệp với đề tài: Nghiên cứu triển khai hạ \ntầng private cloud tích hợp website cung cấp dịch vụ” là công trình nghiên cứu của \nriêng nhóm. Đồ án được thực hiện dưới sự hướng dẫn tận tình của Thạc sĩ Hoàng \nThị Thu và sự hỗ trợ đào tạo của kho"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 7,
+          "text": "i \nNhóm 9 \nLỜI CẢM ƠN \nNhóm em xin tỏ lòng biết ơn sâu sắc tới Ban giám đốc Học viện Công nghệ \nBưu chính Viễn thông, ban chủ nhiệm Khoa Viễn thông 1 cùng toàn thể quý Thầy \nCô giáo trong khoa. Những kiến thức nền tảng vững chắc về mạng máy tính, ảo \nhóa, an ninh mạng và viễn thông mà Thầy Cô đã tru"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 29,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC    CHƯƠNG 1: GIỚI THIỆU TỔNG QUAN VỀ ĐỀ TÀI \n8 \n \no Tổng kết lại những kết quả đã đạt được, so sánh ưu nhược điểm của mô hình \ntriển khai so với các giải pháp khác. Đồng thời thảo luận về trách nhiệm đạo \nđức nghề nghiệp, chỉ ra các hạn chế còn tồn tại và đề xuất lộ trình nâ"
+        }
+      ],
+      "timestamp": "2026-03-23T08:33:41.279Z"
+    },
+    {
+      "id": "4684301e-6d17-4340-a230-952829696e98",
+      "question": "Nhóm có mấy người và làm về chủ đề gì?",
+      "answer": "**Số lượng thành viên:**  \nTrong các đoạn trích được cung cấp không có thông tin cụ thể về số người tham gia nhóm. Các tài liệu chỉ đề cập tới “Nhóm 9” (tên nhóm) mà không nêu số lượng thành viên, vì vậy không thể khẳng định được nhóm có bao nhiêu người.\n\n**Chủ đề nghiên cứu:**  \nNhóm thực hiện đề tài **xây dựng một nền tảng Private Cloud dạng IaaS (Infrastructure as a Service) tích hợp website quản lý dịch vụ VPS**, bao gồm các công nghệ ảo hoá, lưu trữ (storage), networking và phát triển website cung cấp dịch vụ.  \n- Trang 64 mô tả yêu cầu chức năng của website cho việc quản lý người dùng, sản phẩm, đơn hàng và hỗ trợ khách hàng.  \n- Trang 27 nêu rõ mục tiêu thực tiễn của đề tài: “giải quyết bài toán về chủ quyền dữ liệu… cung cấp giải pháp tối ưu chi phí… xây dựng một sản phẩm thực tế – website cổng dịch vụ cho phép tự động hoá quy trình cấp phát máy ảo”.  \n- Các trang 129 và 134 tiếp tục phân tích mô hình IaaS, lựa chọn Proxmox VE làm nền tảng ảo hoá và đề xuất nâng cấp lên cluster high‑availability.\n\n**Tóm lại:**  \n- **Số người trong nhóm:** không được nêu trong các đoạn trích.  \n- **Chủ đề:** phát triển một hệ thống Private Cloud IaaS tích hợp website cung cấp dịch vụ VPS, với các thành phần ảo hoá, storage, networking và giao diện web quản lý.  \n\n*(Tham khảo: **“Nhóm 09 - Đồ án tốt nghiệp.pdf”** – Trang 64, 27, 129, 134.)*",
+      "context": [
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 7,
+          "text": "i \nNhóm 9 \nLỜI CẢM ƠN \nNhóm em xin tỏ lòng biết ơn sâu sắc tới Ban giám đốc Học viện Công nghệ \nBưu chính Viễn thông, ban chủ nhiệm Khoa Viễn thông 1 cùng toàn thể quý Thầy \nCô giáo trong khoa. Những kiến thức nền tảng vững chắc về mạng máy tính, ảo \nhóa, an ninh mạng và viễn thông mà Thầy Cô đã tru"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 64,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 3: PHÂN TÍCH TỔNG THỂ YÊU CẦU \n \n40 \nNhóm 9 \nCHƯƠNG 3: PHÂN TÍCH TỔNG THỂ YÊU CẦU HỆ THỐNG, KIẾN TRÚC \nẢO HÓA, HỆ THỐNG STORAGE, NETWORKING VÀ THIẾT KẾ WEBSITE \nCUNG CẤP DỊCH VỤ \nỞ chương trước nhóm đã hệ thống hóa cơ sở lý luận về điện toán đám mây, \ntập trung phân t"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 129,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 6: TỔNG KẾT, SO SÁNH CÁC MÔ HÌNH,... \n \n108 \nNhóm 9 \nDữ liệu  \nNgười dùng quản lý \nNhà cung cấp quản \nlý \nNhà cung cấp quản \nlý \nThời gian \nchạy  \nNgười dùng quản lý \nNhà cung cấp quản \nlý \nNhà cung cấp quản \nlý \nHệ điều hành  \nNgười dùng quản lý  \nNhà cung cấp quản \n"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 134,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 6: TỔNG KẾT, SO SÁNH CÁC MÔ HÌNH,... \n \n113 \nNhóm 9 \n6.6.1. Nâng cấp mô hình lên high availability cluster \nĐể giải quyết bài toán về độ tin cậy và loại bỏ điểm lỗi đơn lẻ, hướng phát \ntriển ưu tiên hàng đầu là chuyển đổi từ mô hình single-node sang mô hình proxmox \nc"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 27,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 1: GIỚI THIỆU TỔNG QUAN VỀ ĐỀ TÀI \n \n6 \n \nkết nối, tự động hóa giữa hạ tầng  cho đến tầng ứng dụng , tạo thành một chu trình \nkhép kín. Đây có thể trở thành một tài liệu tham khảo giá trị và hữu ích cho các \nnhóm nghiên cứu, sinh viên khóa sau và các tổ chức muốn tiếp"
+        }
+      ],
+      "timestamp": "2026-03-23T08:33:22.878Z"
+    },
+    {
+      "id": "7b7ce20d-f002-4f33-8fc3-c23381cbe4b5",
+      "question": "tóm tắt báo cáo đồ án tốt nghiệp trên",
+      "answer": "**Báo cáo đồ án tốt nghiệp – “Nghiên cứu triển khai hạ tầng private cloud tích hợp website cung cấp dịch vụ”**  \n*(Nhóm 09 – Đồ án tốt nghiệp.pdf)*  \n\n---\n\n## 1. Mục tiêu & Động lực  \n- **Lý do chọn đề tài**: Ở thời đại 4.0, cloud công cộng gây chi phí cao, hạn chế tùy biến và tiềm ẩn rủi ro bảo mật. Private cloud giúp doanh nghiệp vừa và nhỏ tự chủ, an toàn và tiết kiệm chi phí. Proxmox VE được chọn vì khả năng triển khai nhanh, quản trị tập trung và hỗ trợ KVM + LXC.  \n  *(trích từ **“Nhóm 09 - Đồ án tốt nghiệp.pdf” – Trang 21**)*  \n\n- **Mục tiêu**: Xây dựng một hệ thống private cloud ổn định, đánh giá hiệu năng, khả năng mở rộng và đề xuất giải pháp áp dụng cho doanh nghiệp hoặc cơ sở đào tạo.  \n\n- **Phạm vi**: Từ hạ tầng mạng lõi, nền tảng ảo hoá (KVM/LXC) tới website cổng dịch vụ cho phép người dùng thuê VPS, quản lý tài khoản, xác thực, và nhận IP công cộng.  \n\n---\n\n## 2. Cơ sở lý thuyết  \n### 2.1 Hypervisor & Nền tảng  \n- Các hypervisor phổ biến: VMware vSphere/ESXi, Microsoft Hyper‑V, KVM, Xen, VirtualBox và **Proxmox VE** (type‑1, mã nguồn mở, dựa trên KVM + LXC).  \n  *(trích từ **“Nhóm 09 - Đồ án tốt nghiệp.pdf” – Trang 45**)*  \n\n- **Proxmox VE** hỗ trợ:  \n  - **Quản lý templates/ISO** – lưu trữ tập trung, tạo template để nhân bản nhanh.  \n  - **Realms xác thực** (Linux PAM, Proxmox authentication server, LDAP/AD).  \n  - **Mô hình dựa trên vai trò** – kiểm soát truy cập dựa trên role.  \n  *(trích từ **“Nhóm 09 - Đồ án tốt nghiệp.pdf” – Trang 53**)*  \n\n### 2.2 Kiến trúc hệ thống  \n- Sử dụng **KVM + QEMU** cho máy ảo và **LXC** cho container, cho phép chạy đa dạng hệ điều hành và ứng dụng cách ly hoàn toàn.  \n  *(trích từ **“Nhóm 09 - Đồ án tốt nghiệp.pdf” – Trang 53**)*  \n\n---\n\n## 3. Thực hiện & Kiểm thử  \n- **Quy trình tạo tài khoản** trên website, gửi email xác thực, đăng nhập và kiểm tra quyền hạn.  \n  - Hình 5.9 – Tạo tài khoản  \n  - Hình 5.10 – Yêu cầu xác thực  \n  - Hình 5.11 – Xác thực qua email  \n  - Hình 5.12 – Xác thực thành công  \n  - Hình 5.13 – Trang đăng nhập  \n  *(trích từ **“Nhóm 09 - Đồ án tốt nghiệp.pdf” – Trang 112**)*  \n\n- Kiểm thử toàn diện bao gồm: tạo, xóa, khởi động, dừng VM, kiểm tra hiệu năng mạng, và xác thực người dùng.  \n\n---\n\n## 4. Các hạn chế hiện tại  \n### 4.1 Hạn chế về bảo trì & tài nguyên  \n- **Không hỗ trợ bảo trì nóng** – phải tắt toàn bộ hệ thống để bảo trì phần cứng.  \n- **Giới hạn mở rộng dọc** (RAM, CPU) trên máy chủ vật lý, tốn kém.  \n- **Noisy neighbor** khi mật độ VM trên một node quá cao, gây giảm hiệu năng I/O và CPU.  \n- **Rủi ro mất dữ liệu** do lưu trữ cục bộ không sao chép sang node khác.  \n\n### 4.2 Hạn chế về mạng  \n- Hệ thống hiện dùng **NAT** nội bộ, máy ảo chỉ có IP private → người dùng internet không truy cập trực tiếp (cần port‑forwarding hoặc VPN).  \n- Thiếu **IP public tĩnh** cho mỗi VPS → không đáp ứng yêu cầu thương mại (định danh dịch vụ, DNS, chứng chỉ SSL).  \n- **Phụ thuộc vào router phòng lab**, không có cơ chế chống DDoS chuyên nghiệp.  \n  *(trích từ **“Nhóm 09 - Đồ án tốt nghiệp.pdf” – Trang 133**)*  \n\n---\n\n## 5. Hướng phát triển trong tương lai  \n- **Khắc phục các hạn chế** để hệ thống đạt chuẩn private cloud doanh nghiệp:  \n  - Triển khai **bảo trì nóng** (live migration, cập nhật không gián đoạn).  \n  - Mở rộng **hạ tầng lưu trữ phân tán**, sao chép dữ liệu giữa node để tránh mất mát.  \n  - Giải quyết **noisy neighbor** bằng cân bằng tải, giới hạn tài nguyên per‑VM.  \n  - Cấu hình **IP public tĩnh** cho mỗi VPS, tích hợp DNS và SSL tự động.  \n  - Thêm **cơ chế chống DDoS** và chuyển sang mạng lớp data‑center thay vì router phòng lab.  \n\n  *(được đề cập trong phần “6.6 Hướng phát triển trong tương lai” – Trang 133)*  \n\n---\n\n## 6. Kết luận  \n- Đồ án đã **xây dựng thành công** một môi trường private cloud dựa trên Proxmox VE, tích hợp website cho phép người dùng đăng ký, xác thực và thuê VPS.  \n- Qua các **kiểm thử**, hệ thống chứng minh khả năng triển khai nhanh, quản lý tập trung và hỗ trợ đa dạng phương thức xác thực.  \n- Tuy nhiên, **các hạn chế** về bảo trì nóng, tài nguyên, mạng và an ninh vẫn còn, và nhóm đã đề ra **kế hoạch phát triển** để đưa hệ thống tới mức tiêu chuẩn doanh nghiệp.  \n\n---  \n\n*Lưu ý: Tất cả các thông tin trên chỉ dựa trên các đoạn trích được cung cấp trong tài liệu “Nhóm 09 - Đồ án tốt nghiệp.pdf”.*",
+      "context": [
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 133,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 6: TỔNG KẾT, SO SÁNH CÁC MÔ HÌNH,... \n \n112 \nNhóm 9 \nVà điều cuối cùng là thiếu khả năng bảo trì nóng cho hệ thống. Hệ thống \nkhông thể thực hiện bảo trì phần cứng nếu như không tắt toàn bộ hệ thống. \n• Hạn chế về tài nguyên:  \nĐầu tiên là giới hạn mở rộng theo chiều "
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 53,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 2: CƠ SỞ LÝ THUYẾT \n \n30 \nNhóm 9 \nMô hình dựa trên vai trò: hệ thống sử dụng mô hình kiểm soát truy cập dựa \ntrên vai trò. Các quyền cụ thể được nhóm thành các vai trò. Các vai trò này sau đó \nđược gán cho người dùng hoặc nhóm trên một đường dẫn tài nguyên cụ thể. \nRe"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 112,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 5: THỰC HIỆN KIỂM THỬ TOÀN DIỆN,... \n \n84 \nNhóm 9 \n \nHình 5.9. Tạo tài khoản trên trên website\n\nĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 5: THỰC HIỆN KIỂM THỬ TOÀN DIỆN,... \n \n85 \nNhóm 9 \n \nHình 5.10. Yêu cầu xác thực từ hệ thống\n\nĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 5: THỰC HIỆN K"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 21,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC    CHƯƠNG 1: GIỚI THIỆU TỔNG QUAN VỀ ĐỀ TÀI \n \n1 \n \nCHƯƠNG 1: GIỚI THIỆU TỔNG QUAN VỀ ĐỀ TÀI, LÝ DO CHỌN ĐỀ \nTÀI, MỤC TIÊU, PHẠM VI VÀ PHƯƠNG PHÁP NGHIÊN CỨU \n1.1. Lý do chọn đề tài \nTrong thời đại công nghệ 4.0, điện toán đám mây  trở thành nền tảng quan \ntrọng giúp doanh n"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 45,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 2: CƠ SỞ LÝ THUYẾT \n \n23 \nNhóm 9 \nThị trường hypervisor hiện nay khá đa dạng với nhiều giải pháp từ các nhà \ncung cấp lớn cũng như các dự án mã nguồn mở mạnh mẽ. Mỗi giải pháp có những \nưu điểm và đặc thù riêng, phục vụ cho các nhu cầu khác nhau của người dùng và \ndoa"
+        }
+      ],
+      "timestamp": "2026-03-23T08:16:11.134Z"
+    },
+    {
+      "id": "842bf984-3e36-4c93-8dc3-42f870c70158",
+      "question": "tóm tắt nội dung báo cáo trên",
+      "answer": "**Tóm tắt nội dung báo cáo “Báo cáo ĐA KHMT.docx” (trang 1)**  \n\n---\n\n### 1. Chức năng tìm kiếm và hiển thị kết quả  \n- Người dùng nhập từ khóa vào ô **Search** trên menu, nhấn **Enter** hoặc biểu tượng **Tìm kiếm**.  \n- Hệ thống truy xuất cơ sở dữ liệu dựa trên **tiêu đề** và **mô tả** của bài viết, sau đó hiển thị danh sách các bài viết phù hợp.  \n- Khi người dùng nhấn vào tiêu đề, nội dung chi tiết của bài viết sẽ được mở ra.  \n- Nếu không có kết quả, hệ thống hiện thông báo: *“Không tìm thấy nội dung phù hợp với từ khóa của bạn”* (**Báo cáo ĐA KHMT.docx** – Trang 1).  \n\n---\n\n### 2. Giao diện người dùng (UI)  \n- **Màu nền**: trắng (`#ffffff`) làm nền chủ đạo, kết hợp khoảng trắng (whitespace) để giảm mỏi mắt khi đọc báo cáo dài.  \n- **Typography**: sử dụng phông chữ **Sans‑serif** như **Inter** và **Roboto**, giúp hiển thị sắc nét trên mọi thiết bị và kích thước màn hình (**Báo cáo ĐA KHMT.docx** – Trang 1).  \n\n---\n\n### 3. Kiến trúc Front‑end  \n- Toàn bộ website được chia thành các **phân khu chức năng rõ rệt** (cấu trúc bố cục Front‑end) (**Báo cáo ĐA KHMT.docx** – Trang 1).  \n\n---\n\n### 4. Sử dụng Tailwind CSS  \n- Tailwind cung cấp các tiền tố **sm:, md:, lg:, xl:** để áp dụng style theo kích thước màn hình (mobile‑first).  \n- Ví dụ: một khối có lớp `w-full md:w-1/2 lg:w-1/3` sẽ tự động mở rộng **100 %** trên điện thoại, **50 %** trên máy tính bảng và **33,3 %** trên máy tính để bàn, giúp website tương thích đa nền tảng (**Báo cáo ĐA KHMT.docx** – Trang 1).  \n- Ngoài ra còn có các tính năng **PurgeCSS** và **JIT** để tối ưu dung lượng (được đề cập ngắn gọn).  \n\n---\n\n### 5. Các Use Case (tình huống sử dụng)  \n\n| Use Case | Mô tả ngắn gọn | Người thực hiện |\n|----------|----------------|-----------------|\n| **Quản lý danh mục bài viết** (Manage Categories) | Admin đã đăng nhập và đang ở trang quản lý nội dung. | **Admin** |\n| **Thêm mới bài viết** (Create News Post) | 1. Admin vào “Quản lý Tin tức” → 2. Nhấn “Thêm mới” → 3. Hệ thống mở form biên tập → 4. Nhập tiêu đề, tóm tắt, ảnh thumbnail → 5. Soạn nội dung → 6. Chọn “Lưu và Xuất bản” → 7. Bài viết xuất hiện trên trang chủ. | **Admin** |\n| **Cập nhật trạng thái liên hệ** | Admin đánh dấu yêu cầu khách hàng đã được xử lý hay chưa. | **Admin** |\n*(Các bảng 4.2, 4.3, 4.5 trong báo cáo)* (**Báo cáo ĐA KHMT.docx** – Trang 1).  \n\n---\n\n### 6. Yêu cầu chức năng (Functional Requirements) – Phân hệ Người dùng (Client‑side)  \n\n- **CN‑01: Xem Trang chủ (Home Page)**  \n  - Hiển thị banner giới thiệu ấn tượng.  \n  - Hiển thị tóm tắt các dịch vụ nổi bật.  \n  - Hiển thị danh sách tin tức mới nhất.  \n  - Hiển thị các con số thống kê (số dự án, số khách hàng).  \n\n- **CN‑02: Tra cứu Tin tức – Kiến thức**  \n  - Hiển thị danh sách bài viết dạng **lưới** hoặc **danh sách**.  \n  - Hỗ trợ **phân trang (Pagination)**.  \n  - Cho phép **xem chi tiết** nội dung bài viết.  \n\n(**Báo cáo ĐA KHMT.docx** – Trang 1, mục 2.4.1).  \n\n---\n\n### 7. Kết luận  \nBáo cáo cung cấp một cái nhìn tổng quan về **cách thiết kế giao diện người dùng**, **công nghệ front‑end** (Tailwind, tối ưu dung lượng), **các chức năng tìm kiếm**, và **các quy trình quản trị nội dung** (quản lý danh mục, thêm mới, cập nhật trạng thái). Đồng thời, nó liệt kê các **yêu cầu chức năng** cơ bản cho phía người dùng, bao gồm trang chủ và việc tra cứu tin tức.  \n\n---  \n\n*Lưu ý: Tất cả các thông tin trên chỉ dựa trên các đoạn trích được cung cấp trong tài liệu.*",
+      "context": [
+        {
+          "docName": "Báo cáo ĐA KHMT.docx",
+          "page": 1,
+          "text": "1. Người dùng nhập từ khóa tìm kiếm vào ô Search trên menu.2. Người dùng nhấn phím Enter hoặc nút biểu tượng Tìm kiếm.3. Hệ thống truy xuất cơ sở dữ liệu dựa trên tiêu đề và mô tả bài viết.4. Hệ thống hiển thị danh sách các bài viết có nội dung phù hợp từ khóa.5. Người dùng nhấn vào tiêu đề bài viết"
+        },
+        {
+          "docName": "Báo cáo ĐA KHMT.docx",
+          "page": 1,
+          "text": "Màu nền (Background): Sử dụng màu trắng (#ffffff) làm nền chủ đạo kết hợp với các khoảng trắng (Whitespace) hợp lý để làm nổi bật nội dung văn bản, giảm mỏi mắt cho người dùng khi nghiên cứu các báo cáo thầu dài.\n\nTypography: Hệ thống sử dụng phông chữ không chân (Sans-serif) như Inter và Roboto. Đặ"
+        },
+        {
+          "docName": "Báo cáo ĐA KHMT.docx",
+          "page": 1,
+          "text": "Tailwind hỗ trợ mạnh mẽ các tiền tố như sm:, md:, lg:, xl: để áp dụng style cho từng kích thước màn hình theo tư duy \"Mobile-first\". Ví dụ: một khối nội dung có lớp w-full md:w-1/2 lg:w-1/3 sẽ tự động rộng 100% trên điện thoại, 50% trên máy tính bảng và 33.3% trên màn hình máy tính. Điều này giúp vi"
+        },
+        {
+          "docName": "Báo cáo ĐA KHMT.docx",
+          "page": 1,
+          "text": "Bảng 4.2: Đặc tả Use Case Thêm mới bài viết\n\nThêm mới bài viết (Create News Post)\n\nAdmin đã đăng nhập thành công vào trang quản trị.\n\n1. Admin chọn menu \"Quản lý Tin tức\".2. Admin nhấn nút \"Thêm mới\".3. Hệ thống hiển thị Form soạn thảo với trình biên tập nội dung giàu định dạng.4. Admin nhập Tiêu đề"
+        },
+        {
+          "docName": "Báo cáo ĐA KHMT.docx",
+          "page": 1,
+          "text": "2.4 Đặc tả yêu cầu hệ thống (SRS)\n\n2.4.1 Yêu cầu chức năng (Functional Requirements)\n\nHệ thống được chia thành 2 phân hệ chính với các chức năng chi tiết như sau:\n\nA. Phân hệ Người dùng (Client-side)\n\nCN-01: Xem Trang chủ (Home Page)\n\nHiển thị Banner giới thiệu ấn tượng.\n\nHiển thị tóm tắt các dịch v"
+        }
+      ],
+      "timestamp": "2026-03-23T08:04:52.270Z"
+    },
+    {
+      "id": "23bfb178-44de-4507-8530-4710d95a1728",
+      "question": "báo cáo trên có bao nhiêu trang",
+      "answer": "Theo các đoạn trích được cung cấp, tất cả đều ghi rõ **“Trang 1”** của tài liệu **“2121050321- Trần Khánh Bách‑Báo cáo TTDN.docx”** và không có bất kỳ tham chiếu nào đến các trang khác. Vì vậy, dựa trên thông tin hiện có, báo cáo này chỉ có **1 trang**.",
+      "context": [
+        {
+          "docName": "2121050321- Trần Khánh Bách-Báo cáo TTDN.docx",
+          "page": 1,
+          "text": "Xác định hành vi không bình thường: IDS cũng có thể áp dụng phương pháp phát hiện dựa trên bất thường bằng cách xây dựng mô hình hành vi mạng \"bình thường\". Hệ thống sẽ liên tục giám sát để phát hiện sự sai lệch, chẳng hạn như tăng đột biến lưu lượng, truy cập bất thường từ một địa chỉ IP, hoặc hành"
+        },
+        {
+          "docName": "2121050321- Trần Khánh Bách-Báo cáo TTDN.docx",
+          "page": 1,
+          "text": "Phù hợp để phân tích và ghi nhận tấn công có dấu hiệu rõ ràng.\n\nCấu hình linh hoạt, nhiều công cụ hỗ trợ miễn phí.\n\nKhông có khả năng phản hồi hoặc ngăn chặn tấn công.\n\nDễ bị quá tải log hoặc cảnh báo giả (false positive) nếu rule chưa tối ưu.\n\nCần sự can thiệp của quản trị viên để xử lý sau cảnh bá"
+        },
+        {
+          "docName": "2121050321- Trần Khánh Bách-Báo cáo TTDN.docx",
+          "page": 1,
+          "text": "Dựa trên tiêu chuẩn bảo mật (Policy-based Detection): hệ thống hoạt động dựa trên các chính sách bảo mật được thiết lập thủ công bởi quản trị viên. Các chính sách có thể quy định rõ những hành vi, truy cập, giao thức hoặc cổng dịch vụ nào được phép hoạt động trong hệ thống mạng của tổ chức. Khi có l"
+        },
+        {
+          "docName": "2121050321- Trần Khánh Bách-Báo cáo TTDN.docx",
+          "page": 1,
+          "text": "Ghi log và cảnh báo (Logging and Alerting): Khi phát hiện một hành vi đáng ngờ, Snort có thể ghi log sự kiện, sinh cảnh báo hoặc xuất dữ liệu ra các kênh như console, syslog, email, hoặc hiển thị trên giao diện web.\n\nTùy chỉnh hành động theo rule: Quản trị viên có thể quy định rõ mỗi rule sẽ thực hi"
+        },
+        {
+          "docName": "2121050321- Trần Khánh Bách-Báo cáo TTDN.docx",
+          "page": 1,
+          "text": "Bước 8: Tạo file cấu hình mặc định\n\nmkdir -p: Tạo thư mục cấu hình /usr/local/etc/snort.\n\ncp -r: Sao chép toàn bộ file cấu hình mẫu từ thư mục mã nguồn Snort.\n\nÝ nghĩa: Thiết lập cấu hình mặc định để chỉnh sửa.\n\nc: Chỉ định file cấu hình snort.lua.\n\n-i ens33: Lắng nghe trên  card mạng ens33.\n\nA aler"
+        }
+      ],
+      "timestamp": "2026-03-23T08:02:59.499Z"
+    },
+    {
+      "id": "52430771-2454-4bd6-b947-d023f32cae5a",
+      "question": "báo cáo trên có bao nhiêu trang",
+      "answer": "Theo các đoạn trích mà bạn cung cấp, chúng ta chỉ biết một số trang được tham chiếu trong tài liệu: trang 53, 57, 133, 50 và 65. Tuy nhiên **không có thông tin nào trong các đoạn tài liệu này cho biết tổng số trang của toàn bộ báo cáo**. Vì vậy, tôi không thể xác định được báo cáo này có bao nhiêu trang. Nếu bạn có đoạn nào khác trong tài liệu đề cập tới “tổng số trang” hoặc mục lục, vui lòng cung cấp để tôi có thể trả lời chính xác hơn.",
+      "context": [
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 53,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 2: CƠ SỞ LÝ THUYẾT \n \n30 \nNhóm 9 \nMô hình dựa trên vai trò: hệ thống sử dụng mô hình kiểm soát truy cập dựa \ntrên vai trò. Các quyền cụ thể được nhóm thành các vai trò. Các vai trò này sau đó \nđược gán cho người dùng hoặc nhóm trên một đường dẫn tài nguyên cụ thể. \nRe"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 57,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 2: CƠ SỞ LÝ THUYẾT \n \n34 \nNhóm 9 \n● Rendering phía máy chủ  và tạo trang tĩnh: đây là ưu điểm lớn nhất của next.Js \nso với việc chỉ sử dụng react thuần. Trong khi ứng dụng react thông thường  là \nmột ứng dụng một trang  được render hoàn toàn ở phía client, next.Js cho"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 133,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 6: TỔNG KẾT, SO SÁNH CÁC MÔ HÌNH,... \n \n112 \nNhóm 9 \nVà điều cuối cùng là thiếu khả năng bảo trì nóng cho hệ thống. Hệ thống \nkhông thể thực hiện bảo trì phần cứng nếu như không tắt toàn bộ hệ thống. \n• Hạn chế về tài nguyên:  \nĐầu tiên là giới hạn mở rộng theo chiều "
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 50,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 2: CƠ SỞ LÝ THUYẾT \n \n27 \nNhóm 9 \nCộng đồng Proxmox VE được xây dựng trên một mô hình phát triển mã \nnguồn mở bền vững, đảm bảo người dùng có toàn quyền truy cập vào mã nguồn, \nmang lại sự linh hoạt và bảo mật tối đa. Cộng đồng đóng một vai trò trung tâm \ntrong sự phá"
+        },
+        {
+          "docName": "Nhóm 09 - Đồ án tốt nghiệp.pdf",
+          "page": 65,
+          "text": "ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC CHƯƠNG 3: PHÂN TÍCH TỔNG THỂ YÊU CẦU \n \n41 \nNhóm 9 \no Người dùng đã đăng nhập có thể tạo một yêu cầu hỗ trợ mới , cung cấp tiêu \nđề, mô tả vấn đề và chọn loại vấn đề. \no Người dùng có thể xem danh sách các yêu cầu hỗ trợ của mình, bao gồm \ntrạng thái , đồng thời cũng có thể "
+        }
+      ],
+      "timestamp": "2026-03-23T08:02:02.224Z"
+    },
+    {
+      "id": "9063b3c7-a428-459b-b23c-f7144364e217",
+      "question": "báo cáo trên có bao nhiêu trang",
+      "answer": "Dựa trên các trích đoạn mà bạn cung cấp, báo cáo đã được tham chiếu tới các trang sau:\n\n- Trang 2  \n- Trang 4  \n- Trang 12  \n- Trang 16  \n- Trang 41  \n\nNhư vậy, **từ các thông tin trong tài liệu chúng ta biết rằng báo cáo có ít nhất 41 trang** (vì đã có trang 41 được trích dẫn). Tuy nhiên, tài liệu không cung cấp thông tin cụ thể về số trang cuối cùng của toàn bộ báo cáo, nên chúng ta không thể khẳng định chính xác tổng số trang của báo cáo.  \n\n**Kết luận:** Báo cáo có ít nhất 41 trang, nhưng số trang tổng cộng không được nêu trong các đoạn tài liệu đã cho.",
+      "context": [
+        {
+          "docName": "BÃO CÃO THá»°C Táº¬P Tá»T NGHIá»P.pdf",
+          "page": 4,
+          "text": "BÁO CÁO THỰC TẬP TỐT NGHIỆP  ĐINH CÔNG NHẤT – B21DCVT037 \n \n● Phạm vi nghiên cứu: \n- Xây dựng hạ tầng máy chủ ảo hóa trên nền tảng Microsoft Hyper-V. \n- Triển khai và cấu hình Domain Controller trên Windows Server 2022, bao \ngồm các dịch vụ AD DS, DNS, DHCP. \n- Triển khai máy chủ ứng dụng Nextcloud "
+        },
+        {
+          "docName": "BÃO CÃO THá»°C Táº¬P Tá»T NGHIá»P.pdf",
+          "page": 2,
+          "text": "BÁO CÁO THỰC TẬP TỐT NGHIỆP  ĐINH CÔNG NHẤT – B21DCVT037 \n \nLỜI CẢM ƠN \nĐể hoàn thành chương trình học và bài báo cáo thực tập tốt nghiệp này, em \nxin gửi lời cảm ơn chân thành và sâu sắc nhất đến Ban Giám hiệu nhà trường, \nquý thầy cô trong khoa Viễn thông 1 đã tận tình giảng dạy, truyền đạt cho em"
+        },
+        {
+          "docName": "BÃO CÃO THá»°C Táº¬P Tá»T NGHIá»P.pdf",
+          "page": 16,
+          "text": "BÁO CÁO THỰC TẬP TỐT NGHIỆP  ĐINH CÔNG NHẤT – B21DCVT037 \n \ntuân thủ các quy định nghiêm ngặt nhất. Do đó, việc đầu tư vào Private Cloud là \nmột bước đi chiến lược, củng cố vị thế và uy tín của JTSC trong ngành. \n2.2. Công nghệ ảo hóa và nền tảng Microsoft Hyper-V \n2.2.1. Khái niệm ảo hóa \nẢo hóa là"
+        },
+        {
+          "docName": "BÃO CÃO THá»°C Táº¬P Tá»T NGHIá»P.pdf",
+          "page": 41,
+          "text": "BÁO CÁO THỰC TẬP TỐT NGHIỆP  ĐINH CÔNG NHẤT – B21DCVT037 \n \nCHƯƠNG 5: ĐÁNH GIÁ KẾT QUẢ, KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN \n5.1. Đánh giá kết quả triển khai so với mục tiêu đề ra \nSau thời gian thực tập và triển khai, đề tài đã hoàn thành các mục tiêu chính \nđã được đặt ra trong phần mở đầu. Hệ thống Priv"
+        },
+        {
+          "docName": "BÃO CÃO THá»°C Táº¬P Tá»T NGHIá»P.pdf",
+          "page": 12,
+          "text": "BÁO CÁO THỰC TẬP TỐT NGHIỆP  ĐINH CÔNG NHẤT – B21DCVT037 \n \n1.2.1. Hiện trạng hệ thống tại JTSC \n● Mô hình mạng: hệ thống mạng của công ty hiện đang được tổ chức theo mô \nhình mạng ngang hàng (WORKGROUP). Trong mô hình này, mỗi máy tính hoạt \nđộng như một thực thể độc lập, tự quản lý tài khoản người"
+        }
+      ],
+      "timestamp": "2026-03-23T07:58:12.618Z"
+    },
+    {
+      "id": "73fa6d3f-baa6-4f88-b6bb-ccb4e2b984f9",
+      "question": "báo cáo có bao nhiêu trang",
+      "answer": "Theo các đoạn trích được cung cấp, tất cả đều ghi rõ nguồn là **\"BÁo cáo ĐA KHMT.docx\" – Trang 1**.  Tuy nhiên trong nội dung không có thông tin nào đề cập đến tổng số trang của báo cáo.  \n\n**Kết luận:** Số trang của báo cáo không được nêu trong các tài liệu đã cho, vì vậy không thể xác định được. Nếu cần thông tin chi tiết hơn, bạn nên xem toàn bộ file báo cáo.",
+      "context": [
+        {
+          "docName": "BÃ¡o cÃ¡o ÄA KHMT.docx",
+          "page": 1,
+          "text": "Test Case 01: Kiểm tra chức năng Đăng nhập Admin\n\n1. Truy cập /admin/login2. Nhập sai mật khẩu3. Nhấn Login\n\nHệ thống hiển thị thông báo lỗi màu đỏ \"Sai tên đăng nhập hoặc mật khẩu\"\n\n1. Nhập đúng mật khẩu2. Nhấn Login\n\nChuyển hướng thành công vào trang Dashboard. Token được lưu vào LocalStorage.\n\nCh"
+        },
+        {
+          "docName": "BÃ¡o cÃ¡o ÄA KHMT.docx",
+          "page": 1,
+          "text": "Người dùng điền thông tin vào biểu mẫu để yêu cầu công ty liên hệ lại tư vấn.\n\n1. Người dùng truy cập trang \"Liên hệ\" hoặc mục \"Đăng ký\" tại trang dịch vụ.2. Hệ thống hiển thị Form đăng ký với các trường: Họ tên, Email, SĐT, Nội dung.3. Người dùng nhập liệu.4. Người dùng nhấn nút \"Gửi yêu cầu\".5. Hệ"
+        },
+        {
+          "docName": "BÃ¡o cÃ¡o ÄA KHMT.docx",
+          "page": 1,
+          "text": "Navbar (Thanh điều hướng): Thiết kế dạng Sticky (ghim ở đầu trang) giúp người dùng dễ dàng chuyển đổi giữa các mục Trang chủ, Giới thiệu, Dịch vụ, Tin tức và Liên hệ mà không cần cuộn trang lên đầu.\n\nHero Section (Khu vực banner chính): Bao gồm một banner lớn chất lượng cao minh họa cho lĩnh vực dự "
+        },
+        {
+          "docName": "BÃ¡o cÃ¡o ÄA KHMT.docx",
+          "page": 1,
+          "text": "BÁO CÁO ĐỒ ÁN KHOA HỌC MÁY TÍNH\n\nXÂY DỰNG HỆ THỐNG WEBSITETƯ VẤN ĐẤU THẦU VÀ HỖ TRỢTRA CỨU PHÁP LUẬT THÔNG MINH(VAR.ASIA)\n\nSinh viên thực hiện:Nguyễn Văn Tuấn Anh\n\nGiáo viên hướng dẫn: Nguyễn Thị Hải Yến\n\n1.3 Đối tượng và phạm vi nghiên cứu\n\nCHƯƠNG 2: KHẢO SÁT HỆ THỐNG VÀ ĐẶC TẢ YÊU CẦU\n\n2.1 Tổng qu"
+        },
+        {
+          "docName": "BÃ¡o cÃ¡o ÄA KHMT.docx",
+          "page": 1,
+          "text": "Hỗ trợ sơ cấp (Định hướng tương lai): Trong giai đoạn tiếp theo tích hợp AI, các câu hỏi tra cứu luật đơn giản sẽ được Chatbot JTSC trả lời ngay lập tức 24/7. Tư vấn viên con người chỉ cần tập trung vào các \"ca khó\", đòi hỏi phân tích hồ sơ thầu phức tạp hoặc tư vấn chiến lược.\n\nGiai đoạn 4: Lưu trữ"
+        }
+      ],
+      "timestamp": "2026-03-23T07:51:47.690Z"
+    }
+  ]
+}

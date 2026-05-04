@@ -1,0 +1,119 @@
+{
+  "userProfile": {
+    "name": null,
+    "language": "vi",
+    "interests": [],
+    "expertise": [],
+    "preferences": {}
+  },
+  "facts": [
+    "User is interested in Vietnamese lục bát poetry",
+    "User requested a poem in the lục bát form",
+    "User is interested in Vietnamese poetry, specifically lục bát form.",
+    "User wants information about the classic novel Truyện Kiều by Nguyễn Du.",
+    "User wants information and excerpts from Nguyễn Du's Truyện Kiều.",
+    "Người dùng quan tâm đến lịch sử Việt Nam, đặc biệt là Chủ tịch Hồ Chí Minh",
+    "Người dùng giao tiếp bằng tiếng Việt",
+    "User shows interest in Vietnamese historical figures, specifically Chủ tịch Hồ Chí Minh and his notable disciples.",
+    "Người dùng nói tiếng Việt",
+    "Quan tâm tới lịch sử Việt Nam, đặc biệt là Chủ tịch Hồ Chí Minh và các học trò của ông",
+    "Muốn biết thông tin ngắn gọn về mô hình AI đang sử dụng",
+    "User shows interest in Vietnamese history, specifically notable students of Hồ Chí Minh.",
+    "User is curious about the AI model being used and wants a concise introduction.",
+    "User wants to explore practical applications of the AI model in learning and work contexts."
+  ],
+  "conversationSummaries": [
+    {
+      "id": "mmxagt904qoub0smuwr",
+      "title": "làm một bài thơ lục bát",
+      "summary": "Người dùng yêu cầu một bài thơ lục bát và AI đã cung cấp một đoạn thơ ngắn.",
+      "topics": [
+        "Vietnamese poetry",
+        "Lục bát verse structure"
+      ],
+      "timestamp": "2026-03-19T09:49:51.389Z"
+    },
+    {
+      "id": "mmxagt904qoub0smuwr",
+      "title": "làm một bài thơ lục bát",
+      "summary": "Người dùng yêu cầu một bài thơ lục bát và hỏi về Truyện Kiều; AI đã cung cấp bài thơ và tóm tắt nhanh về tác phẩm.",
+      "topics": [
+        "Lục bát poetry",
+        "Truyện Kiều",
+        "Nguyễn Du"
+      ],
+      "timestamp": "2026-03-19T09:50:37.535Z"
+    },
+    {
+      "id": "mmxagt904qoub0smuwr",
+      "title": "làm một bài thơ lục bát",
+      "summary": "Người dùng yêu cầu một bài thơ lục bát, sau đó hỏi về Truyện Kiều và yêu cầu một vài đoạn trích từ tác phẩm.",
+      "topics": [
+        "Lục bát poetry",
+        "Truyện Kiều",
+        "Nguyễn Du",
+        "Vietnamese classical literature"
+      ],
+      "timestamp": "2026-03-19T09:51:13.329Z"
+    },
+    {
+      "id": "mmxajuch9ka4mvte2c8",
+      "title": "Giới thiệu về Chủ tịch HCM",
+      "summary": "Người dùng yêu cầu giới thiệu về Chủ tịch Hồ Chí Minh và AI đã cung cấp một đoạn tiểu sử ngắn gọn.",
+      "topics": [
+        "Giới thiệu tiểu sử Chủ tịch Hồ Chí Minh",
+        "Lịch sử hiện đại Việt Nam"
+      ],
+      "timestamp": "2026-03-19T09:52:12.489Z"
+    },
+    {
+      "id": "mmxajuch9ka4mvte2c8",
+      "title": "Giới thiệu về Chủ tịch HCM",
+      "summary": "Người dùng hỏi về giới thiệu Chủ tịch Hồ Chí Minh và muốn biết ai là những học trò xuất sắc của ông.",
+      "topics": [
+        "Giới thiệu về Chủ tịch Hồ Chí Minh",
+        "Các học trò xuất sắc của Chủ tịch Hồ Chí Minh"
+      ],
+      "timestamp": "2026-03-19T09:52:51.758Z"
+    },
+    {
+      "id": "mmxajuch9ka4mvte2c8",
+      "title": "Giới thiệu về Chủ tịch HCM",
+      "summary": "Người dùng hỏi về Chủ tịch Hồ Chí Minh, các học trò xuất sắc của ông, và yêu cầu giới thiệu ngắn gọn về mô hình AI đang dùng.",
+      "topics": [
+        "Giới thiệu về Chủ tịch Hồ Chí Minh",
+        "Học trò xuất sắc của Chủ tịch Hồ Chí Minh",
+        "Mô tả ngắn gọn về mô hình AI (ChatGPT‑4)"
+      ],
+      "timestamp": "2026-03-19T10:10:24.868Z"
+    },
+    {
+      "id": "mmxajuch9ka4mvte2c8",
+      "title": "Giới thiệu về Chủ tịch HCM",
+      "summary": "Người dùng hỏi về học trò xuất sắc của Hồ Chí Minh, yêu cầu giới thiệu ngắn gọn về mô hình AI và muốn biết các ứng dụng thực tế của AI trong học tập và công việc.",
+      "topics": [
+        "Prominent disciples of Hồ Chí Minh",
+        "Brief overview of the ChatGPT‑4 model",
+        "Real‑world applications of AI in education and professional settings"
+      ],
+      "timestamp": "2026-03-19T10:12:24.916Z"
+    }
+  ],
+  "topicHistory": [
+    "Vietnamese poetry",
+    "Lục bát verse structure",
+    "Lục bát poetry",
+    "Truyện Kiều",
+    "Nguyễn Du",
+    "Vietnamese classical literature",
+    "Giới thiệu tiểu sử Chủ tịch Hồ Chí Minh",
+    "Lịch sử hiện đại Việt Nam",
+    "Giới thiệu về Chủ tịch Hồ Chí Minh",
+    "Các học trò xuất sắc của Chủ tịch Hồ Chí Minh",
+    "Học trò xuất sắc của Chủ tịch Hồ Chí Minh",
+    "Mô tả ngắn gọn về mô hình AI (ChatGPT‑4)",
+    "Prominent disciples of Hồ Chí Minh",
+    "Brief overview of the ChatGPT‑4 model",
+    "Real‑world applications of AI in education and professional settings"
+  ]
+}
