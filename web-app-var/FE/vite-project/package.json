@@ -12,6 +12,21 @@
   "dependencies": {
     "@fortawesome/react-fontawesome": "^3.1.0",
     "@tailwindcss/vite": "^4.1.17",
+    "@tiptap/extension-color": "^3.22.5",
+    "@tiptap/extension-font-family": "^3.22.5",
+    "@tiptap/extension-highlight": "^3.22.5",
+    "@tiptap/extension-image": "^3.22.5",
+    "@tiptap/extension-link": "^3.22.5",
+    "@tiptap/extension-table": "^3.22.5",
+    "@tiptap/extension-table-cell": "^3.22.5",
+    "@tiptap/extension-table-header": "^3.22.5",
+    "@tiptap/extension-table-row": "^3.22.5",
+    "@tiptap/extension-text-align": "^3.22.5",
+    "@tiptap/extension-text-style": "^3.22.5",
+    "@tiptap/extension-underline": "^3.22.5",
+    "@tiptap/pm": "^3.22.5",
+    "@tiptap/react": "^3.22.5",
+    "@tiptap/starter-kit": "^3.22.5",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.9.6"
@@ -21,6 +36,8 @@
     "@fortawesome/fontawesome-free": "^7.1.0",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
+    "@typescript-eslint/eslint-plugin": "^8.59.2",
+    "@typescript-eslint/parser": "^8.59.2",
     "@vitejs/plugin-react": "^5.1.1",
     "autoprefixer": "^10.4.22",
     "eslint": "^9.39.1",
@@ -29,6 +46,7 @@
     "globals": "^16.5.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.17",
+    "typescript": "^6.0.3",
     "vite": "^7.2.4"
   }
 }

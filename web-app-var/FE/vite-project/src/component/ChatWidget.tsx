@@ -3,7 +3,7 @@ import "../styles/ChatWidget.css";
 
 const CHATBOT_API = "/chatbot-api";
 
-function renderMarkdown(text) {
+function renderMarkdown(text: string): string {
   // Tables: detect blocks where lines start/end with |
   text = text.replace(
     /((?:\|.+\|\n?)+)/g,
@@ -38,35 +38,49 @@ function renderMarkdown(text) {
     .replace(/$/, "</p>");
 }
 
-function escHtml(s) {
-  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-}
-
 const EDGE_MARGIN = 18;
 const BTN_SIZE = 56;
 
+interface ChatContext {
+  page: number;
+  docName: string;
+}
+
+interface ChatMessage {
+  role: "user" | "ai";
+  content: string;
+  loading?: boolean;
+  error?: string;
+  context?: ChatContext[];
+}
+
+interface Position {
+  x: number;
+  y: number;
+}
+
 const ChatWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const messagesEndRef = useRef(null);
-  const inputRef = useRef(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
 
   // Drag state
-  const [pos, setPos] = useState({ x: window.innerWidth - BTN_SIZE - EDGE_MARGIN, y: window.innerHeight - BTN_SIZE - EDGE_MARGIN });
-  const [side, setSide] = useState("right"); // "left" | "right"
+  const [pos, setPos] = useState<Position>({ x: window.innerWidth - BTN_SIZE - EDGE_MARGIN, y: window.innerHeight - BTN_SIZE - EDGE_MARGIN });
+  const [side, setSide] = useState<"left" | "right">("right");
   const dragging = useRef(false);
   const dragStart = useRef({ px: 0, py: 0, sx: 0, sy: 0 });
   const hasMoved = useRef(false);
-  const wrapperRef = useRef(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
   // Snap to nearest side
-  const snapToSide = useCallback((x, y) => {
+  const snapToSide = useCallback((x: number, y: number) => {
     const vw = window.innerWidth;
     const vh = window.innerHeight;
     const centerX = x + BTN_SIZE / 2;
-    const snappedSide = centerX < vw / 2 ? "left" : "right";
+    const snappedSide: "left" | "right" = centerX < vw / 2 ? "left" : "right";
     const snappedX = snappedSide === "left" ? EDGE_MARGIN : vw - BTN_SIZE - EDGE_MARGIN;
     const clampedY = Math.max(EDGE_MARGIN, Math.min(y, vh - BTN_SIZE - EDGE_MARGIN));
     setSide(snappedSide);
@@ -74,8 +88,8 @@ const ChatWidget = () => {
   }, []);
 
   // Mouse events
-  const onPointerDown = useCallback((e) => {
-    if (isOpen) return; // don't drag when chat is open
+  const onPointerDown = useCallback((e: React.PointerEvent) => {
+    if (isOpen) return;
     dragging.current = true;
     hasMoved.current = false;
     dragStart.current = { px: e.clientX, py: e.clientY, sx: pos.x, sy: pos.y };
@@ -83,7 +97,7 @@ const ChatWidget = () => {
   }, [isOpen, pos]);
 
   useEffect(() => {
-    const onPointerMove = (e) => {
+    const onPointerMove = (e: PointerEvent) => {
       if (!dragging.current) return;
       const dx = e.clientX - dragStart.current.px;
       const dy = e.clientY - dragStart.current.py;
@@ -101,10 +115,9 @@ const ChatWidget = () => {
     const onPointerUp = () => {
       if (!dragging.current) return;
       dragging.current = false;
-      // Snap
       setPos((prev) => {
         snapToSide(prev.x, prev.y);
-        return prev; // snapToSide sets state
+        return prev;
       });
     };
 
@@ -136,7 +149,7 @@ const ChatWidget = () => {
   const toggleWidget = () => {
     if (hasMoved.current) {
       hasMoved.current = false;
-      return; // was a drag, not a click
+      return;
     }
     setIsOpen(!isOpen);
   };
@@ -149,8 +162,6 @@ const ChatWidget = () => {
     setMessages((prev) => [...prev, { role: "user", content: question }]);
     setIsLoading(true);
 
-    // Add a placeholder AI message
-    const aiMsgIndex = messages.length + 1;
     setMessages((prev) => [
       ...prev,
       { role: "ai", content: "", loading: true },
@@ -165,32 +176,32 @@ const ChatWidget = () => {
 
       if (!res.ok) {
         const json = await res.json().catch(() => ({}));
-        throw new Error(json.error || `Lỗi server (${res.status})`);
+        throw new Error((json as { error?: string }).error || `Lỗi server (${res.status})`);
       }
 
-      const reader = res.body.getReader();
+      const reader = res.body!.getReader();
       const decoder = new TextDecoder();
       let buf = "";
       let fullText = "";
-      let contextChunks = [];
+      let contextChunks: ChatContext[] = [];
 
       while (true) {
         const { done, value } = await reader.read();
         if (done) break;
         buf += decoder.decode(value, { stream: true });
         const lines = buf.split("\n");
-        buf = lines.pop();
+        buf = lines.pop() ?? "";
 
         for (const line of lines) {
           if (!line.startsWith("data: ")) continue;
           const raw = line.slice(6);
           if (raw === "[DONE]") break;
           try {
-            const msg = JSON.parse(raw);
+            const msg = JSON.parse(raw) as { type: string; chunks?: ChatContext[]; content?: string; message?: string };
             if (msg.type === "context") {
-              contextChunks = msg.chunks;
+              contextChunks = msg.chunks ?? [];
             } else if (msg.type === "token") {
-              fullText += msg.content;
+              fullText += msg.content ?? "";
               setMessages((prev) => {
                 const updated = [...prev];
                 updated[updated.length - 1] = {
@@ -205,7 +216,7 @@ const ChatWidget = () => {
               throw new Error(msg.message);
             }
           } catch (parseErr) {
-            if (parseErr.message !== "Unexpected end of JSON input")
+            if ((parseErr as Error).message !== "Unexpected end of JSON input")
               throw parseErr;
           }
         }
@@ -228,7 +239,7 @@ const ChatWidget = () => {
         updated[updated.length - 1] = {
           role: "ai",
           content: "",
-          error: err.message,
+          error: (err as Error).message,
           loading: false,
         };
         return updated;
@@ -238,7 +249,7 @@ const ChatWidget = () => {
     }
   };
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       handleSend();
@@ -246,7 +257,7 @@ const ChatWidget = () => {
   };
 
   // Compute chat window position based on button side
-  const windowStyle = side === "left"
+  const windowStyle: React.CSSProperties = side === "left"
     ? { left: 0, bottom: 70 }
     : { right: 0, bottom: 70 };
 

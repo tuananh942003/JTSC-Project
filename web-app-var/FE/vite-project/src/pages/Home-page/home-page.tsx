@@ -1,20 +1,33 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
-import { Navbar } from "../../component/navbar.jsx";
-import logo from "../../images/computerscience-scaled.jpg";
-import { Footer } from "../../component/footer.jsx";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "./home-page.css";
-import ServiceCard from "./card.jsx";
-import { NewsCard } from "./card.jsx";
-import { Contact } from "../../component/contact.jsx";
+import ServiceCard from "./card";
+import { NewsCard } from "./card";
+import { Contact } from "../../component/contact";
 import { Link } from "react-router-dom";
-import { useLang } from "../../context/LanguageContext.jsx";
-import API_URL from "../../config/api.js";
+import { useLang } from "../../context/LanguageContext";
+import API_URL from "../../config/api";
+import logo from "../../images/computerscience-scaled.jpg";
+
+interface ApiService {
+  _id: string;
+  icon: string;
+  title: string;
+  content: string;
+}
+
+interface ApiPost {
+  _id: string;
+  title: string;
+  content: string;
+  imageUrl: string;
+  createdAt: string;
+}
 
 /* ---- Animated counter hook ---- */
-function useCountUp(target, duration = 2000) {
+function useCountUp(target: number, duration = 2000): [number, React.RefObject<HTMLDivElement | null>] {
   const [count, setCount] = useState(0);
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const started = useRef(false);
 
   useEffect(() => {
@@ -42,7 +55,13 @@ function useCountUp(target, duration = 2000) {
   return [count, ref];
 }
 
-function CountUpStat({ value, suffix, label }) {
+interface CountUpStatProps {
+  value: number;
+  suffix: string;
+  label: string;
+}
+
+function CountUpStat({ value, suffix, label }: CountUpStatProps) {
   const [count, ref] = useCountUp(value);
   return (
     <div className="hero-stat-item" ref={ref}>
@@ -53,17 +72,17 @@ function CountUpStat({ value, suffix, label }) {
 }
 
 export const HomePage = () => {
-  const observerRef = useRef(null);
+  const observerRef = useRef<IntersectionObserver | null>(null);
   const { t } = useLang();
-  const [services, setServices] = useState([]);
-  const [posts, setPosts] = useState([]);
+  const [services, setServices] = useState<ApiService[]>([]);
+  const [posts, setPosts] = useState<ApiPost[]>([]);
 
   useEffect(() => {
     const fetchServices = async () => {
       try {
         const res = await fetch(`${API_URL}/api/services`);
         if (res.ok) {
-          const data = await res.json();
+          const data: ApiService[] = await res.json();
           setServices(data);
         }
       } catch (err) {
@@ -74,7 +93,7 @@ export const HomePage = () => {
       try {
         const res = await fetch(`${API_URL}/api/posts`);
         if (res.ok) {
-          const data = await res.json();
+          const data: ApiPost[] = await res.json();
           setPosts(data);
         }
       } catch (err) {
@@ -91,14 +110,14 @@ export const HomePage = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("revealed");
-            observerRef.current.unobserve(entry.target);
+            observerRef.current?.unobserve(entry.target);
           }
         });
       },
       { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
     );
     document.querySelectorAll("[data-reveal]").forEach((el) => {
-      observerRef.current.observe(el);
+      observerRef.current?.observe(el);
     });
     return () => observerRef.current?.disconnect();
   }, []);
@@ -122,12 +141,8 @@ export const HomePage = () => {
           <div className="hero-badge">
             <span></span> {t('hero.badge')}
           </div>
-          <h1>
-            {t('hero.title')}
-          </h1>
-          <p>
-            {t('hero.description')}
-          </p>
+          <h1>{t('hero.title')}</h1>
+          <p>{t('hero.description')}</p>
           <div className="home-page-action">
             <Link to="/service">
               <button>
@@ -162,48 +177,35 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
+
       <section className="section-about" id="about-section">
         <div className="section-inner">
           <div className="subtitle" data-reveal>
             <p className="section-label"><i className="fa-solid fa-star"></i> {t('homeAbout.badge')}</p>
             <h2>{t('homeAbout.title')}</h2>
-            <p>
-              Chuyên gia tư vấn đấu thầu hàng đầu với đội ngũ có nhiều năm kinh nghiệm
-            </p>
+            <p>Chuyên gia tư vấn đấu thầu hàng đầu với đội ngũ có nhiều năm kinh nghiệm</p>
           </div>
           <div className="about-content">
             <div className="about-text">
-              <div className="feature-item" data-reveal style={{transitionDelay: '0.1s'}}>
-                <div className="icon">
-                  <i className="fa-solid fa-clipboard-check"></i>
-                </div>
+              <div className="feature-item" data-reveal style={{ transitionDelay: '0.1s' }}>
+                <div className="icon"><i className="fa-solid fa-clipboard-check"></i></div>
                 <div className="info">
                   <h3 className="info-title">{t('homeAbout.feature1Title')}</h3>
-                  <p className="info-description">
-                    {t('homeAbout.feature1Desc')}
-                  </p>
+                  <p className="info-description">{t('homeAbout.feature1Desc')}</p>
                 </div>
               </div>
-              <div className="feature-item" data-reveal style={{transitionDelay: '0.2s'}}>
-                <div className="icon">
-                  <i className="fa-solid fa-gavel"></i>
-                </div>
+              <div className="feature-item" data-reveal style={{ transitionDelay: '0.2s' }}>
+                <div className="icon"><i className="fa-solid fa-gavel"></i></div>
                 <div className="info">
                   <h3 className="info-title">{t('homeAbout.feature2Title')}</h3>
-                  <p className="info-description">
-                    {t('homeAbout.feature2Desc')}
-                  </p>
+                  <p className="info-description">{t('homeAbout.feature2Desc')}</p>
                 </div>
               </div>
-              <div className="feature-item" data-reveal style={{transitionDelay: '0.3s'}}>
-                <div className="icon">
-                  <i className="fa-solid fa-trophy"></i>
-                </div>
+              <div className="feature-item" data-reveal style={{ transitionDelay: '0.3s' }}>
+                <div className="icon"><i className="fa-solid fa-trophy"></i></div>
                 <div className="info">
                   <h3 className="info-title">{t('homeAbout.feature3Title')}</h3>
-                  <p className="info-description">
-                    {t('homeAbout.feature3Desc')}
-                  </p>
+                  <p className="info-description">{t('homeAbout.feature3Desc')}</p>
                 </div>
               </div>
             </div>
@@ -298,7 +300,7 @@ export const HomePage = () => {
                 description={post.content}
                 extension={{
                   icon: "fas fa-calendar",
-                  date: new Date(post.createdAt).toLocaleDateString('vi-VN')
+                  date: new Date(post.createdAt).toLocaleDateString('vi-VN'),
                 }}
               />
             ))}
@@ -320,4 +322,5 @@ export const HomePage = () => {
     </>
   );
 };
+
 export default HomePage;

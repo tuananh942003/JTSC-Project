@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./about.css";
 import "@fortawesome/fontawesome-free/css/all.css";
-import { useLang } from "../../context/LanguageContext.jsx";
+import { useLang } from "../../context/LanguageContext";
 
 /* Animated counter */
-function useCountUp(target, duration = 2000) {
+function useCountUp(target: number, duration = 2000): [number, React.RefObject<HTMLDivElement | null>] {
   const [count, setCount] = useState(0);
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const started = useRef(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -32,7 +32,14 @@ function useCountUp(target, duration = 2000) {
   return [count, ref];
 }
 
-function StatCounter({ icon, value, suffix, label }) {
+interface StatCounterProps {
+  icon: string;
+  value: number;
+  suffix: string;
+  label: string;
+}
+
+function StatCounter({ icon, value, suffix, label }: StatCounterProps) {
   const [count, ref] = useCountUp(value);
   return (
     <div className="about-counter-card" ref={ref}>
@@ -44,7 +51,7 @@ function StatCounter({ icon, value, suffix, label }) {
 }
 
 export const About = () => {
-  const observerRef = useRef(null);
+  const observerRef = useRef<IntersectionObserver | null>(null);
   const { t } = useLang();
 
   useEffect(() => {
@@ -53,33 +60,22 @@ export const About = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("revealed");
-            observerRef.current.unobserve(entry.target);
+            observerRef.current?.unobserve(entry.target);
           }
         });
       },
       { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
     );
     document.querySelectorAll("[data-reveal]").forEach((el) => {
-      observerRef.current.observe(el);
+      observerRef.current?.observe(el);
     });
     return () => observerRef.current?.disconnect();
   }, []);
+
   const visionMissionData = [
-    {
-      icon: "fas fa-eye",
-      title: t('about.visionTitle'),
-      description: t('about.visionDesc')
-    },
-    {
-      icon: "fas fa-rocket",
-      title: t('about.missionTitle'),
-      description: t('about.missionDesc')
-    },
-    {
-      icon: "fas fa-heart",
-      title: t('about.coreValuesTitle'),
-      description: t('about.coreValuesDesc')
-    }
+    { icon: "fas fa-eye", title: t('about.visionTitle'), description: t('about.visionDesc') },
+    { icon: "fas fa-rocket", title: t('about.missionTitle'), description: t('about.missionDesc') },
+    { icon: "fas fa-heart", title: t('about.coreValuesTitle'), description: t('about.coreValuesDesc') },
   ];
 
   const expertTeam = [
@@ -88,22 +84,22 @@ export const About = () => {
       position: t('about.expert1Position'),
       avatar: "fas fa-user-tie",
       description: t('about.expert1Desc'),
-      expertise: `${t('about.expert1Skill1')}, ${t('about.expert1Skill2')}, ${t('about.expert1Skill3')}`
+      expertise: `${t('about.expert1Skill1')}, ${t('about.expert1Skill2')}, ${t('about.expert1Skill3')}`,
     },
     {
       name: t('about.expert2Name'),
       position: t('about.expert2Position'),
       avatar: "fas fa-gavel",
       description: t('about.expert2Desc'),
-      expertise: `${t('about.expert2Skill1')}, ${t('about.expert2Skill2')}, ${t('about.expert2Skill3')}`
+      expertise: `${t('about.expert2Skill1')}, ${t('about.expert2Skill2')}, ${t('about.expert2Skill3')}`,
     },
     {
       name: t('about.expert3Name'),
       position: t('about.expert3Position'),
       avatar: "fas fa-chart-line",
       description: t('about.expert3Desc'),
-      expertise: `${t('about.expert3Skill1')}, ${t('about.expert3Skill2')}, ${t('about.expert3Skill3')}`
-    }
+      expertise: `${t('about.expert3Skill1')}, ${t('about.expert3Skill2')}, ${t('about.expert3Skill3')}`,
+    },
   ];
 
   return (
@@ -126,17 +122,16 @@ export const About = () => {
             </h2>
             <div className="intro-text">
               <p>
-                Với hơn <strong>15 năm kinh nghiệm</strong> trong lĩnh vực tư vấn đấu thầu, chúng tôi tự hào là đơn vị 
-                tiên phong trong việc cung cấp các giải pháp toàn diện cho doanh nghiệp. Đội ngũ chuyên gia của chúng 
-                tôi luôn sẵn sàng đồng hành cùng bạn trong mọi giai đoạn của quá trình đấu thầu.
+                Với hơn <strong>15 năm kinh nghiệm</strong> trong lĩnh vực tư vấn đấu thầu, chúng tôi tự hào là đơn vị
+                tiên phong trong việc cung cấp các giải pháp toàn diện cho doanh nghiệp.
               </p>
               <p>
-                Chúng tôi không chỉ đơn thuần là nhà tư vấn, mà còn là người bạn đồng hành đáng tin cậy, luôn đặt 
-                lợi ích và thành công của khách hàng lên hàng đầu. Với phương châm <em>"Chuyên nghiệp - Uy tín - Hiệu quả"</em>, 
+                Chúng tôi không chỉ đơn thuần là nhà tư vấn, mà còn là người bạn đồng hành đáng tin cậy, luôn đặt
+                lợi ích và thành công của khách hàng lên hàng đầu. Với phương châm <em>"Chuyên nghiệp - Uy tín - Hiệu quả"</em>,
                 chúng tôi cam kết mang đến dịch vụ chất lượng cao nhất.
               </p>
               <p>
-                Hơn <strong>500+ dự án</strong> đã được triển khai thành công và <strong>200+ khách hàng</strong> tin tưởng 
+                Hơn <strong>500+ dự án</strong> đã được triển khai thành công và <strong>200+ khách hàng</strong> tin tưởng
                 lựa chọn chúng tôi như một minh chứng cho chất lượng dịch vụ mà chúng tôi cung cấp.
               </p>
             </div>
@@ -155,9 +150,7 @@ export const About = () => {
             {visionMissionData.map((item, index) => (
               <div key={index} className="vision-card">
                 <div className="vision-card-number">0{index + 1}</div>
-                <div className="card-icon">
-                  <i className={item.icon}></i>
-                </div>
+                <div className="card-icon"><i className={item.icon}></i></div>
                 <h3 className="card-title">{item.title}</h3>
                 <p className="card-description">{item.description}</p>
               </div>
@@ -185,15 +178,11 @@ export const About = () => {
             <i className="fas fa-users"></i>
             {t('about.sectionTeam')}
           </h2>
-          <p className="section-subtitle">
-            {t('about.teamSubtitle')}
-          </p>
+          <p className="section-subtitle">{t('about.teamSubtitle')}</p>
           <div className="expert-grid" data-reveal>
             {expertTeam.map((expert, index) => (
               <div key={index} className="expert-card">
-                <div className="expert-avatar">
-                  <i className={expert.avatar}></i>
-                </div>
+                <div className="expert-avatar"><i className={expert.avatar}></i></div>
                 <div className="expert-info">
                   <h3 className="expert-name">{expert.name}</h3>
                   <p className="expert-position">{expert.position}</p>

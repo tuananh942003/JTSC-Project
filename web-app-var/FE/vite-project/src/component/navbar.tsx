@@ -3,7 +3,7 @@ import "../styles/navbar.css";
 import logo from "../images/logo.png";
 import "@fortawesome/fontawesome-free/css/all.css";
 import { Link, useLocation } from "react-router-dom";
-import { useLang } from "../context/LanguageContext.jsx";
+import { useLang } from "../context/LanguageContext";
 
 export const Navbar = () => {
   const { t, lang, toggleLang } = useLang();
@@ -62,7 +62,6 @@ export const Navbar = () => {
           <Link to="/ai-chatbot" className={`nav-ai-chatbot${location.pathname === '/ai-chatbot' ? ' active' : ''}`}>
             <i className="fas fa-robot"></i> {t('nav.aiChatbot')}
           </Link>
-
         </div>
 
         {/* Language + Theme toggles */}
@@ -76,7 +75,6 @@ export const Navbar = () => {
             <i className={darkMode ? 'fas fa-sun' : 'fas fa-moon'}></i>
           </button>
         </div>
-
       </div>
 
       {/* Mobile overlay */}

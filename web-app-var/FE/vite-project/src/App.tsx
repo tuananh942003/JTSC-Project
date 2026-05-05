@@ -1,20 +1,20 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import { Navbar } from "./component/navbar.jsx";
-import { Footer } from "./component/footer.jsx";
+import { Navbar } from "./component/navbar";
+import { Footer } from "./component/footer";
 import "@fortawesome/fontawesome-free/css/all.css";
-import HomePage from "./pages/Home-page/home-page.jsx";
-import About from "./pages/About-page/about.jsx";
-import { Contact } from "./component/contact.jsx";
-import AdminPage from "./pages/admin-page/admin-page.jsx";
-import ServicePage from "./pages/Service-page/service-page.jsx";
-import NewsPage from "./pages/News-page/news-page.jsx";
-import NewsDetail from "./pages/News-page/news-detail.jsx";
-import ChatbotPage from "./pages/Chatbot-page/chatbot-page.jsx";
-import ChatWidget from "./component/ChatWidget.jsx";
+import HomePage from "./pages/Home-page/home-page";
+import About from "./pages/About-page/about";
+import { Contact } from "./component/contact";
+import AdminPage from "./pages/admin-page/admin-page";
+import ServicePage from "./pages/Service-page/service-page";
+import NewsPage from "./pages/News-page/news-page";
+import NewsDetail from "./pages/News-page/news-detail";
+import ChatbotPage from "./pages/Chatbot-page/chatbot-page";
+import ChatWidget from "./component/ChatWidget";
 import { Route, Routes, Outlet, useLocation } from "react-router-dom";
 
-function ScrollToTop() {  
+function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
     document.documentElement.scrollTop = 0;
@@ -98,4 +98,3 @@ function App() {
 }
 
 export default App;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          

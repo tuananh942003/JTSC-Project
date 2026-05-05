@@ -1,12 +1,17 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import "./chatbot-page.css";
-import API_URL from "../../config/api.js";
+import API_URL from "../../config/api";
 
 const CHATBOT_URL = import.meta.env.VITE_CHATBOT_URL || "http://localhost:3000";
 const CHATBOT_API = "/chatbot-api";
 
-const LOADING_STEPS = [
+interface LoadingStep {
+  text: string;
+  icon: string;
+}
+
+const LOADING_STEPS: LoadingStep[] = [
   { text: "Đang khởi tạo hệ thống AI...", icon: "fa-microchip" },
   { text: "Kết nối tới máy chủ...", icon: "fa-server" },
   { text: "Tải mô hình trí tuệ nhân tạo...", icon: "fa-brain" },
@@ -14,16 +19,16 @@ const LOADING_STEPS = [
   { text: "Sẵn sàng phục vụ!", icon: "fa-check-circle" },
 ];
 
-const MIN_LOADING_MS = 3500; // minimum 3.5 seconds loading
+const MIN_LOADING_MS = 3500;
 
 const ChatbotPage = () => {
-  const iframeRef = useRef(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
   const [iframeLoaded, setIframeLoaded] = useState(false);
   const [splashDone, setSplashDone] = useState(false);
   const [loadingStep, setLoadingStep] = useState(0);
   const [progress, setProgress] = useState(0);
   const [fadeOut, setFadeOut] = useState(false);
-  const splashTimerRef = useRef(null);
+  const splashTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Auth state
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -36,12 +41,9 @@ const ChatbotPage = () => {
   const [registerError, setRegisterError] = useState("");
   const [registerLoading, setRegisterLoading] = useState(false);
 
-  // Check if user is already logged in
   useEffect(() => {
     const savedUser = localStorage.getItem("user");
-    if (savedUser) {
-      setIsAuthenticated(true);
-    }
+    if (savedUser) setIsAuthenticated(true);
     setAuthChecked(true);
   }, []);
 
@@ -61,7 +63,7 @@ const ChatbotPage = () => {
         }),
       });
       const data = await res.json();
-      if (data.ok && data.token && iframeRef.current) {
+      if (data.ok && data.token && iframeRef.current?.contentWindow) {
         iframeRef.current.contentWindow.postMessage(
           { type: "AUTH_SYNC", token: data.token },
           CHATBOT_URL
@@ -72,8 +74,7 @@ const ChatbotPage = () => {
     }
   }, []);
 
-  // Handle login
-  const handleLogin = async (e) => {
+  const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoginError("");
     setLoginLoading(true);
@@ -100,8 +101,7 @@ const ChatbotPage = () => {
     }
   };
 
-  // Handle register
-  const handleRegister = async (e) => {
+  const handleRegister = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setRegisterError("");
     setRegisterLoading(true);
@@ -113,7 +113,6 @@ const ChatbotPage = () => {
       });
       const data = await res.json();
       if (res.ok) {
-        // Auto login after register
         const loginRes = await fetch(`${API_URL}/api/users/login`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -127,7 +126,6 @@ const ChatbotPage = () => {
           setIsAuthenticated(true);
           setRegisterForm({ name: "", username: "", email: "", password: "" });
         } else {
-          // Register success but auto-login failed — switch to login
           setShowRegister(false);
           setLoginError("");
         }
@@ -145,15 +143,12 @@ const ChatbotPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Loading steps animation — only start after authenticated
   useEffect(() => {
     if (!isAuthenticated) return;
-
     const totalSteps = LOADING_STEPS.length;
     const stepDuration = MIN_LOADING_MS / totalSteps;
     let currentStep = 0;
 
-    // Progress bar animation
     const progressInterval = setInterval(() => {
       setProgress((prev) => {
         const target = ((currentStep + 1) / totalSteps) * 100;
@@ -162,7 +157,6 @@ const ChatbotPage = () => {
       });
     }, 50);
 
-    // Step animation
     const stepInterval = setInterval(() => {
       currentStep++;
       if (currentStep < totalSteps) {
@@ -172,23 +166,19 @@ const ChatbotPage = () => {
       }
     }, stepDuration);
 
-    // Minimum loading timer
     splashTimerRef.current = setTimeout(() => {
       setProgress(100);
       setLoadingStep(totalSteps - 1);
-      // Wait a short time to show 100% then fade out
       setTimeout(() => {
         setFadeOut(true);
-        setTimeout(() => {
-          setSplashDone(true);
-        }, 600); // match CSS fade-out duration
+        setTimeout(() => setSplashDone(true), 600);
       }, 400);
     }, MIN_LOADING_MS);
 
     return () => {
       clearInterval(progressInterval);
       clearInterval(stepInterval);
-      clearTimeout(splashTimerRef.current);
+      if (splashTimerRef.current) clearTimeout(splashTimerRef.current);
     };
   }, [isAuthenticated]);
 
@@ -199,10 +189,8 @@ const ChatbotPage = () => {
 
   const showSplash = !splashDone;
 
-  // Show nothing while checking auth
   if (!authChecked) return null;
 
-  // Login gate — show login form if not authenticated
   if (!isAuthenticated) {
     return (
       <div className="chatbot-fullscreen">
@@ -214,9 +202,7 @@ const ChatbotPage = () => {
             </Link>
             <div className="chatbot-topbar-divider"></div>
             <div className="chatbot-topbar-brand">
-              <div className="chatbot-topbar-icon">
-                <i className="fas fa-robot"></i>
-              </div>
+              <div className="chatbot-topbar-icon"><i className="fas fa-robot"></i></div>
               <div className="chatbot-topbar-info">
                 <h1>AI Document Search</h1>
                 <p>Tra cứu tài liệu thông minh bằng AI</p>
@@ -233,14 +219,12 @@ const ChatbotPage = () => {
                 '--duration': `${3 + Math.random() * 4}s`,
                 '--x': `${Math.random() * 100}%`,
                 '--size': `${2 + Math.random() * 4}px`,
-              }} />
+              } as React.CSSProperties} />
             ))}
           </div>
 
           <div className="chatbot-auth-card">
-            <div className="chatbot-auth-icon">
-              <i className="fas fa-robot"></i>
-            </div>
+            <div className="chatbot-auth-icon"><i className="fas fa-robot"></i></div>
             <h2>{showRegister ? "Đăng ký tài khoản" : "Đăng nhập"}</h2>
             <p>{showRegister ? "Tạo tài khoản mới để sử dụng AI Chatbot" : "Đăng nhập để sử dụng AI Chatbot"}</p>
 
@@ -249,24 +233,13 @@ const ChatbotPage = () => {
                 {loginError && <div className="chatbot-auth-error"><i className="fas fa-exclamation-circle"></i> {loginError}</div>}
                 <div className="chatbot-auth-field">
                   <i className="fas fa-user"></i>
-                  <input
-                    type="text"
-                    placeholder="Tên đăng nhập"
-                    value={loginForm.username}
-                    onChange={(e) => setLoginForm({ ...loginForm, username: e.target.value })}
-                    required
-                    autoFocus
-                  />
+                  <input type="text" placeholder="Tên đăng nhập" value={loginForm.username}
+                    onChange={(e) => setLoginForm({ ...loginForm, username: e.target.value })} required autoFocus />
                 </div>
                 <div className="chatbot-auth-field">
                   <i className="fas fa-lock"></i>
-                  <input
-                    type="password"
-                    placeholder="Mật khẩu"
-                    value={loginForm.password}
-                    onChange={(e) => setLoginForm({ ...loginForm, password: e.target.value })}
-                    required
-                  />
+                  <input type="password" placeholder="Mật khẩu" value={loginForm.password}
+                    onChange={(e) => setLoginForm({ ...loginForm, password: e.target.value })} required />
                 </div>
                 <button type="submit" className="chatbot-auth-submit" disabled={loginLoading}>
                   {loginLoading ? <><i className="fas fa-spinner fa-spin"></i> Đang đăng nhập...</> : <><i className="fas fa-sign-in-alt"></i> Đăng nhập</>}
@@ -280,45 +253,23 @@ const ChatbotPage = () => {
                 {registerError && <div className="chatbot-auth-error"><i className="fas fa-exclamation-circle"></i> {registerError}</div>}
                 <div className="chatbot-auth-field">
                   <i className="fas fa-user-tag"></i>
-                  <input
-                    type="text"
-                    placeholder="Họ và tên"
-                    value={registerForm.name}
-                    onChange={(e) => setRegisterForm({ ...registerForm, name: e.target.value })}
-                    required
-                    autoFocus
-                  />
+                  <input type="text" placeholder="Họ và tên" value={registerForm.name}
+                    onChange={(e) => setRegisterForm({ ...registerForm, name: e.target.value })} required autoFocus />
                 </div>
                 <div className="chatbot-auth-field">
                   <i className="fas fa-user"></i>
-                  <input
-                    type="text"
-                    placeholder="Tên đăng nhập"
-                    value={registerForm.username}
-                    onChange={(e) => setRegisterForm({ ...registerForm, username: e.target.value })}
-                    required
-                  />
+                  <input type="text" placeholder="Tên đăng nhập" value={registerForm.username}
+                    onChange={(e) => setRegisterForm({ ...registerForm, username: e.target.value })} required />
                 </div>
                 <div className="chatbot-auth-field">
                   <i className="fas fa-envelope"></i>
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    value={registerForm.email}
-                    onChange={(e) => setRegisterForm({ ...registerForm, email: e.target.value })}
-                    required
-                  />
+                  <input type="email" placeholder="Email" value={registerForm.email}
+                    onChange={(e) => setRegisterForm({ ...registerForm, email: e.target.value })} required />
                 </div>
                 <div className="chatbot-auth-field">
                   <i className="fas fa-lock"></i>
-                  <input
-                    type="password"
-                    placeholder="Mật khẩu"
-                    value={registerForm.password}
-                    onChange={(e) => setRegisterForm({ ...registerForm, password: e.target.value })}
-                    required
-                    minLength={6}
-                  />
+                  <input type="password" placeholder="Mật khẩu" value={registerForm.password}
+                    onChange={(e) => setRegisterForm({ ...registerForm, password: e.target.value })} required minLength={6} />
                 </div>
                 <button type="submit" className="chatbot-auth-submit" disabled={registerLoading}>
                   {registerLoading ? <><i className="fas fa-spinner fa-spin"></i> Đang đăng ký...</> : <><i className="fas fa-user-plus"></i> Đăng ký</>}
@@ -336,7 +287,6 @@ const ChatbotPage = () => {
 
   return (
     <div className="chatbot-fullscreen">
-      {/* Top bar */}
       <header className="chatbot-topbar">
         <div className="chatbot-topbar-left">
           <Link to="/" className="chatbot-back-btn">
@@ -345,9 +295,7 @@ const ChatbotPage = () => {
           </Link>
           <div className="chatbot-topbar-divider"></div>
           <div className="chatbot-topbar-brand">
-            <div className="chatbot-topbar-icon">
-              <i className="fas fa-robot"></i>
-            </div>
+            <div className="chatbot-topbar-icon"><i className="fas fa-robot"></i></div>
             <div className="chatbot-topbar-info">
               <h1>AI Document Search</h1>
               <p>Tra cứu tài liệu thông minh bằng AI</p>
@@ -362,11 +310,9 @@ const ChatbotPage = () => {
         </div>
       </header>
 
-      {/* Splash Loading Screen */}
       {showSplash && (
         <div className={`chatbot-splash ${fadeOut ? "chatbot-splash--fade-out" : ""}`}>
           <div className="chatbot-splash__content">
-            {/* Animated Background Particles */}
             <div className="chatbot-splash__particles">
               {[...Array(20)].map((_, i) => (
                 <div key={i} className="chatbot-splash__particle" style={{
@@ -374,66 +320,47 @@ const ChatbotPage = () => {
                   '--duration': `${3 + Math.random() * 4}s`,
                   '--x': `${Math.random() * 100}%`,
                   '--size': `${2 + Math.random() * 4}px`,
-                }} />
+                } as React.CSSProperties} />
               ))}
             </div>
 
-            {/* Main Icon */}
             <div className="chatbot-splash__icon-wrapper">
               <div className="chatbot-splash__ring chatbot-splash__ring--outer"></div>
               <div className="chatbot-splash__ring chatbot-splash__ring--inner"></div>
-              <div className="chatbot-splash__icon">
-                <i className="fas fa-robot"></i>
-              </div>
+              <div className="chatbot-splash__icon"><i className="fas fa-robot"></i></div>
             </div>
 
-            {/* Title */}
             <h2 className="chatbot-splash__title">AI Document Search</h2>
             <p className="chatbot-splash__subtitle">Hệ thống tra cứu tài liệu thông minh</p>
 
-            {/* Loading Steps */}
             <div className="chatbot-splash__steps">
               {LOADING_STEPS.map((step, index) => (
-                <div
-                  key={index}
-                  className={`chatbot-splash__step ${
-                    index < loadingStep ? "chatbot-splash__step--done" :
-                    index === loadingStep ? "chatbot-splash__step--active" : ""
-                  }`}
-                >
+                <div key={index} className={`chatbot-splash__step ${
+                  index < loadingStep ? "chatbot-splash__step--done" :
+                  index === loadingStep ? "chatbot-splash__step--active" : ""
+                }`}>
                   <div className="chatbot-splash__step-icon">
-                    <i className={`fas ${
-                      index < loadingStep ? "fa-check" : step.icon
-                    }`}></i>
+                    <i className={`fas ${index < loadingStep ? "fa-check" : step.icon}`}></i>
                   </div>
                   <span>{step.text}</span>
                 </div>
               ))}
             </div>
 
-            {/* Progress Bar */}
             <div className="chatbot-splash__progress">
               <div className="chatbot-splash__progress-track">
-                <div
-                  className="chatbot-splash__progress-fill"
-                  style={{ width: `${progress}%` }}
-                ></div>
+                <div className="chatbot-splash__progress-fill" style={{ width: `${progress}%` }}></div>
               </div>
-              <span className="chatbot-splash__progress-text">
-                {Math.round(progress)}%
-              </span>
+              <span className="chatbot-splash__progress-text">{Math.round(progress)}%</span>
             </div>
           </div>
         </div>
       )}
 
-      {/* Original loading overlay for iframe (backup) */}
       {splashDone && !iframeLoaded && (
         <div className="chatbot-loading-overlay">
           <div className="chatbot-loader">
-            <div className="chatbot-loader-icon">
-              <i className="fas fa-robot"></i>
-            </div>
+            <div className="chatbot-loader-icon"><i className="fas fa-robot"></i></div>
             <p>Đang tải hệ thống AI...</p>
             <div className="chatbot-loader-bar">
               <div className="chatbot-loader-fill"></div>
@@ -442,7 +369,6 @@ const ChatbotPage = () => {
         </div>
       )}
 
-      {/* Iframe */}
       <div className="chatbot-iframe-container">
         <iframe
           ref={iframeRef}

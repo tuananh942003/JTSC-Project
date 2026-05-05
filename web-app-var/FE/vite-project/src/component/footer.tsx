@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
 import "../styles/footer.css";
 import "@fortawesome/fontawesome-free/css/all.css";
-import { useLang } from "../context/LanguageContext.jsx";
+import { useLang } from "../context/LanguageContext";
+
 const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
 export const Footer = () => {
   const { t } = useLang();
   const [email, setEmail] = useState('');
-  const handleNewsletter = (e) => {
+
+  const handleNewsletter = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (email) {
       alert(t('footer.newsletterSuccess'));
@@ -44,9 +46,7 @@ export const Footer = () => {
           <div className="footer-logo">
             <img src={logo} alt="VAR" />
           </div>
-          <p>
-            {t('footer.companyDesc')}
-          </p>
+          <p>{t('footer.companyDesc')}</p>
           <div className="social-link">
             <i className="fab fa-facebook-f"></i>
             <i className="fab fa-twitter"></i>
@@ -101,4 +101,5 @@ export const Footer = () => {
     </div>
   );
 };
+
 export default Footer;
