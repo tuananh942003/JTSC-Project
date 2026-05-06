@@ -386,3 +386,88 @@
   max-width: 860px;
   width: 90vw;
 }
+
+/* ── Image alignment classes (applied to <img> via CustomImage extension) ── */
+.rte-editor .ProseMirror img.img-float-left {
+  float: left;
+  margin: 4px 18px 10px 0;
+  clear: left;
+}
+
+.rte-editor .ProseMirror img.img-float-right {
+  float: right;
+  margin: 4px 0 10px 18px;
+  clear: right;
+}
+
+.rte-editor .ProseMirror img.img-center {
+  display: block;
+  float: none;
+  margin: 12px auto;
+}
+
+.rte-editor .ProseMirror img.img-full {
+  display: block;
+  float: none;
+  width: 100% !important;
+  margin: 12px 0;
+}
+
+/* Clearfix — prevents container collapse when images are floated */
+.rte-editor .ProseMirror::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* Selected image highlight ring */
+.rte-editor .ProseMirror img.ProseMirror-selectednode {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Contextual Image Format Bar ── */
+.rte-image-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 4px 10px;
+  background: #eff6ff;
+  border-bottom: 1.5px solid #bfdbfe;
+  border-top: 1.5px solid #bfdbfe;
+  animation: rte-bar-in 0.12s ease;
+}
+
+@keyframes rte-bar-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.rte-image-bar-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #1d4ed8;
+  padding: 0 4px;
+  user-select: none;
+}
+
+/* Compact width preset buttons */
+.rte-width-btn {
+  min-width: auto !important;
+  padding: 0 6px !important;
+  font-size: 11px !important;
+  font-weight: 600;
+  color: #374151;
+  letter-spacing: 0.02em;
+}
+
+/* Disabled toolbar button */
+.rte-btn-disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}

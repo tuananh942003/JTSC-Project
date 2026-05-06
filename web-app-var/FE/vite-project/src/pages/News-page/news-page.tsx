@@ -3,6 +3,16 @@ import { useNavigate } from 'react-router-dom';
 import './news-page.css';
 import API_URL from '../../config/api';
 import { useLang } from '../../context/LanguageContext';
+import SEO from '../../component/SEO';
+
+/** Strip HTML tags and return plain text for preview cards */
+const stripHtml = (html: string): string =>
+  html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+
+const getExcerpt = (content: string, maxLen = 120): string => {
+  const plain = stripHtml(content);
+  return plain.length > maxLen ? plain.slice(0, maxLen) + '…' : plain;
+};
 
 interface ApiPost {
   _id: string;
@@ -136,6 +146,19 @@ export const NewsPage = () => {
 
   return (
     <div className="news-container">
+      <SEO
+        title="Tin Tức & Công Nghệ"
+        description="Cập nhật tin tức mới nhất về công nghệ, xu hướng chuyển đổi số, AI, phần mềm doanh nghiệp và các giải pháp IT từ JTSC."
+        keywords="tin tức công nghệ, xu hướng IT, chuyển đổi số, AI, phần mềm, JTSC blog"
+        url="/news"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          "name": "Tin Tức – JTSC",
+          "url": "https://jtsc.vn/news",
+          "description": "Tin tức và bài viết mới nhất về công nghệ từ JTSC."
+        }}
+      />
       <div className="news-hero">
         <h1>{t('news.title')}</h1>
         <p className="news-subtitle">{t('news.subtitle')}</p>
@@ -169,7 +192,7 @@ export const NewsPage = () => {
                 <div className="featured-content">
                   <span className="featured-badge"><i className="fas fa-star"></i> {t('news.featured')}</span>
                   <h2 className="featured-title">{filteredPosts[0].title}</h2>
-                  <p className="featured-desc">{filteredPosts[0].content}</p>
+                  <p className="featured-desc">{getExcerpt(filteredPosts[0].content, 180)}</p>
                   <div className="featured-meta">
                     <span><i className="fas fa-calendar-alt"></i> {formatDate(filteredPosts[0].createdAt)}</span>
                     <span className="featured-read">{t('news.readMore')} <i className="fas fa-arrow-right"></i></span>
@@ -189,7 +212,7 @@ export const NewsPage = () => {
                 )}
                 <div className="post-content">
                   <h2 className="post-title">{post.title}</h2>
-                  <p className="post-description">{post.content}</p>
+                  <p className="post-description">{getExcerpt(post.content)}</p>
                   <p className="post-date">
                     <i className="fas fa-calendar-alt"></i>
                     {formatDate(post.createdAt)}

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './service-page.css';
 import API_URL from '../../config/api';
 import { useLang } from '../../context/LanguageContext';
+import SEO from '../../component/SEO';
 
 interface ApiService {
   _id: string;
@@ -103,6 +104,20 @@ export const ServicePage = () => {
 
   return (
     <div className="service-page">
+      <SEO
+        title="Dịch Vụ"
+        description="Khám phá các dịch vụ công nghệ của JTSC: phát triển phần mềm, ứng dụng web & mobile, giải pháp AI, tư vấn chuyển đổi số và bảo mật hệ thống."
+        keywords="dịch vụ công nghệ, phát triển phần mềm, ứng dụng web, ứng dụng mobile, AI, tư vấn IT, chuyển đổi số"
+        url="/service"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Dịch Vụ Công Nghệ – JTSC",
+          "url": "https://jtsc.vn/service",
+          "provider": { "@type": "Organization", "name": "JTSC" },
+          "description": "Phát triển phần mềm, ứng dụng web & mobile, AI và tư vấn chuyển đổi số."
+        }}
+      />
       <div className="service-hero">
         <span className="svc-hero-badge"><i className="fas fa-briefcase"></i> {t('service.heroBadge')}</span>
         <h1>{t('service.heroTitle')}</h1>

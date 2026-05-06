@@ -10,8 +10,7 @@ import AdminPage from "./pages/admin-page/admin-page";
 import ServicePage from "./pages/Service-page/service-page";
 import NewsPage from "./pages/News-page/news-page";
 import NewsDetail from "./pages/News-page/news-detail";
-import ChatbotPage from "./pages/Chatbot-page/chatbot-page";
-import ChatWidget from "./component/ChatWidget";
+
 import { Route, Routes, Outlet, useLocation } from "react-router-dom";
 
 function ScrollToTop() {
@@ -87,12 +86,7 @@ function App() {
         {/* Route admin KHÔNG có layout */}
         <Route path="/admin" element={<AdminPage />} />
 
-        {/* Route AI Chatbot - full screen, KHÔNG có Navbar */}
-        <Route path="/ai-chatbot" element={<ChatbotPage />} />
       </Routes>
-
-      {/* Floating Chat Widget - hiển thị trên mọi trang */}
-      <ChatWidget />
     </>
   );
 }

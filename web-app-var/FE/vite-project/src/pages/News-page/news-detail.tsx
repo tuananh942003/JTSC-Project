@@ -1,14 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+﻿import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import './news-detail.css';
 import API_URL from '../../config/api';
 import { useLang } from '../../context/LanguageContext';
-import pic1 from '../../images/pic1.png';
-import pic2 from '../../images/pic2.png';
-import pic4 from '../../images/pic4.jpg';
-import pic5 from '../../images/pic5.jpg';
-import heroBg from '../../images/hero-bg.jpg';
-import computerScience from '../../images/computerscience-scaled.jpg';
+import SEO from '../../component/SEO';
 
 interface ApiPost {
   _id: string;
@@ -19,33 +14,52 @@ interface ApiPost {
   createdAt: string;
 }
 
-interface StatItem {
-  value: string;
-  label: string;
+interface TocItem {
+  id: string;
+  text: string;
+  level: number;
 }
 
-interface ContentSection {
-  type: string;
-  title?: string;
-  content?: string;
-  image?: string;
-  quote?: string;
-  author?: string;
-  items?: string[];
-  stats?: StatItem[];
-  number?: string;
-}
+/** Detect if the content string contains HTML markup from TipTap */
+const isHtmlContent = (content: string): boolean =>
+  /<[a-z][\s\S]*>/i.test(content);
 
-interface DetailedContent {
-  intro: string;
-  sections: ContentSection[];
-}
+/** Strip all HTML tags, return plain text */
+const stripHtml = (html: string): string =>
+  html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+
+/** Parse h2/h3 headings from HTML string for TOC */
+const extractToc = (html: string): TocItem[] => {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, 'text/html');
+  const headings = Array.from(doc.querySelectorAll('h1, h2, h3'));
+  return headings.map((el, i) => ({
+    id: `toc-heading-${i}`,
+    text: el.textContent || '',
+    level: parseInt(el.tagName[1]),
+  })).filter(h => h.text.trim() !== '');
+};
+
+/** Inject id attributes into headings so anchor links work */
+const injectHeadingIds = (html: string): string => {
+  let counter = 0;
+  return html.replace(/<(h[123])(\s[^>]*)?>([\s\S]*?)<\/h[123]>/gi, (_match, tag, attrs, text) => {
+    const id = `toc-heading-${counter++}`;
+    return `<${tag}${attrs || ''} id="${id}">${text}</${tag}>`;
+  });
+};
+
+const formatDateShort = (dateString: string): string => {
+  const d = new Date(dateString);
+  return `${d.getDate().toString().padStart(2, '0')}/${(d.getMonth() + 1).toString().padStart(2, '0')}/${d.getFullYear()}`;
+};
 
 export const NewsDetail = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { t, lang } = useLang();
   const [post, setPost] = useState<ApiPost | null>(null);
+  const [relatedPosts, setRelatedPosts] = useState<ApiPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [readProgress, setReadProgress] = useState(0);
@@ -71,10 +85,17 @@ export const NewsDetail = () => {
   const fetchPostDetail = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`${API_URL}/api/posts/${id}`);
-      if (!response.ok) throw new Error('Không thể lấy chi tiết bài viết');
-      const data: ApiPost = await response.json();
+      const [postRes, allRes] = await Promise.all([
+        fetch(`${API_URL}/api/posts/${id}`),
+        fetch(`${API_URL}/api/posts`),
+      ]);
+      if (!postRes.ok) throw new Error('Không thể lấy chi tiết bài viết');
+      const data: ApiPost = await postRes.json();
       setPost(data);
+      if (allRes.ok) {
+        const all: ApiPost[] = await allRes.json();
+        setRelatedPosts(all.filter(p => p._id !== id).slice(0, 6));
+      }
       setError(null);
     } catch (err) {
       setError((err as Error).message);
@@ -85,91 +106,36 @@ export const NewsDetail = () => {
   };
 
   const formatDate = (dateString: string) => {
-    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+    const options: Intl.DateTimeFormatOptions = {
+      year: 'numeric', month: 'long', day: 'numeric',
+      hour: '2-digit', minute: '2-digit',
+    };
     return new Date(dateString).toLocaleDateString(lang === 'vi' ? 'vi-VN' : 'en-US', options);
-  };
-
-  const getVariant = (p: ApiPost): number => {
-    const str = String(p._id || p.id || p.title || '');
-    const sum = str.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
-    return sum % 5;
-  };
-
-  const generateDetailedContent = (p: ApiPost): DetailedContent => {
-    const allImgs = [pic1, pic2, pic4, pic5, heroBg, computerScience];
-    const seed = String(p._id || p.id || p.title || '').split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
-    const imgs = [
-      allImgs[seed % allImgs.length],
-      allImgs[(seed + 2) % allImgs.length],
-      allImgs[(seed + 4) % allImgs.length],
-    ];
-    const ttl = p.title;
-    const cnt = p.content;
-
-    const templates: DetailedContent[] = [
-      {
-        intro: `${cnt} Trong bối cảnh công nghệ không ngừng tiến hóa, ${ttl} nổi lên như một trong những chủ đề được giới chuyên gia và cộng đồng toàn cầu quan tâm đặc biệt.`,
-        sections: [
-          { type: 'text-image', title: 'Bức tranh tổng quan', content: `${ttl} đang định hình lại cách chúng ta tiếp cận và giải quyết các thách thức hiện đại.`, image: imgs[0] },
-          { type: 'stats', title: 'Những con số biết nói', stats: [{ value: '87%', label: 'Doanh nghiệp áp dụng' }, { value: '3.2x', label: 'Tăng trưởng hiệu quả' }, { value: '2025', label: 'Năm bứt phá' }, { value: '$4.2T', label: 'Giá trị thị trường' }] },
-          { type: 'text-image', title: 'Phân tích chuyên sâu', content: `Khi đi sâu vào từng khía cạnh, chúng ta nhận thấy sự phức tạp đằng sau những con số bề ngoài. ${cnt}`, image: imgs[1] },
-          { type: 'quote', quote: `"${ttl} không chỉ là một xu hướng nhất thời — đây là sự thay đổi căn bản trong cách chúng ta tư duy và hành động trong thế kỷ 21."`, author: 'Chuyên gia phân tích công nghệ' },
-          { type: 'bullets', title: 'Điểm nhấn quan trọng', items: ['Tác động trực tiếp đến hơn 500 triệu người dùng toàn cầu', 'Hợp tác chiến lược với các tổ chức hàng đầu thế giới', 'Giải pháp bền vững cho các thách thức dài hạn', 'Nền tảng đổi mới sáng tạo cho thế hệ tiếp theo'] },
-          { type: 'text', title: 'Nhìn về phía trước', content: `Trong 5 năm tới, ${ttl} được dự báo sẽ tiếp tục tạo ra những bước đột phá đáng kể.` },
-        ],
-      },
-      {
-        intro: `${cnt} Bài viết này đưa ra góc nhìn phân tích đa chiều về ${ttl}, từ bối cảnh hình thành cho đến những ảnh hưởng thực tiễn đang diễn ra ngay lúc này.`,
-        sections: [
-          { type: 'image-left', title: 'Bối cảnh và nguồn gốc', content: `Để hiểu đúng về ${ttl}, chúng ta cần nhìn lại hành trình hình thành và phát triển của nó.`, image: imgs[0] },
-          { type: 'quote', quote: `"Chúng ta đang chứng kiến một trong những sự chuyển đổi lớn nhất trong lịch sử công nghệ. ${ttl} chính là tâm điểm của cuộc cách mạng đó."`, author: 'Viện Nghiên cứu Công nghệ Toàn cầu' },
-          { type: 'text-image', title: 'Phân tích tác động', content: `${cnt} Tác động của ${ttl} không chỉ giới hạn ở một lĩnh vực mà lan rộng ra nhiều ngành nghề.`, image: imgs[1] },
-          { type: 'numbered', title: '5 giải pháp tiên phong', items: ['Xây dựng nền tảng dữ liệu thống nhất', 'Đầu tư vào đào tạo nhân lực chất lượng cao', 'Thiết lập hệ sinh thái đối tác chiến lược đa quốc gia', 'Ứng dụng công nghệ AI và tự động hóa vào quy trình cốt lõi', 'Xây dựng khung pháp lý linh hoạt hỗ trợ đổi mới sáng tạo'] },
-          { type: 'text', title: 'Kết luận và khuyến nghị', content: `Qua phân tích toàn diện, có thể thấy ${ttl} mang lại nhiều cơ hội hơn là thách thức.` },
-        ],
-      },
-      {
-        intro: `${cnt} Đây là câu chuyện về ${ttl} — không chỉ là thông tin, mà là góc nhìn sâu sắc về một hiện tượng đang định hình tương lai của chúng ta.`,
-        sections: [
-          { type: 'text-image', title: 'Khởi đầu của mọi sự', content: `Mọi thứ bắt đầu từ một câu hỏi đơn giản: làm thế nào để ${ttl} có thể thực sự thay đổi cuộc sống?`, image: imgs[0] },
-          { type: 'quote', quote: `"Khi ${ttl} lần đầu xuất hiện, nhiều người còn hoài nghi. Giờ đây, không ai có thể phủ nhận vai trò then chốt của nó."`, author: 'Nhà phân tích chiến lược hàng đầu' },
-          { type: 'image-right', title: 'Bức tranh toàn cảnh', content: `${cnt} Nhìn từ góc độ vĩ mô, ${ttl} là mảnh ghép quan trọng trong bức tranh chuyển đổi số toàn cầu.`, image: imgs[1] },
-          { type: 'stats', title: 'Số liệu nổi bật', stats: [{ value: '150+', label: 'Quốc gia tham gia' }, { value: '62%', label: 'Tăng đầu tư R&D' }, { value: '18M', label: 'Việc làm mới' }, { value: '2030', label: 'Tầm nhìn chiến lược' }] },
-          { type: 'text', title: 'Chương tiếp theo', content: `Câu chuyện về ${ttl} vẫn chưa kết thúc — thực ra, chúng ta mới chỉ đang ở những trang đầu tiên.` },
-        ],
-      },
-      {
-        intro: `${cnt} Dưới đây là những điều quan trọng nhất bạn cần biết về ${ttl} — được tổng hợp từ hàng trăm nguồn thông tin uy tín.`,
-        sections: [
-          { type: 'numbered-image', number: '01', title: 'Tại sao điều này quan trọng?', content: `${ttl} không đơn giản là một xu hướng thoáng qua. Đây là sự thay đổi cơ bản trong cách chúng ta hiểu và tương tác với thế giới.`, image: imgs[0] },
-          { type: 'numbered', number: '02', title: 'Những tác động trực tiếp', items: ['Thay đổi căn bản mô hình làm việc và học tập', 'Tạo ra làn sóng đổi mới sáng tạo chưa từng có', 'Kết nối hàng tỷ người trong một hệ sinh thái chung', 'Giải quyết những vấn đề nan giải của nhân loại'] },
-          { type: 'numbered-image', number: '03', title: 'Ứng dụng thực tiễn nổi bật', content: `${cnt} Thực tế đã chứng minh rằng các ứng dụng của ${ttl} không chỉ dừng lại trên lý thuyết.`, image: imgs[1] },
-          { type: 'stats', title: '04. Những con số ấn tượng', stats: [{ value: '94%', label: 'Mức độ hài lòng' }, { value: '5x', label: 'Tăng năng suất' }, { value: '$78B', label: 'Đầu tư toàn cầu' }, { value: '2031', label: 'Năm chín muồi' }] },
-          { type: 'text', title: '05. Bước đi tiếp theo', content: `Hiểu được tầm quan trọng của ${ttl} chỉ là bước đầu tiên. Điều quan trọng hơn là hành động.` },
-        ],
-      },
-      {
-        intro: `${cnt} Bài phân tích chuyên sâu này được thực hiện dựa trên dữ liệu từ hơn 200 nghiên cứu độc lập về ${ttl}.`,
-        sections: [
-          { type: 'text', title: 'Phạm vi nghiên cứu', content: `Nghiên cứu này tập trung vào việc hiểu rõ bản chất và tác động đa chiều của ${ttl} trong bối cảnh toàn cầu hóa và chuyển đổi số.` },
-          { type: 'stats', title: 'Dữ liệu nghiên cứu', stats: [{ value: '200+', label: 'Nghiên cứu tham chiếu' }, { value: '47', label: 'Quốc gia khảo sát' }, { value: '12K', label: 'Đối tượng phỏng vấn' }, { value: '98%', label: 'Độ tin cậy' }] },
-          { type: 'image-left', title: 'Phát hiện chính', content: `Kết quả nghiên cứu chỉ ra rằng ${ttl} có mối tương quan chặt chẽ với sự tăng trưởng kinh tế bền vững. ${cnt}`, image: imgs[0] },
-          { type: 'quote', quote: `"Dữ liệu không nói dối. ${ttl} đang tạo ra giá trị kinh tế và xã hội lớn hơn bất kỳ công nghệ nào trong thập kỷ qua."`, author: 'Báo cáo Nghiên cứu Chiến lược 2025' },
-          { type: 'text-image', title: 'Phân tích so sánh', content: `So sánh với các xu hướng tương tự trong quá khứ, ${ttl} cho thấy tốc độ phổ biến nhanh hơn đáng kể.`, image: imgs[1] },
-          { type: 'bullets', title: 'Khuyến nghị từ nghiên cứu', items: [`Ưu tiên đầu tư vào nghiên cứu và phát triển trong lĩnh vực ${ttl}`, 'Xây dựng chương trình đào tạo chuyên sâu ở các cấp độ khác nhau', 'Tạo môi trường thử nghiệm an toàn cho các giải pháp đột phá', 'Thiết lập tiêu chuẩn chất lượng và đạo đức rõ ràng'] },
-        ],
-      },
-    ];
-
-    return templates[getVariant(p)];
   };
 
   const handleBack = () => navigate('/news');
 
+  // ── Derived values — MUST be before early returns (Rules of Hooks) ──
+  const htmlContent = isHtmlContent(post?.content ?? '');
+
+  const processedHtml = useMemo(
+    () => (post && htmlContent ? injectHeadingIds(post.content) : ''),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [post?.content, htmlContent]
+  );
+
+  const tocItems = useMemo(
+    () => (post && htmlContent ? extractToc(post.content) : []),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [post?.content, htmlContent]
+  );
+
+  const plainExcerpt = post ? stripHtml(post.content).slice(0, 160) : '';
+
   if (loading) {
     return (
       <div className="detail-container">
-        <div className="loading">
+        <div className="detail-state">
           <i className="fas fa-spinner fa-spin"></i>
           <p>{t('newsDetail.loading')}</p>
         </div>
@@ -180,7 +146,7 @@ export const NewsDetail = () => {
   if (error || !post) {
     return (
       <div className="detail-container">
-        <div className="error">
+        <div className="detail-state">
           <i className="fas fa-exclamation-circle"></i>
           <p>{error || t('newsDetail.notFound')}</p>
           <button className="back-btn" onClick={handleBack}>
@@ -192,176 +158,223 @@ export const NewsDetail = () => {
     );
   }
 
-  const detailedContent = generateDetailedContent(post);
-
-  const renderSection = (section: ContentSection, index: number) => {
-    const sid = `section-${index}`;
-    switch (section.type) {
-      case 'stats':
-        return (
-          <div key={index} className="content-section" id={sid}>
-            <h2 className="section-title">{section.title}</h2>
-            <div className="stats-grid">
-              {section.stats?.map((s, i) => (
-                <div key={i} className="stat-card">
-                  <span className="stat-card-value">{s.value}</span>
-                  <span className="stat-card-label">{s.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        );
-      case 'quote':
-        return (
-          <div key={index} className="content-section" id={sid}>
-            <blockquote className="pull-quote">
-              <p>{section.quote}</p>
-              <cite>{section.author}</cite>
-            </blockquote>
-          </div>
-        );
-      case 'bullets':
-        return (
-          <div key={index} className="content-section" id={sid}>
-            <h2 className="section-title">{section.title}</h2>
-            <ul className="article-bullets">
-              {section.items?.map((item, i) => <li key={i}>{item}</li>)}
-            </ul>
-          </div>
-        );
-      case 'numbered':
-        return (
-          <div key={index} className="content-section" id={sid}>
-            <h2 className="section-title">{section.title}</h2>
-            <ol className="article-numbered">
-              {section.items?.map((item, i) => <li key={i}>{item}</li>)}
-            </ol>
-          </div>
-        );
-      case 'image-left':
-        return (
-          <div key={index} className="content-section section-side left" id={sid}>
-            <h2 className="section-title">{section.title}</h2>
-            <div className="side-wrap">
-              <div className="side-img"><img src={section.image} alt={section.title} /></div>
-              <p className="section-text">{section.content}</p>
-            </div>
-          </div>
-        );
-      case 'image-right':
-        return (
-          <div key={index} className="content-section section-side right" id={sid}>
-            <h2 className="section-title">{section.title}</h2>
-            <div className="side-wrap">
-              <p className="section-text">{section.content}</p>
-              <div className="side-img"><img src={section.image} alt={section.title} /></div>
-            </div>
-          </div>
-        );
-      case 'numbered-image':
-        return (
-          <div key={index} className="content-section section-numbered-lead" id={sid}>
-            <span className="number-badge">{section.number}</span>
-            <h2 className="section-title">{section.title}</h2>
-            <p className="section-text">{section.content}</p>
-            {section.image && (
-              <div className="section-image"><img src={section.image} alt={section.title} /></div>
-            )}
-          </div>
-        );
-      case 'text':
-      case 'text-image':
-      default:
-        return (
-          <div key={index} className="content-section" id={sid}>
-            <h2 className="section-title">{section.title}</h2>
-            <p className="section-text">{section.content}</p>
-            {section.image && (
-              <div className="section-image"><img src={section.image} alt={section.title} /></div>
-            )}
-          </div>
-        );
-    }
-  };
-
   return (
     <div className="detail-container" ref={articleRef}>
-      <div className="reading-progress" style={{ width: `${readProgress}%` }}></div>
+      <SEO
+        title={post.title}
+        description={plainExcerpt}
+        url={`/news/${id}`}
+        image={post.imageUrl || undefined}
+        type="article"
+        publishedAt={post.createdAt}
+        keywords={`${post.title}, JTSC, tin tức công nghệ`}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "NewsArticle",
+          "headline": post.title,
+          "url": `https://jtsc.vn/news/${id}`,
+          "datePublished": post.createdAt,
+          "dateModified": post.createdAt,
+          "author": { "@type": "Organization", "name": "JTSC" },
+          "publisher": {
+            "@type": "Organization",
+            "name": "JTSC",
+            "logo": { "@type": "ImageObject", "url": "https://jtsc.vn/logo.png" }
+          },
+          "description": plainExcerpt,
+          "image": post.imageUrl || "https://jtsc.vn/og-image.png"
+        }}
+      />
 
-      <div className="detail-wrapper">
+      {/* Reading progress bar */}
+      <div className="reading-progress" style={{ width: `${readProgress}%` }} />
+
+      <div className="detail-page-wrap">
+
+        {/* ─── Breadcrumb ─── */}
         <nav className="detail-breadcrumb">
           <Link to="/">{t('newsDetail.home')}</Link>
           <i className="fas fa-chevron-right"></i>
           <Link to="/news">{t('newsDetail.news')}</Link>
           <i className="fas fa-chevron-right"></i>
-          <span>{t('newsDetail.detail')}</span>
+          <span>{post.title.length > 60 ? post.title.slice(0, 60) + '…' : post.title}</span>
         </nav>
 
-        <button className="back-btn" onClick={handleBack}>
-          <i className="fas fa-arrow-left"></i>
-          {t('newsDetail.backToList')}
-        </button>
+        {/* ─── Two-column layout ─── */}
+        <div className="detail-layout">
 
-        <article className="post-detail">
-          <header className="post-header">
-            <h1 className="detail-title">{post.title}</h1>
-            <div className="post-meta">
-              <span className="post-date">
-                <i className="fas fa-calendar-alt"></i>
-                {formatDate(post.createdAt)}
-              </span>
-              <span className="post-reading-time">
-                <i className="fas fa-clock"></i>
-                {t('newsDetail.readingTime')}
-              </span>
-            </div>
-          </header>
+          {/* ══ MAIN ARTICLE COLUMN ══ */}
+          <main className="detail-main">
+            <article className="post-detail">
 
-          {post.imageUrl && (
-            <div className="detail-image">
-              <img src={post.imageUrl} alt={post.title} />
-            </div>
-          )}
+              {/* Category badge */}
+              <div className="post-category-badge">
+                <i className="fas fa-newspaper"></i>
+                {t('newsDetail.tagNews')}
+              </div>
 
-          <div className="detail-toc">
-            <h4><i className="fas fa-list-ul"></i> {t('newsDetail.toc')}</h4>
-            <ul>
-              {detailedContent.sections
-                .map((section, index) => ({ section, index }))
-                .filter(({ section }) => section.title)
-                .map(({ section, index }) => (
-                  <li key={index}>
-                    <a href={`#section-${index}`}>{section.title}</a>
-                  </li>
-                ))}
-            </ul>
-          </div>
+              {/* Title */}
+              <h1 className="detail-title">{post.title}</h1>
 
-          <div className="detail-content">
-            <p className="intro-text">{detailedContent.intro}</p>
-            {detailedContent.sections.map((section, index) => renderSection(section, index))}
+              {/* Meta row */}
+              <div className="post-meta-row">
+                <span className="meta-author">
+                  <i className="fas fa-building"></i>
+                  JTSC
+                </span>
+                <span className="meta-dot">·</span>
+                <span className="meta-date">
+                  <i className="fas fa-calendar-alt"></i>
+                  {formatDate(post.createdAt)}
+                </span>
+                <span className="meta-dot">·</span>
+                <span className="meta-read">
+                  <i className="fas fa-clock"></i>
+                  {t('newsDetail.readingTime')}
+                </span>
+              </div>
 
-            <div className="article-footer">
-              <div className="tags">
+              {/* Share bar */}
+              <div className="post-share-bar">
+                <span className="share-label">{t('newsDetail.shareArticle')}</span>
+                <div className="share-buttons">
+                  <button className="share-btn facebook" title="Chia sẻ Facebook">
+                    <i className="fab fa-facebook-f"></i>
+                  </button>
+                  <button className="share-btn twitter" title="Chia sẻ Twitter">
+                    <i className="fab fa-twitter"></i>
+                  </button>
+                  <button className="share-btn linkedin" title="Chia sẻ LinkedIn">
+                    <i className="fab fa-linkedin-in"></i>
+                  </button>
+                  <button
+                    className="share-btn copy-link"
+                    title="Sao chép liên kết"
+                    onClick={() => navigator.clipboard.writeText(window.location.href)}
+                  >
+                    <i className="fas fa-link"></i>
+                  </button>
+                </div>
+              </div>
+
+              {/* Hero image */}
+              {post.imageUrl && (
+                <div className="detail-hero-image">
+                  <img src={post.imageUrl} alt={post.title} />
+                </div>
+              )}
+
+              {/* Table of Contents */}
+              {tocItems.length > 0 && (
+                <div className="detail-toc">
+                  <div className="toc-header">
+                    <i className="fas fa-list-ul"></i>
+                    {t('newsDetail.toc')}
+                  </div>
+                  <ul>
+                    {tocItems.map((item) => (
+                      <li key={item.id} className={`toc-level-${item.level}`}>
+                        <a href={`#${item.id}`}>{item.text}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Body content */}
+              <div className="detail-body">
+                {htmlContent ? (
+                  <div className="rich-text-body" dangerouslySetInnerHTML={{ __html: processedHtml }} />
+                ) : (
+                  <p className="intro-text">{post.content}</p>
+                )}
+              </div>
+
+              {/* Tags + back */}
+              <div className="post-tags">
                 <i className="fas fa-tags"></i>
                 <span className="tag">{t('newsDetail.tagNews')}</span>
                 <span className="tag">{t('newsDetail.tagUpdate')}</span>
                 <span className="tag">{t('newsDetail.tagTrend')}</span>
               </div>
-              <div className="share-section">
-                <p>{t('newsDetail.shareArticle')}</p>
-                <div className="share-buttons">
-                  <button className="share-btn facebook"><i className="fab fa-facebook-f"></i></button>
-                  <button className="share-btn twitter"><i className="fab fa-twitter"></i></button>
-                  <button className="share-btn linkedin"><i className="fab fa-linkedin-in"></i></button>
+
+              <button className="back-btn" onClick={handleBack}>
+                <i className="fas fa-arrow-left"></i>
+                {t('newsDetail.backToList')}
+              </button>
+
+            </article>
+
+            {/* ── Related posts (mobile only) ── */}
+            {relatedPosts.length > 0 && (
+              <div className="related-mobile">
+                <div className="sidebar-box-title">
+                  <i className="fas fa-fire-alt"></i>
+                  Bài viết khác
+                </div>
+                <div className="related-grid-mobile">
+                  {relatedPosts.slice(0, 4).map(rp => (
+                    <Link key={rp._id} to={`/news/${rp._id}`} className="related-card-mobile">
+                      {rp.imageUrl && <img src={rp.imageUrl} alt={rp.title} />}
+                      <div className="rcm-body">
+                        <p className="rcm-title">{rp.title}</p>
+                        <span className="rcm-date">{formatDateShort(rp.createdAt)}</span>
+                      </div>
+                    </Link>
+                  ))}
                 </div>
               </div>
+            )}
+          </main>
+
+          {/* ══ SIDEBAR ══ */}
+          <aside className="detail-sidebar">
+
+            {relatedPosts.length > 0 && (
+              <div className="sidebar-box">
+                <div className="sidebar-box-title">
+                  <i className="fas fa-fire-alt"></i>
+                  Bài viết khác
+                </div>
+                <div className="sidebar-articles">
+                  {relatedPosts.map((rp, idx) => (
+                    <Link key={rp._id} to={`/news/${rp._id}`} className="sidebar-article-card">
+                      <div className="sac-num">{String(idx + 1).padStart(2, '0')}</div>
+                      <div className="sac-body">
+                        {rp.imageUrl && (
+                          <div className="sac-img">
+                            <img src={rp.imageUrl} alt={rp.title} />
+                          </div>
+                        )}
+                        <p className="sac-title">{rp.title}</p>
+                        <span className="sac-date">
+                          <i className="fas fa-calendar-alt"></i>
+                          {formatDateShort(rp.createdAt)}
+                        </span>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Back to list CTA */}
+            <div className="sidebar-box sidebar-cta">
+              <i className="fas fa-newspaper sidebar-cta-icon"></i>
+              <p>Xem tất cả tin tức &amp; bài viết mới nhất từ JTSC</p>
+              <Link to="/news" className="sidebar-cta-btn">
+                <i className="fas fa-arrow-left"></i>
+                Danh sách tin tức
+              </Link>
             </div>
-          </div>
-        </article>
-      </div>
+
+          </aside>
+
+        </div>{/* /detail-layout */}
+      </div>{/* /detail-page-wrap */}
     </div>
   );
 };
 
 export default NewsDetail;
+

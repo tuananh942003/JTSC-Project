@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Underline from '@tiptap/extension-underline';
@@ -15,6 +15,28 @@ import FontFamily from '@tiptap/extension-font-family';
 import Highlight from '@tiptap/extension-highlight';
 import '../styles/RichTextEditor.css';
 
+// ── Custom Image extension: adds alignment class + width style ──
+const CustomImage = Image.extend({
+  addAttributes() {
+    return {
+      ...this.parent?.(),
+      class: {
+        default: 'img-center',
+        parseHTML: (el: HTMLElement) => el.getAttribute('class') || 'img-center',
+        renderHTML: (attrs: Record<string, unknown>) => ({
+          class: (attrs.class as string) || 'img-center',
+        }),
+      },
+      style: {
+        default: null,
+        parseHTML: (el: HTMLElement) => el.getAttribute('style'),
+        renderHTML: (attrs: Record<string, unknown>) =>
+          attrs.style ? { style: attrs.style as string } : {},
+      },
+    };
+  },
+});
+
 interface RichTextEditorProps {
   value: string;
   onChange: (html: string) => void;
@@ -28,14 +50,17 @@ const COLORS = [
   '#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#42d4f4', '#f032e6',
 ];
 
-const ToolbarBtn = ({ active, onClick, title, children }: {
-  active?: boolean; onClick: () => void; title: string; children: React.ReactNode;
+const IMG_WIDTHS = ['25%', '33%', '50%', '66%', '75%', '100%'];
+
+const ToolbarBtn = ({ active, onClick, title, disabled, children }: {
+  active?: boolean; onClick: () => void; title: string; disabled?: boolean; children: React.ReactNode;
 }) => (
   <button
     type="button"
-    onMouseDown={(e) => { e.preventDefault(); onClick(); }}
-    className={`rte-btn${active ? ' rte-btn-active' : ''}`}
+    onMouseDown={(e) => { e.preventDefault(); if (!disabled) onClick(); }}
+    className={`rte-btn${active ? ' rte-btn-active' : ''}${disabled ? ' rte-btn-disabled' : ''}`}
     title={title}
+    disabled={disabled}
   >
     {children}
   </button>
@@ -44,6 +69,10 @@ const ToolbarBtn = ({ active, onClick, title, children }: {
 const Divider = () => <span className="rte-divider" />;
 
 const RichTextEditor: React.FC<RichTextEditorProps> = ({ value, onChange }) => {
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [imageSelected, setImageSelected] = useState(false);
+  const [imageAlign, setImageAlignState] = useState('img-center');
+
   const editor = useEditor({
     extensions: [
       StarterKit,
@@ -53,7 +82,7 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ value, onChange }) => {
       Color,
       FontFamily,
       Highlight.configure({ multicolor: true }),
-      Image.configure({ inline: false, allowBase64: true }),
+      CustomImage.configure({ inline: false, allowBase64: true }),
       Link.configure({ openOnClick: false, autolink: true }),
       Table.configure({ resizable: true }),
       TableRow,
@@ -64,12 +93,69 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ value, onChange }) => {
     onUpdate({ editor }) {
       onChange(editor.getHTML());
     },
+    onSelectionUpdate({ editor }) {
+      const { selection } = editor.state;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const node = (selection as any).node;
+      if (node && node.type.name === 'image') {
+        setImageSelected(true);
+        setImageAlignState(node.attrs.class || 'img-center');
+      } else {
+        setImageSelected(false);
+      }
+    },
   });
 
-  const addImage = useCallback(() => {
+  // ── Upload image from local file (converted to base64) ──
+  const handleImageUpload = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const file = e.target.files?.[0];
+      if (!file || !editor) return;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        const src = ev.target?.result as string;
+        if (src) {
+          editor.chain().focus().insertContent({
+            type: 'image',
+            attrs: { src, class: 'img-center' },
+          }).run();
+        }
+      };
+      reader.readAsDataURL(file);
+      e.target.value = '';   // allow re-uploading same file
+    },
+    [editor]
+  );
+
+  // ── Insert image from URL ──
+  const addImageUrl = useCallback(() => {
     const url = window.prompt('Nhập URL hình ảnh:');
-    if (url && editor) editor.chain().focus().setImage({ src: url }).run();
+    if (url && editor) {
+      editor.chain().focus().insertContent({
+        type: 'image',
+        attrs: { src: url, class: 'img-center' },
+      }).run();
+    }
   }, [editor]);
+
+  // ── Set alignment class on selected image ──
+  const applyImageAlign = useCallback(
+    (alignClass: string) => {
+      if (!editor) return;
+      editor.chain().focus().updateAttributes('image', { class: alignClass }).run();
+      setImageAlignState(alignClass);
+    },
+    [editor]
+  );
+
+  // ── Set width on selected image ──
+  const applyImageWidth = useCallback(
+    (width: string) => {
+      if (!editor) return;
+      editor.chain().focus().updateAttributes('image', { style: `width: ${width}; max-width: 100%;` }).run();
+    },
+    [editor]
+  );
 
   const setLink = useCallback(() => {
     if (!editor) return;
@@ -207,7 +293,12 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ value, onChange }) => {
         <ToolbarBtn active={editor.isActive('link')} onClick={setLink} title="Chèn liên kết">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
         </ToolbarBtn>
-        <ToolbarBtn active={false} onClick={addImage} title="Chèn hình ảnh">
+        {/* Upload from computer */}
+        <ToolbarBtn active={false} onClick={() => fileInputRef.current?.click()} title="Upload ảnh từ máy tính">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        </ToolbarBtn>
+        {/* Insert from URL */}
+        <ToolbarBtn active={false} onClick={addImageUrl} title="Chèn ảnh từ URL">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
         </ToolbarBtn>
         <ToolbarBtn active={false} onClick={insertTable} title="Chèn bảng">
@@ -227,6 +318,69 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ value, onChange }) => {
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/><line x1="2" y1="2" x2="22" y2="22" stroke="red"/></svg>
         </ToolbarBtn>
       </div>
+
+      {/* ── Image Format Bar (contextual, like Word's Picture Format tab) ── */}
+      {imageSelected && (
+        <div className="rte-image-bar">
+          <span className="rte-image-bar-label">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            Định dạng ảnh:
+          </span>
+          {/* Float left — text wraps on the right */}
+          <ToolbarBtn active={imageAlign === 'img-float-left'} onClick={() => applyImageAlign('img-float-left')} title="Văn bản bao quanh bên phải (như Word)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <rect x="2" y="3" width="9" height="9" rx="1" fill="currentColor" stroke="none" opacity="0.65"/>
+              <line x1="13" y1="6" x2="22" y2="6"/><line x1="13" y1="10" x2="22" y2="10"/>
+              <line x1="2" y1="16" x2="22" y2="16"/><line x1="2" y1="20" x2="22" y2="20"/>
+            </svg>
+          </ToolbarBtn>
+          {/* Center — block, no wrap */}
+          <ToolbarBtn active={imageAlign === 'img-center'} onClick={() => applyImageAlign('img-center')} title="Ảnh căn giữa (không bao văn bản)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <line x1="2" y1="3" x2="22" y2="3"/>
+              <rect x="7" y="7" width="10" height="8" rx="1" fill="currentColor" stroke="none" opacity="0.65"/>
+              <line x1="2" y1="19" x2="22" y2="19"/>
+            </svg>
+          </ToolbarBtn>
+          {/* Float right — text wraps on the left */}
+          <ToolbarBtn active={imageAlign === 'img-float-right'} onClick={() => applyImageAlign('img-float-right')} title="Văn bản bao quanh bên trái (như Word)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <rect x="13" y="3" width="9" height="9" rx="1" fill="currentColor" stroke="none" opacity="0.65"/>
+              <line x1="2" y1="6" x2="11" y2="6"/><line x1="2" y1="10" x2="11" y2="10"/>
+              <line x1="2" y1="16" x2="22" y2="16"/><line x1="2" y1="20" x2="22" y2="20"/>
+            </svg>
+          </ToolbarBtn>
+          {/* Full width */}
+          <ToolbarBtn active={imageAlign === 'img-full'} onClick={() => applyImageAlign('img-full')} title="Ảnh toàn chiều rộng">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <rect x="2" y="5" width="20" height="14" rx="1" fill="currentColor" stroke="none" opacity="0.65"/>
+            </svg>
+          </ToolbarBtn>
+
+          <span className="rte-divider" />
+          <span className="rte-image-bar-label">Kích thước:</span>
+          {IMG_WIDTHS.map((w) => (
+            <button
+              key={w}
+              type="button"
+              className="rte-btn rte-width-btn"
+              onMouseDown={(e) => { e.preventDefault(); applyImageWidth(w); }}
+              title={`Đặt chiều rộng ${w}`}
+            >
+              {w}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* Hidden file input for image upload */}
+      <input
+        ref={fileInputRef}
+        type="file"
+        accept="image/*"
+        style={{ display: 'none' }}
+        onChange={handleImageUpload}
+      />
 
       {/* Editor area */}
       <EditorContent editor={editor} className="rte-editor" />

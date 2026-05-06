@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./about.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import { useLang } from "../../context/LanguageContext";
+import SEO from "../../component/SEO";
 
 /* Animated counter */
 function useCountUp(target: number, duration = 2000): [number, React.RefObject<HTMLDivElement | null>] {
@@ -104,6 +105,19 @@ export const About = () => {
 
   return (
     <div className="about-container">
+      <SEO
+        title="Về Chúng Tôi"
+        description="Tìm hiểu về JTSC – đội ngũ chuyên gia công nghệ với hơn 12 năm kinh nghiệm, cam kết mang lại giải pháp số tốt nhất cho doanh nghiệp."
+        keywords="về JTSC, đội ngũ công nghệ, kinh nghiệm phát triển phần mềm, chuyên gia IT Việt Nam"
+        url="/about"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "Về Chúng Tôi – JTSC",
+          "url": "https://jtsc.vn/about",
+          "description": "Đội ngũ chuyên gia công nghệ JTSC với hơn 12 năm kinh nghiệm."
+        }}
+      />
       {/* Header Section */}
       <section className="about-header">
         <div className="header-content">

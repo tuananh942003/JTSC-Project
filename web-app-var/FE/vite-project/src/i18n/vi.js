@@ -19,7 +19,7 @@ const vi = {
   hero: {
     badge: 'Đối tác đấu thầu tin cậy',
     title: 'Chuyên gia tư vấn và hỗ trợ đấu thầu dự án',
-    description: 'VAR cung cấp giải pháp tư vấn đấu thầu chuyên nghiệp, giúp doanh nghiệp tối ưu hóa quy trình và nâng cao tỷ lệ trúng thầu với đội ngũ chuyên gia giàu kinh nghiệm.',
+    description: 'JTSC cung cấp giải pháp tư vấn đấu thầu chuyên nghiệp, giúp doanh nghiệp tối ưu hóa quy trình và nâng cao tỷ lệ trúng thầu với đội ngũ chuyên gia giàu kinh nghiệm.',
     exploreServices: 'Khám phá dịch vụ',
     contactNow: 'Liên hệ ngay',
     statPackages: 'Gói thầu thành công',

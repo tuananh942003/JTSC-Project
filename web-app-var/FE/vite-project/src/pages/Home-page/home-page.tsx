@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { useLang } from "../../context/LanguageContext";
 import API_URL from "../../config/api";
 import logo from "../../images/computerscience-scaled.jpg";
+import SEO from "../../component/SEO";
 
 interface ApiService {
   _id: string;
@@ -131,6 +132,19 @@ export const HomePage = () => {
 
   return (
     <>
+      <SEO
+        title="Trang Chủ"
+        description="JTSC – Giải pháp công nghệ thông minh: phần mềm doanh nghiệp, ứng dụng web & mobile, AI và chuyển đổi số tại Việt Nam."
+        keywords="JTSC, giải pháp công nghệ, phần mềm doanh nghiệp, chuyển đổi số, AI, Việt Nam"
+        url="/"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "JTSC – Trang Chủ",
+          "url": "https://jtsc.vn/",
+          "description": "JTSC cung cấp giải pháp công nghệ thông tin hiện đại cho doanh nghiệp Việt Nam."
+        }}
+      />
       {/* ===== HERO ===== */}
       <div className="home-page">
         <div className="hero-dots"></div>

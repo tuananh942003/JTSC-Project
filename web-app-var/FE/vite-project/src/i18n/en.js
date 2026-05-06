@@ -19,7 +19,7 @@ const en = {
   hero: {
     badge: 'Trusted Bidding Partner',
     title: 'Expert Consulting & Bidding Support for Your Projects',
-    description: 'VAR provides professional bidding consultancy solutions, helping businesses optimize processes and improve win rates with our team of experienced experts.',
+    description: 'JTSC provides professional bidding consultancy solutions, helping businesses optimize processes and improve win rates with our team of experienced experts.',
     exploreServices: 'Explore Services',
     contactNow: 'Contact Now',
     statPackages: 'Successful Bids',

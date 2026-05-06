@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "../styles/navbar.css";
-import logo from "../images/logo.png";
+import logo from "../images/Logo (1).png";
 import "@fortawesome/fontawesome-free/css/all.css";
 import { Link, useLocation } from "react-router-dom";
 import { useLang } from "../context/LanguageContext";
@@ -45,7 +45,7 @@ export const Navbar = () => {
     <>
       <div className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
         <div className="nav-logo">
-          <Link to="/"><img src={logo} alt="VAR" /></Link>
+          <Link to="/"><img src={logo} alt="JTSC" /></Link>
         </div>
 
         {/* Hamburger toggle */}
@@ -59,9 +59,7 @@ export const Navbar = () => {
           <Link to="/service" className={location.pathname === '/service' ? 'active' : ''}>{t('nav.services')}</Link>
           <Link to="/news" className={location.pathname === '/news' ? 'active' : ''}>{t('nav.news')}</Link>
           <Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>{t('nav.contact')}</Link>
-          <Link to="/ai-chatbot" className={`nav-ai-chatbot${location.pathname === '/ai-chatbot' ? ' active' : ''}`}>
-            <i className="fas fa-robot"></i> {t('nav.aiChatbot')}
-          </Link>
+
         </div>
 
         {/* Language + Theme toggles */}

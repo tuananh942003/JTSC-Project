@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../images/logo.png";
+import logo from "../images/Logo (1).png";
 import "../styles/footer.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import { useLang } from "../context/LanguageContext";
@@ -44,7 +44,7 @@ export const Footer = () => {
       <div className="footer-content">
         <div className="footer-section">
           <div className="footer-logo">
-            <img src={logo} alt="VAR" />
+            <img src={logo} alt="JTSC" />
           </div>
           <p>{t('footer.companyDesc')}</p>
           <div className="social-link">
@@ -89,7 +89,7 @@ export const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2025 VAR - Technology Solutions. {t('footer.copyright')}</p>
+        <p>© 2025 JTSC. {t('footer.copyright')}</p>
         <div className="footer-bottom-links">
           <Link to="/contact" onClick={scrollTop}>{t('footer.privacy')}</Link>
           <Link to="/contact" onClick={scrollTop}>{t('footer.terms')}</Link>
